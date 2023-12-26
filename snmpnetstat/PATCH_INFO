@@ -1,0 +1,261 @@
+** The following patches were applied in CMU1.2u:
+
+From: he@idt.unit.no
+To: sw0l+snmp@andrew.cmu.edu
+Reply-To: he@idt.unit.no
+Subject: Enhancement for CMU SNMP package
+
+I just transferred the snmp1.1b.tar from lancaster.andrew.cmu.edu, and
+found out that I wanted to enhance the "snmpnetstat" application somewhat.
+In particular, I felt that the old "snmpnetstat -i" output was somewhat
+lacking, in that it had no IP address display. Besides, I wanted to aquaint
+myself with the CMU SNMP library, so I thought modifying snmpnetstat was a
+good way to start. The output from "snmpnetstat -i" now looks like this:
+
+Name        Mtu   Address         Netmask            Ipkts Ierrs    Opkts Oerrs
+Ethernet0   1500  128.39.9.2      255.255.255.0    1659429     4  2544681     0
+Ethernet1   1500  129.241.1.2     255.255.255.0    5347267   940  1827123     0
+Ethernet2   1500  129.241.170.1   255.255.255.0          0     0    38552     0
+Ethernet3@  1500  129.241.171.1   255.255.255.0          0     0        1     1
+Serial0     1500  129.241.147.1   255.255.255.0      20566     0    20681     0
+Serial1     1500  129.241.200.1   255.255.255.0     544705     0   753890     0
+Serial2@    1500  none            none                   0     0        0     0
+Serial3@    1500  none            none                   0     0        0     0
+Serial4@    1500  none            none                   0     0        0     0
+Serial5@    1500  none            none                   0     0        0     0
+
+or
+
+Name        Mtu   Address         Netmask            Ipkts Ierrs    Opkts Oerrs
+Ethernet0*  1500  146.224.64.4    255.255.240.0          0     0    88021 88021
+Serial0     1500  146.224.240.2   255.255.240.0      86950   433    92995     0
+
+The '@' indicates that both the OPER and ADMIN status variables indicate
+"not up", whereas a '*' indicates that only OPER status is "not up".
+
+While I was at it, I felt that the "snmpnetstat -i" display was slow, and
+it turned out that snmpnetstat sent a new SNMP request for each of
+OperStatus, ifMtu etc. variable that it wanted to get for a particular
+interface.  I changed this so that a single SNMP request is sent for each
+interface, improving response time considerably.
+
+I also dropped the "Collisions" coloumn from the "snmpnetstat -i" display
+-- it always ran into the right edge of my 80-coloumn xterm.
+
+Lastly, some cosmetic changes were done to the "snmpnetstat agent community
+period" display.
+
+The changes to implement these features follow below.
+
+Share and enjoy!
+
+- Havard Eidnes
+
+
+From: he@idt.unit.no
+Reply-To: he@idt.unit.no
+To: sw0l+snmp@andrew.cmu.edu
+Subject: More snmpnetstat enhancements
+
+These changes relative to to the SNMP 1.1 (Beta) version of snmpnetstat are
+more cosmetic than the changes I sent you yesterday. These changes add
+display of which routing protocol a route was learned via, and adjusts the
+field widths of the display to utilize more of a 80 coloumn terminal (I
+like to compile my network applications with -lresolv on the Suns I use, so
+the gateway field could use some more space.
+
+Share and enjoy!
+
+- Havard
+
+From: he@idt.unit.no
+Reply-To: he@idt.unit.no
+To: sw0l+snmp@andrew.cmu.edu
+Subject: snmpnetstat "protopr" improved efficiency
+
+The following changes reduce the number of SNMP PDUs transmitted with the
+"snmpnetstat host community" command with 5x, and reduces the real time
+needed to dump the table with between 3x to 4x in my test cases. These
+changes are relative to your 1.1 Beta SNMP software. (Note, the source code
+in this routine needs re-indentation after this change.)
+
+Share and enjoy!
+
+- Havard
+From: he@idt.unit.no
+Reply-To: he@idt.unit.no
+To: sw0l+snmp@andrew.cmu.edu
+Subject: more snmpnetstat improvements
+
+The changes enclosed below make two improvements to the snmpnetstat 
+application (under the '-i' option): 
+
+1) snmpnetstat can now tackle SNMP agents that use "strange" instance
+   identifiers in the interfaces table. Eg. some versions of the ISODE SNMP
+   agent seem to prefer to use 1 and 19 as the instance identifiers for the
+   ethernet and loopback interfaces respectively. This problem is solved by
+   doing a GET-NEXT sweep over the ifIndex variables first, and use these
+   values when doing the GET operations on the rest of the rows in the table.
+
+2) snmpnetstat can now tackle SNMP agents that do not implement all of the
+   rows in the interfaces table. In particular, most Unix agents will not be
+   able to respond with real values of ifInNUcastPkts and ifOutNUcastPkts.
+   snmpnetstat now permits 4 missing variables from the variable list it
+   supplies, and now demonstrates the use of the snmp_fix_pdu routine.
+   
+A couple of other minor cosmetic changes sneaked in. 
+
+These changes should be applied after the other changes I sent you.
+
+BTW, all these changes are available with anonymous ftp from ugle.unit.no in
+the pub/unix/network/ directory as snmp1.1b-patch.[1234].
+
+Again, share and enjoy!
+
+- Havard
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!! THE FOLLOWING HAS NOT BEEN APPLIED !!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+From: he@idt.unit.no
+Reply-To: he@idt.unit.no
+To: sw0l+snmp@andrew.cmu.edu
+Subject: CMU SNMP build enhancement
+
+The following changes make it possible to select to use a special library
+(eg. -lresolv) with the CMU SNMP applications. Only the RES= definition in
+the top-level Makefile needs to be set to achieve this.
+
+Share and enjoy!
+
+- Havard
+
+------------------------------ Apply with patch -p0 in the CMU SNMP main dir
+
+*** /tmp/,RCSt1a18622	Mon May 27 10:34:18 1991
+--- Makefile	Mon May 27 10:32:59 1991
+***************
+*** 1,2 ****
+--- 1,3 ----
++ RES=-lresolv
+  
+  TARG = bin/snmpget bin/snmpgetnext bin/snmpstatus bin/snmpwalk bin/snmptest bin/snmptrap bin/snmptrapd bin/snmpnetstat bin/snmpmon bin/snmpd
+***************
+*** 18,24 ****
+  
+  makeall:
+! 	cd snmplib; make all install
+! 	cd apps; make
+! 	cd apps/snmpnetstat; make
+  
+  clean:
+--- 19,25 ----
+  
+  makeall:
+! 	cd snmplib; make all install "RES=$(RES)"
+! 	cd apps; make "RES=$(RES)"
+! 	cd apps/snmpnetstat; make "RES=$(RES)"
+  
+  clean:
+*** /tmp/,RCSt1a18631	Mon May 27 10:34:39 1991
+--- apps/Makefile	Mon May 27 10:33:06 1991
+***************
+*** 3,7 ****
+  #
+  TARG=	snmpget snmpgetnext snmpwalk snmpstatus snmptest snmptrap snmptrapd snmpd
+! LIBS=	../lib/libsnmp.a
+  CFLAGS=-g -I../include
+  
+--- 3,8 ----
+  #
+  TARG=	snmpget snmpgetnext snmpwalk snmpstatus snmptest snmptrap snmptrapd snmpd
+! DEPLIBS=../lib/libsnmp.a
+! LIBS=	../lib/libsnmp.a $(RES)
+  CFLAGS=-g -I../include
+  
+***************
+*** 8,33 ****
+  all: $(TARG)
+  
+! snmpget:    snmpget.o ${LIBS}
+  	${CC} -o $@ snmpget.o ${LIBS}
+  
+! snmpgetnext:    snmpgetnext.o ${LIBS}
+  	${CC} -o $@ snmpgetnext.o ${LIBS}
+  
+! snmpwalk:    snmpwalk.o ${LIBS}
+  	${CC} -o $@ snmpwalk.o ${LIBS}
+  
+! snmpstatus:    snmpstatus.o ${LIBS}
+  	${CC} -o $@ snmpstatus.o ${LIBS}
+  
+! snmptest:    snmptest.o ${LIBS}
+  	${CC} -o $@ snmptest.o ${LIBS}
+  
+! snmptrap:    snmptrap.o ${LIBS}
+  	${CC} -o $@ snmptrap.o ${LIBS}
+  
+! snmptrapd:    snmptrapd.o ${LIBS}
+  	${CC} -o $@ snmptrapd.o ${LIBS}
+  
+! snmpd:	snmpd.o kernel.o ${LIBS} snmp_agent.o snmp_vars.o snmp_var_route.o
+  	${CC} -o $@ snmpd.o kernel.o snmp_agent.o snmp_vars.o snmp_var_route.o ${LIBS}
+  
+--- 9,34 ----
+  all: $(TARG)
+  
+! snmpget:    snmpget.o ${DEPLIBS}
+  	${CC} -o $@ snmpget.o ${LIBS}
+  
+! snmpgetnext:    snmpgetnext.o ${DEPLIBS}
+  	${CC} -o $@ snmpgetnext.o ${LIBS}
+  
+! snmpwalk:    snmpwalk.o ${DEPLIBS}
+  	${CC} -o $@ snmpwalk.o ${LIBS}
+  
+! snmpstatus:    snmpstatus.o ${DEPLIBS}
+  	${CC} -o $@ snmpstatus.o ${LIBS}
+  
+! snmptest:    snmptest.o ${DEPLIBS}
+  	${CC} -o $@ snmptest.o ${LIBS}
+  
+! snmptrap:    snmptrap.o ${DEPLIBS}
+  	${CC} -o $@ snmptrap.o ${LIBS}
+  
+! snmptrapd:    snmptrapd.o ${DEPLIBS}
+  	${CC} -o $@ snmptrapd.o ${LIBS}
+  
+! snmpd:	snmpd.o kernel.o ${DEPLIBS} snmp_agent.o snmp_vars.o snmp_var_route.o
+  	${CC} -o $@ snmpd.o kernel.o snmp_agent.o snmp_vars.o snmp_var_route.o ${LIBS}
+  
+*** /tmp/,RCSt1a18635	Mon May 27 10:34:55 1991
+--- apps/snmpnetstat/Makefile	Mon May 27 10:33:13 1991
+***************
+*** 18,22 ****
+  #
+  CFLAGS=	-g -I../../include
+! LIBS=	../../lib/libsnmp.a
+  SRCS=	inet.c if.c main.c route.c 
+  OBJS=	inet.o if.o main.o route.o
+--- 18,24 ----
+  #
+  CFLAGS=	-g -I../../include
+! RES=-lresolv
+! DEPLIBS= ../../lib/libsnmp.a
+! LIBS=	../../lib/libsnmp.a $(RES)
+  SRCS=	inet.c if.c main.c route.c 
+  OBJS=	inet.o if.o main.o route.o
+***************
+*** 24,28 ****
+  all: snmpnetstat
+  
+! snmpnetstat: ${OBJS} ${LIBS}
+  	${CC} -o $@ ${CFLAGS} ${OBJS} ${LIBS}
+  
+--- 26,30 ----
+  all: snmpnetstat
+  
+! snmpnetstat: ${OBJS} ${DEPLIBS}
+  	${CC} -o $@ ${CFLAGS} ${OBJS} ${LIBS}
+  

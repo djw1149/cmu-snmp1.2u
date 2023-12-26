@@ -1,0 +1,198 @@
+
+
+
+SNMPNETSTAT(1)            User Commands            SNMPNETSTAT(1)
+
+
+
+NNNNAAAAMMMMEEEE
+     snmpnetstat - show network status using SNMP
+
+SSSSYYYYNNNNOOOOPPPPSSSSIIIISSSS
+     ssssnnnnmmmmppppnnnneeeettttssssttttaaaatttt _h_o_s_t _c_o_m_m_u_n_i_t_y [ ----aaaannnn ]
+     ssssnnnnmmmmppppnnnneeeettttssssttttaaaatttt _h_o_s_t _c_o_m_m_u_n_i_t_y [ ----iiiinnnnrrrrssss ]
+     ssssnnnnmmmmppppnnnneeeettttssssttttaaaatttt _h_o_s_t _c_o_m_m_u_n_i_t_y [ ----nnnn ] [ ----IIII _i_n_t_e_r_f_a_c_e ] _i_n_t_e_r_v_a_l
+     ssssnnnnmmmmppppnnnneeeettttssssttttaaaatttt _h_o_s_t _c_o_m_m_u_n_i_t_y [ ----pppp _p_r_o_t_o_c_o_l ]
+
+DDDDEEEESSSSCCCCRRRRIIIIPPPPTTTTIIIIOOOONNNN
+     The _s_n_m_p_n_e_t_s_t_a_t command symbolically displays the values  of
+     various  network-related information retrieved from a remote
+     system using the SNMP protocol.  There are a number of  out-
+     put  formats,  depending  on the options for the information
+     presented.  The first form of the command displays a list of
+     active  sockets.   The  second  form  presents the values of
+     other network-related information according  to  the  option
+     selected.  Using the third form, with an _i_n_t_e_r_v_a_l specified,
+     _s_n_m_p_n_e_t_s_t_a_t  will  continuously  display   the   information
+     regarding  packet  traffic  on the configured network inter-
+     faces.  The fourth form displays statistics about the  named
+     protocol.
+
+     The _h_o_s_t specification may be  either  a  host  name  or  an
+     internet address specified in "dot notation"
+
+     The _c_o_m_m_u_n_i_t_y specifies the community name for the  transac-
+     tion with the remote system.
+
+     The options have the following meaning:
+
+     ----aaaa    With the default display, show the state of all  sock-
+          ets;  normally sockets used by server processes are not
+          shown.
+
+     ----iiii    Show the state of all of  the  interfaces.   Interface
+          names  may  be  followed by a flag.  A @@@@ indicates that
+          both the OPER and ADMIN status variables indicate  "not
+          up",  whereas  a  ****  indicates that only OPER status is
+          "not up".
+
+     ----IIII _i_n_t_e_r_f_a_c_e
+          Show information only about this  interface  (named  by
+          the  ifDescr  variable or named by the ifIndex variable
+          if the -n flag is also specified).  Use with an  _i_n_t_e_r_-
+          _v_a_l  as described below to display periodic information
+          about one interface.
+
+      ---- nnnn    Show  network   addresses   as   numbers   (normally
+          _s_n_m_p_n_e_t_s_t_a_t   interprets   addresses  and  attempts  to
+          display them symbolically).  This option  may  be  used
+          with any of the display formats.
+
+
+
+SunOS 5.5.1       Last change: 6 February 1992                  1
+
+
+
+
+
+
+SNMPNETSTAT(1)            User Commands            SNMPNETSTAT(1)
+
+
+
+     ----pppp _p_r_o_t_o_c_o_l
+          Show statistics  about  _p_r_o_t_o_c_o_l,  which  is  either  a
+          well-known  name  for  a  protocol  or an alias for it.
+          Some protocol names and aliases are listed in the  file
+          /_e_t_c/_p_r_o_t_o_c_o_l_s.   A  null response typically means that
+          there are no interesting numbers to report.   The  pro-
+          gram  will  complain if _p_r_o_t_o_c_o_l is unknown or if there
+          is no statistics routine for it.
+
+     ----ssss    Show per-protocol statistics.
+
+     ----rrrr    Show the routing tables.  When ---- ssss  is  also  present,
+          show routing statistics instead.
+
+     The default display, for active sockets, shows the local and
+     remote  addresses,  protocol,  and the internal state of the
+     protocol.  Address formats are of the form ``host.port''  or
+     ``network.port''  if  a socket's address specifies a network
+     but no specific host address.  When known the host and  net-
+     work  addresses  are displayed symbolically according to the
+     data bases /_e_t_c/_h_o_s_t_s and /_e_t_c/_n_e_t_w_o_r_k_s, respectively.  If a
+     symbolic name for an address is unknown, or if the ----nnnn option
+     is specified, the address is printed numerically,  according
+     to  the  address family.  For more information regarding the
+     Internet ``dot format,'' refer to _i_n_e_t(3N).  Unspecified, or
+     ``wildcard'', addresses and ports appear as ``*''.
+
+     The interface display provides a table of cumulative statis-
+     tics  regarding packets transferred, errors, and collisions.
+     The network addresses  of  the  interface  and  the  maximum
+     transmission unit (``mtu'') are also displayed.
+
+     The routing table display indicates the available routes and
+     their  status.  Each route consists of a destination host or
+     network and a gateway to use  in  forwarding  packets.   The
+     flags  field shows the state of the route (``U'' if ``up''),
+     whether the route is to a gateway (``G''), whether the route
+     was  created  dynamically by a redirect (``D''), and whether
+     the route has been modified by a redirect  (``M'').   Direct
+     routes  are created for each interface attached to the local
+     host; the gateway field for such entries shows  the  address
+     of  the  outgoing  interface.  The interface entry indicates
+     the network interface utilized for the route.
+
+     When _s_n_m_p_n_e_t_s_t_a_t is invoked with an  _i_n_t_e_r_v_a_l  argument,  it
+     displays  a  running  count of statistics related to network
+     interfaces.  This display consists of a column for the  pri-
+     mary  interface and a column summarizing information for all
+     interfaces.  The primary  interface  may  be  replaced  with
+     another  interface  with  the  -_I option.  The first line of
+     each screen of information contains a summary since the sys-
+     tem  was  last  rebooted.   Subsequent  lines of output show
+
+
+
+SunOS 5.5.1       Last change: 6 February 1992                  2
+
+
+
+
+
+
+SNMPNETSTAT(1)            User Commands            SNMPNETSTAT(1)
+
+
+
+     values accumulated over the preceding interval.
+
+SSSSEEEEEEEE AAAALLLLSSSSOOOO
+     iostat(1), vmstat(1), hosts(5),  networks(5),  protocols(5),
+     services(5), RFC1067
+
+BBBBUUUUGGGGSSSS
+     The notion of errors is ill-defined.
+
+CCCCOOOONNNNTTTTRRRRIIIIBBBBUUUUTTTTOOOORRRRSSSS
+     Havard Eidnes  (he@idt.unit.no)  contributed  many  improve-
+     ments.
+     David Waitzman (djw@bbn.com) cleaned up  some  memory  usage
+     bugs,  exit  status  bugs,  and adding optionally specifying
+     interfaces by ifIndex.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SunOS 5.5.1       Last change: 6 February 1992                  3
+
+
+

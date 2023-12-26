@@ -1,0 +1,11 @@
+snmpnetstat medea.bbn.com public -i
+snmpnetstat medea.bbn.com public -i -n
+snmpnetstat medea.bbn.com public -I 0
+snmpnetstat medea.bbn.com public -I 999 -n
+snmpnetstat medea.bbn.com public -I 0 -n
+snmpnetstat medea.bbn.com public -I 1 -n
+snmpnetstat medea.bbn.com public -I le0 -n
+snmpnetstat medea.bbn.com public -I le0
+snmpnetstat medea.bbn.com public -I le0sdfsdfsfsf
+snmpnetstat medea.bbn.com public -I 1 -n 1     # wont terminate
+snmpnetstat medea.bbn.com public -I le0 1     # wont terminate

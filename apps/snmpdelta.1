@@ -1,0 +1,143 @@
+.RC $Header: /nfs/medea/u0/rel5/rcs/Tools/cmusnmp/apps/snmpdelta.1,v 1.2 1992/07/29 18:16:45 djw Exp $
+.\* /***********************************************************
+.\" 	Copyright 1992 by Carnegie Mellon University
+.\" 
+.\"                       All Rights Reserved
+.\" 
+.\" Permission to use, copy, modify, and distribute this software and its 
+.\" documentation for any purpose and without fee is hereby granted, 
+.\" provided that the above copyright notice appear in all copies and that
+.\" both that copyright notice and this permission notice appear in 
+.\" supporting documentation, and that the name of CMU not be
+.\" used in advertising or publicity pertaining to distribution of the
+.\" software without specific, written prior permission.  
+.\" 
+.\" CMU DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE, INCLUDING
+.\" ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS, IN NO EVENT SHALL
+.\" CMU BE LIABLE FOR ANY SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR
+.\" ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS,
+.\" WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION,
+.\" ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS
+.\" SOFTWARE.
+.\" ******************************************************************/
+.\"
+.\" Man page by David Waitzman.  Program by CMU (Steve Waldbusser:?)
+.\"
+.TH SNMPDELTA 1 "20 Feb 1992"
+.UC 4
+.SH NAME
+snmpdelta - Display deltas (changes) to variables in a network entity 
+.SH SYNOPSIS
+snmpdelta [-f] [-s] [-t] [-p period] [-d] host community variable-name [variable-name]...
+.SH DESCRIPTION
+
+Snmpdelta is an SNMP application that uses SNMP GET requests to
+repetitively query for information on a network entity.  The
+information is displayed one variable per line.  By default, the first
+display of each variable shows the total value of the variable.
+Subsequent displays show the change in the variable's value from the
+last poll period.
+
+One or more fully qualified object identifiers may be given as
+arguments on the command line.  Each variable name is given in the
+format specified in
+.IR variables (5).
+.PP
+The
+.I host
+specification may be either a host name or an internet address
+specified in "dot notation"
+.PP
+The
+.I community
+specifies the community name for the transactions with the remote system.
+.PP
+
+If the network entity has an error processing the request packet, an
+error packet will be returned and a message will be shown, helping to
+pinpoint in what way the request was malformed.  If there were other
+variables in the request, the request will be resent without the bad
+variable.  If using the 
+.B \-f
+option described later, nothing will be written to the file if the
+first request fails.
+
+.SH FLAGS
+.TP
+.B \-f
+
+Each variable's values will be appended to a file whose filename is
+the suffix of the variable's name.  If the file doesn't exist it will
+be created.  For instance, the variable
+interfaces.iftable.ifentry.ifinoctets.1 will be written into the file
+"ifInOctets.1".  Note that the capitalization of the file name
+reflects the variable's MIB name-- not the name that was specified on
+the command line.  Multiple files will be written for each variable
+specified on the command line.
+
+.TP
+.B \-s
+Causes time stamps to be written in front of each variable report, in
+the form
+.B [10:38:37 2/20]
+, which means hour:minute:second month/date.
+
+.TP
+.B \-t
+Attempts to display variable value changes per second.  
+Also causes system.sysUptime.0 to be retrieved (not displayed, though).
+
+.TP
+.B \-p Number
+Changes the poll period to the specified number of seconds.  The
+default poll period is one second.
+
+.TP
+.B \-d
+Dump the SNMP packets that are being sent, and that are received in
+hexadecimal.
+.SH Examples:
+.PP
+.ft B
+.nf
+snmpdelta hostname public interfaces.iftable.ifentry.ifinoctets.1
+.fi
+.ft R
+
+Outputs:
+.RS
+.ft R
+.nf
+ifInOctets.1: 2485348224
+ifInOctets.1: 4
+ifInOctets.1: 10
+ifInOctets.1: 54
+ifInOctets.1: 1
+.I ...for ever until interrupting the program
+.fi
+.ft R
+.RE
+
+.PP
+.ft B
+.nf
+snmpdelta -t -p 3 -s hostname public interfaces.iftable.ifentry.ifinoctets.1
+.fi
+.ft R
+
+
+Outputs:
+.RS
+.ft R
+.nf
+[10:42:50 2/20] ifInOctets.1 /sec: 67.73
+[10:42:53 2/20] ifInOctets.1 /sec: 63.90
+[10:42:56 2/20] ifInOctets.1 /sec: 116.56
+.I ...for ever until interrupting the program
+.fi
+.ft R
+.RE
+
+.SH "SEE ALSO"
+variables(5), RFC 1065, RFC 1212, RFC 1213
+

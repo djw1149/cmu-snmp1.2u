@@ -1,0 +1,19 @@
+Version .91:  Changed the ASN type for the types: Counter, Ipaddress, gauge,
+timeticks, and opaque.  The SMI defines them as application specific types,
+not ASN_INTEGER and ASN_OCTET_STRING.
+
+Version 1.0: Added snmpnetstat, snmptrap, snmptrapd.  Everything runs on a new
+API that has an asynchronous interface.  Most old hard-coded limits are either
+non-existent or much larger than necessary.  The mib module now gets it's data
+by parsing a text file in the same ASN.1 format as is given in RFC1066.
+
+Version 1.1b: <Not documented>
+
+Version 1.2u: Added Concise MIB parsing support to the snmp library
+and to the snmptranslate program.  New mib.txt file that is an
+almost-direct extract from RFC1213.  Added the snmproute,
+snmptranslate, and snmpdelta programs.  Assorted bug fixes.
+Integers are now the only signed numbers.  The snmptrap program is
+heavily revised-- it now can pass user-specified varbindings in the
+trap PDU.  Some nice snmpnetstat additions from Havard Eidnes
+(he@idt.unit.no).

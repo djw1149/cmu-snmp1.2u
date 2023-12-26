@@ -1,0 +1,86 @@
+.RC $Header: /nfs/medea/u0/rel5/rcs/Tools/cmusnmp/apps/snmptrapd.1,v 1.4 1995/02/16 13:48:35 djw Exp $
+.\* /***********************************************************
+.\" 	Copyright 1989 by Carnegie Mellon University
+.\" 
+.\"                       All Rights Reserved
+.\" 
+.\" Permission to use, copy, modify, and distribute this software and its 
+.\" documentation for any purpose and without fee is hereby granted, 
+.\" provided that the above copyright notice appear in all copies and that
+.\" both that copyright notice and this permission notice appear in 
+.\" supporting documentation, and that the name of CMU not be
+.\" used in advertising or publicity pertaining to distribution of the
+.\" software without specific, written prior permission.  
+.\" 
+.\" CMU DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE, INCLUDING
+.\" ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS, IN NO EVENT SHALL
+.\" CMU BE LIABLE FOR ANY SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR
+.\" ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS,
+.\" WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION,
+.\" ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS
+.\" SOFTWARE.
+.\" ******************************************************************/
+.TH SNMPTRAPD 1 "16 FEBRUARY 1995"
+.UC 4
+.SH NAME
+snmptrapd - Receive and log snmp trap messages.
+.SH SYNOPSIS
+snmptrapd [-p] [-d] [-t] [-N] [-P port]
+.SH DESCRIPTION
+Snmptrapd
+is an SNMP application that receives and logs snmp trap messages
+sent to the SNMP-TRAP port (162) on the local machine.  This version has
+support to pretty-print T/20 HMP traps sent via SNMP.
+.PP
+If the
+.B -p
+option is given,
+.I snmptrapd
+will print its messages to the standard output, with 
+each trap terminated by a newline character.
+If the
+.B -N
+option is given,
+.I snmptrapd
+will print its messages to the standard output, with 
+each trap terminated by a single ASCII NUL character [In C: (char)0] (there
+may still be internal newlines in the trap, if it is a multi-line trap).
+Otherwise it will use
+.IR syslog (8)
+to log messages.  
+These syslog messages are sent with the level of LOG_WARNING,
+and if available (usually on 4.3 systems) are sent to the LOG_LOCAL0 facility.
+.PP
+The
+.B -t
+option sets the directory in which to find its trapmsg.list file, if 
+not present, the current directory is searched.
+.PP
+The
+.B -P port_number
+option sets the UDP port number on which to listen for traps.  If not 
+present, the standard SNMP value of 162 is used.  Using values higher than 
+1023 will allow snmptrapd to run as a non-root user.
+.PP
+.I Snmptrapd
+must be run as root so that UDP port 162 can be opened.  Only one application 
+can only a port at once-- so
+.I ONLY ONE snmptrapd CAN RUN 
+.I ON ONE SYSTEM AT ONCE ON THE
+.I SAME LISTENING PORT!
+These two restrictions may not apply if you use the 
+.B -P
+option to change the port number.
+.PP
+The log messages are of the form:
+.br
+.I Sep 17 22:39:52 suffern snmptrapd: 128.2.13.41:
+.I Cold Start Trap (0) Uptime:
+.I 8 days, 0:35:46
+.PP
+Adding a "-d" to the argument list will cause the application to dump
+input and output packets.
+.PP
+.SH "SEE ALSO"
+syslog(8), variables(5), RFC 1065, RFC 1212, RFC 1213
+

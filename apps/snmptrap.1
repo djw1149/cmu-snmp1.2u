@@ -1,0 +1,156 @@
+.RC $Header: /nfs/medea/u0/rel5/rcs/Tools/cmusnmp/apps/snmptrap.1,v 1.4 1995/02/16 16:39:05 djw Exp $
+.\" /***********************************************************
+.\" 	Copyright 1988, 1989 by Carnegie Mellon University
+.\" 
+.\"                       All Rights Reserved
+.\" 
+.\" Permission to use, copy, modify, and distribute this software and its 
+.\" documentation for any purpose and without fee is hereby granted, 
+.\" provided that the above copyright notice appear in all copies and that
+.\" both that copyright notice and this permission notice appear in 
+.\" supporting documentation, and that the name of CMU not be
+.\" used in advertising or publicity pertaining to distribution of the
+.\" software without specific, written prior permission.  
+.\" 
+.\" CMU DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE, INCLUDING
+.\" ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS, IN NO EVENT SHALL
+.\" CMU BE LIABLE FOR ANY SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR
+.\" ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS,
+.\" WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION,
+.\" ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS
+.\" SOFTWARE.
+.\" ******************************************************************/
+.TH SNMPTRAP 1 "17 September 1989"
+.UC 4
+.SH NAME
+snmptrap - Send an SNMP TRAP message to a host.
+.SH SYNOPSIS
+snmptrap host community trap-type specific-type [ -a agent-addr ] [-e enterprise-oid] [-d] [-r repeat-count#] [-P port]
+.SH DESCRIPTION
+snmptrap is an SNMP application that forms and sends an SNMP TRAP message to
+a host.
+.PP
+The
+.I host
+specification may be either a host name or an internet address
+specified in "dot notation"
+.PP
+The
+.I community
+specifies the community name for the transaction with the remote system.
+.PP
+The
+.I trap-type
+and
+.I specific-type
+are integers that specify the type of trap message being sent.
+.PP
+The optional argument
+.I -a agent-addr
+can be used to change the address from which the trap reports it is being 
+sent.  Otherwise the sending host\'s address is used.
+.PP
+The optional argument
+.I -e enterprise-oid
+can be used to specify the enterprise object id of the device emitting 
+the trap.  The default is 1.3.6.1.4.1.3.1.1.
+.PP
+The optional argument
+.I -r repeat-count#
+can be used to specify a repeat count to send the specified trap more than
+once.  This is very useful for testing trap receivers.  The traps are sent
+very close together in time.
+.PP
+The
+.I -P port_number
+option sets the UDP port number to which to send the trap.  If not 
+present, the standard SNMP value of 162 is used.
+.PP
+After the command line arguments are read and parsed, the program will
+prompt for the entry of a list of variables to send in the
+VarBindingList in the TRAP PDU.
+It will prompt with:
+.PP
+.I Please enter the variable name:
+.PP
+At this point you can enter one or more variable names, one per line.
+Type just a blank line at that prompt to send the TRAP PDU and exit.
+Each variable name is given in the format specified in
+.I variables (5).
+The prompt:
+.PP
+.I Please enter variable type [i|s|x|d|n|o|t|a]: 
+.PP
+requests the type of the variable be entered.  Type "i" for an
+integer, "s" for an displayable string,
+and "n" for a null value. (more...)
+.br
+At this point a value will be prompted for:
+.PP
+.I Please enter the value: 
+.PP
+
+If this is an integer value, just type the integer (in decimal).  If
+it is a string, type in the string. (more...)
+
+For example
+.PP
+.br
+.I snmptrap nic.andrew.cmu.edu public 0 0
+.br
+.I Please enter the variable name: system.sysdescr.0
+.br
+.I Please enter variable type [i|s|x|d|n|o|t|a]: s
+.br
+.I Please enter the value: Unix 4.3BSD-Reno
+.br
+.I Please enter the variable name: 
+.PP
+Will send a trap with one variable.
+.PP
+The defined trap types are:
+.TP
+.B 0
+coldStart \- signifies that the sending protocol entity is
+reinitializing itself such that the agent\'s configuration or the
+protocol entity implementation may be altered.
+.TP
+.B 1
+warmStart \- signifies that the sending protocol entity is
+reinitializing itself such that neither the agent configuration nor
+the protocol entity implementation is altered.
+.TP
+.B 2
+linkDown \- signifies that the sending protocol entity
+recognizes a failure in one of the communication links represented in
+the agent\'s configuration.
+.TP
+.B 3
+linkUp \- signifies that the sending protocol entity
+recognizes that one of the communication links represented in the
+agent\'s configuration has come up.
+.TP
+.B 4
+authenticationFailure \- signifies that the sending protocol
+entity is the addressee of a protocol message that is not properly
+authenticated.  While implementations of the SNMP must be capable of
+generating this trap, they must also be capable of suppressing the
+emission of such traps via an implementation-specific mechanism.
+.TP
+.B 5
+egpNeighborLoss \- signifies that an EGP neighbor for whom
+the sending protocol entity was an EGP peer has been marked down and
+the peer relationship no longer obtains.
+.TP
+.B 6
+enterpriseSpecific \- signifies that the sending protocol
+entity recognizes that some enterprise-specific event has occurred.
+The specific-trap field identifies the particular trap which
+occurred.
+.PP
+Adding a "-d" to the argument list will cause the application to dump the output packet.
+.PP
+.SH "SEE ALSO"
+variables(5), RFC 1065, RFC 1212, RFC 1213
+
+

@@ -1,0 +1,95 @@
+.RC $Header: /nfs/medea/u0/rel5/rcs/Tools/cmusnmp/apps/snmparp.1,v 1.2 1993/08/30 20:02:40 djw Exp $
+.\* /***********************************************************
+.\" *	Copyright 1993 by SINTEF RUNIT
+.\" *
+.\" *	All Rights Reserved
+.\" *
+.\" * Permission to use, copy, modify, and distribute this software and its 
+.\" * documentation for any purpose and without fee is hereby granted, 
+.\" * provided that the above copyright notice appear in all copies and that
+.\" * both that copyright notice and this permission notice appear in 
+.\" * supporting documentation, and that the name of SINTEF RUNIT not be
+.\" * used in advertising or publicity pertaining to distribution of the
+.\" * software without specific, written prior permission.  
+.\" * 
+.\" * SINTEF RUNIT DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE,
+.\" * INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS, IN NO
+.\" * EVENT SHALL SINTEF RUNIT BE LIABLE FOR ANY SPECIAL, INDIRECT OR
+.\" * CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF
+.\" * USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+.\" * OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+.\" * PERFORMANCE OF THIS SOFTWARE.
+.\" ******************************************************************/
+.TH SNMPARP 1 "17 September 1989"
+.UC 4
+.SH NAME
+snmparp - gets and shows (parts of) the ARP table on an SNMP agent
+supporting MIB-1 or MIB-2.
+.SH SYNOPSIS
+snmparp host community [-h] [-n] [IP address fragment]
+.SH DESCRIPTION
+Snmparp is an SNMP application that gets and shows all or part of the
+ARP table on an SNMP agent supporting MIB-1 or MIB-2.
+.PP
+The
+.I host
+specification may be either a host name or an internet address
+specified in "dot notation"
+.PP
+The
+.I community
+specifies the community name for the transaction with the remote system.
+.PP
+The
+.I IP address fragment
+is optional, and specifies the leading portion of an IP address.  Addresses
+that match that fragment will be shown.  Some SNMP agents have problems
+with this feature (due to GETNEXT bugs).
+.PP
+Examples:
+.PP
+.I snmparp sintef-gw public 129.241.181
+.\".RS
+.ft R
+.nf
+ARP Table
+Name                    Address         Media-addr        Type      Interface
+unit-gw.unit.no         129.241.181.1   aa:0:4:0:68:dc    dynamic   Fddi0
+mtfs-gw.unit.no         129.241.181.3   aa:0:4:0:59:dd    dynamic   Fddi0
+sintef-gw.sintef.no     129.241.181.4   0:0:c:3:3b:6a     other     Fddi0
+termo-gw.unit.no        129.241.181.5   0:0:a2:3:43:ca    dynamic   Fddi0
+Std.supernett.tele.no   129.241.181.6   0:0:a9:2:4:1f     dynamic   Fddi0
+dragv-gw.unit.no        129.241.181.7   aa:0:4:0:7e:de    dynamic   Fddi0
+ed-gw.unit.no           129.241.181.9   aa:0:4:0:fa:df    dynamic   Fddi0
+.fi
+.ft R
+.RE
+.I snmparp sintef-gw public 129.241.1.5
+.RS
+.ft R
+.nf
+ARP Table
+Name                    Address         Media-addr        Type      Interface
+runix.runit.sintef.no   129.241.1.5     8:0:20:9:44:bc    dynamic   Ethernet0
+.fi
+.ft R
+.RE
+.PP
+With no prefix given, it dumps the whole ARP table.
+.PP
+If the network entity has an error processing the request packet, an error
+packet will be returned and a message will be shown, helping to pinpoint in what
+way the request was malformed.
+.PP
+Adding a "-h" to the argument list will cause the header part of the
+output not to be printed.
+.PP
+Adding a "-n" to the argument list will cause the name part of the table
+not to be printed (-n means numeric-only).
+.PP
+.SH AUTHOR
+Havard.Eidnes@runit.sintef.no, 930709
+
+.SH "SEE ALSO"
+RFC 1065, RFC 1212, RFC 1213
+

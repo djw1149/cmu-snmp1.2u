@@ -1,0 +1,45 @@
+Installation instructions for CMU SNMP release 1.2:
+
+Untar the release into some directory tree.
+
+Cd to that directory.  The rest of the instructions will use the variable
+TOP as the name.
+
+Edit the following Makefiles:
+
+	$TOP/snmplib/Makefile
+	$TOP/apps/Makefile
+	$TOP/apps/snmpnetstat/Makefile
+
+Find the line that defines CFLAGS.  If you are not running on a BSD 4.3
+compliant system, remove the "-DBSD4_3" flag.  Modify "-g" as 
+appropriate (perhaps replace it with "-O").  For an Ultrix 4.2 system, add 
+"-DULTRIX42" to CFLAGS.
+
+In the top level directory ($TOP), type "make".
+
+Set the environment variable MIBFILE to $TOP/mib.txt.  This will
+enable the applications to find the mib description.  See the man page
+variables(5) in $TOP/man for more information on finding the mib
+description file.
+
+Test the applications in $TOP/apps and $TOP/apps/snmpnetstat.  The TEST.sh
+shell script can help.  Assuming you're on the Internet, you can type
+"TEST.sh $TOP/apps 128.2.1.8 public" to run some example tests (you can
+substitute any addressable SNMP device for 128.2.1.8, and change "public" 
+for the appropriate community string).
+
+In the top level directory ($TOP), type "make install" to install the
+programs in $TOP/bin.
+
+When you are really ready to install everything: Copy the man pages in
+$TOP/man into your appropriate system's man directory tree.  Copy the
+applications from $TOP/bin into the appropriate place.  Copy mib.txt to
+some standard place, perhaps /etc/mib.txt or if not using /etc/mib.txt
+then set up an environment variable MIBFILE that points to where
+mib.txt is located.
+
+Remember that the snmp agent "snmpd" and the snmp trap receiver "snmptrapd"
+must run as root.  Perhaps you want to run "snmpd" from your system's boot
+script (/etc/rc.local on BSD Unix based systems)?
+

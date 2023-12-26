@@ -1,0 +1,199 @@
+.\" 
+.\" $Header: /nfs/medea/u0/rel5/rcs/Tools/cmusnmp/apps/snmproute.1,v 1.2 1992/07/29 18:16:58 djw Exp $
+.\" 
+.\" Copyright 1991 by Bolt, Beranek and Newman Inc.
+.\" 
+.TH SNMPROUTE 1 "8 August 1991"
+.UC 4
+.SH NAME
+snmproute \- gets routing information from a router using SNMP
+.SH SYNOPSIS
+snmproute router-name [flags] 
+.SH DESCRIPTION
+Snmproute is an SNMP application that obtains routing information from
+one or more SNMP managable network entities.  It can dump some or all
+information about one route in one network entity.  It can also try to
+follow the nexthop path, doing a partial
+.I traceroute
+with SNMP.
+.PP
+Snmproute will retry to reach each network-entity using all of the
+community strings that it knows.  After each community string has been
+tried for one router, snmproute decides that the router is down or
+doesn't speak SNMP and exists.  More community strings can be added
+using the 
+.B \-c
+flag described below.  You can also indicate that a longer timeout
+should be used for long paths.  When tracing the route through
+multiple routers, once the program has found a community string that
+works, it will continue to use it for the other routers, until the
+community string stops working (e.g. it will not reset the community
+to the first one its knows for each new router).
+.PP
+The
+.I router name
+and
+.I route destinations
+specifications may be either a host name or an internet address
+specified in "dot notation".  You may use a network address or a host 
+address for route destinations (remember that routes to hosts may exist).
+.PP
+The route destinations may be either found with a SNMP GET or an SNMP
+GETNEXT operation.  Use 
+.B \-g destination
+for SNMP GET.
+Use 
+.B \-n destination
+for SNMP GETNEXT.
+You may use multiple instances of this flag-- snmproute will try
+each in turn.  If tracing a route, it will go back to the first
+route-destination on each hop (this is the opposite behavior from the 
+.B \-c
+flag).
+Repeating the 
+.B \-g
+flag is useful when you wish to specify trying a
+default route in case the primary route fails.
+At least one 
+.B \-g
+or
+.B \-n
+flag is 
+.B required.
+.PP
+.SH FLAGS
+.TP
+.B \-g route-destination
+Specifies a destination address to query with an SNMP GET operation.
+.TP
+.B \-n route-destination
+Specifies a destination address to query with an SNMP GETNEXT
+operation (this typically should be the truly-desired route-destination 
+minus 1). This could be used if the current router says it doesn't have a 
+route to the destination but it is buggy and really does (this applies to
+some buggy NSFnet NSSs).
+.TP
+.B \-s
+Short output form.  Provides less information about the route.
+.TP
+.B \-t
+Trace the routing path, using the ipRouteNextHop attribute.  
+Stops when the nexthop is zero or equal to the first route destination.
+.TP
+.B \-L
+Long path/high time-out mode.  Doubles the timeout.  Can be
+specified multiple times (using
+.B \-L \-L \-L
+not
+.B \-LLL
+) to increase the timeout even more.  Use this flag if you know a
+router is up and speaks SNMP, but is far away or slow to respond to
+SNMP queries.
+.TP
+.B \-c community-name
+Specifies an additional community name to try to use when accessing
+the device.  The first additional community specified will be the
+first one used by the program.  The built-in list of community names
+may be gotten by executing the program with no arguments (which gives the
+usage summary).
+.TP
+.B \-d
+Dump the SNMP packets that are being sent, and that are received in
+hexadecimal.
+.SH Examples:
+.PP
+.B snmproute 131.119.254.240 -g 128.2.0.0 -L -L -c lookatit
+
+Outputs:
+.RS
+.ft R
+.nf
+Name "NSS13.BARRNET.NET"
+        Address   131.119.254.240
+        Community "lookatit"
+         Destination = IpAddress:       128.2.0.0
+             NextHop = IpAddress:       129.140.14.1
+                Type = INTEGER: remote(4)
+               Proto = INTEGER: is-is(9)
+             IfIndex = INTEGER: 2
+                 Age = INTEGER: 224007
+             Metric1 = INTEGER: 22
+             Metric2 = INTEGER: 1
+             Metric3 = INTEGER: -1
+             Metric4 = INTEGER: -1
+             Metric5 = doesn't exist
+                Mask = doesn't exist
+.fi
+.ft R
+.RE
+.PP
+.B snmproute -t 131.192.5.2 -g 192.91.55.0
+
+Outputs:
+.RS
+.ft R
+.nf
+Name "bbn-gw.near.net.near.net"
+        Address   131.192.5.2
+        Community "public"
+         Destination = IpAddress:       192.91.55.0
+             NextHop = IpAddress:       192.52.71.3
+                Type = INTEGER: remote(4)
+               Proto = INTEGER: egp(5)
+             IfIndex = INTEGER: 1
+                 Age = INTEGER: 28
+             Metric1 = INTEGER: 1
+             Metric2 = INTEGER: 0
+             Metric3 = INTEGER: 0
+             Metric4 = INTEGER: 0
+             Metric5 = doesn't exist
+                Mask = IpAddress:       255.255.255.0
+
+Name "WB-GW.BBN.COM"
+        Address   192.52.71.3
+        Community "public"
+         Destination = IpAddress:       192.91.55.0
+             NextHop = IpAddress:       192.91.55.0
+                Type = INTEGER: direct(3)
+               Proto = INTEGER: bbnSpfIgp(12)
+             IfIndex = INTEGER: 4
+                 Age = INTEGER: 0
+             Metric1 = INTEGER: 0
+             Metric2 = INTEGER: -1
+             Metric3 = INTEGER: -1
+             Metric4 = INTEGER: -1
+             Metric5 = doesn't exist
+                Mask = doesn't exist
+.fi
+.ft R
+.RE
+.PP
+.B snmproute -s 192.80.7.1 -g 128.89.0.0
+
+Outputs:
+.RS
+.ft R
+.nf
+Name "[192.80.7.1]"
+        Address   192.80.7.1
+        Community "public"
+         Destination = IpAddress:       128.89.0.0
+             NextHop = IpAddress:       192.80.6.2
+                Type = INTEGER: remote(4)
+               Proto = INTEGER: egp(5)
+.fi
+.ft R
+.RE
+.SH "BUGS"
+
+Doesn't give very informative or any error messages for certain
+conditions.  When tracing a route, doesn't have logic to deal with
+uncooperative routers in the middle of a route-- therefore, this is
+not a replacement for traceroute, just a supplement to tell you what
+the SNMP routing tables are.
+
+.SH "SEE ALSO"
+snmpget(1), snmpgetnext(1), snmpwalk(1), snmpnetstat(1)
+
+.SH "AUTHOR"
+David Waitzman (djw@bbn.com)

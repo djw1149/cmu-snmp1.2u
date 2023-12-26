@@ -1,0 +1,1935 @@
+./libether/timer.c        1 Crash1  "d"  **PREV CRASH**  Alloc Seg failed at timer init.  Device#%d
+./libdispatch/dinit.c     3 TRAP_DEBUG "dd" DispatchInit: ProcessNumber %d Monitoree %d
+./libdispatch/dinit.c     4 TRAP_DEBUG "" queue handle not NULL at initialization
+./libdispatch/dinit.c     5 Crash1 "x"  **PREV CRASH**  DispatchInit: alloc_seg status = %x
+./libdispatch/dinit.c     6 Crash1 "x"  **PREV CRASH**  DispatchInit: alloc_seg status = %x
+./libdispatch/dinit.c     7 TRAP_DEBUG "xd" Disp: FORUS queue full; dropping packet %x dest %d
+./libdispatch/dinit.c     8 TRAP_DEBUG "d" Disp: OUTPUT queue full; dropping packet - device %d
+./libdispatch/dispatch.c  9 TRAP_DEBUG "x" Dispatch: process number = %x
+./libdispatch/dispatch.c  10  TRAP_DEBUG  "x" dispatch: error bad packet signal %x\n\r
+./libdispatch/dispatch.c  11  TRAP_DEBUG  "Iddxd" Disp:[%I]: IP len %d ttl %d pkt %x, input %d
+./libdispatch/dispatch.c  12 TRAP_DEBUG "d" Dispatch: send to dev %d
+./libdispatch/dispmb.c    13  TRAP_DEBUG  "I" DispatchMB: Enqueue packet to MBQ %I
+./libdispatch/dispmb.c    14  TRAP_DEBUG  "saaaasdxs" %s Failed Access Control: s %a d %a p hop %a n hop %a prot %s %d packet_kind 0x%x failed %s question
+./libdispatch/dispmb.c    15  TRAP_FIRE  "saaaasdxs" %s Failed Access Control: s %a d %a p hop %a n hop %a prot %s %d packet_kind 0x%x failed %s question 
+./libdispatch/dispmb.c    16  TRAP_DEBUG  "aId" DispatchMB: Cache LoadSharing RedirectVia %a for %I, RedirectHostFlag=%d
+./libdispatch/dispmb.c    17 TRAP_DEBUG "aasddd" MBCacheKeySetUp: %a => %a %s(%d) s.p. %d d.p. %d
+./libdispatch/dispmb.c    18 TRAP_DEBUG "aasddd" MBCacheKeySetUp: %a => %a %s(%d) s.p. %d d.p. %d
+./libdispatch/dispmb.c    19 TRAP_DEBUG "saadd" %s s %a d %a s.p. %d d.p %d
+./libdispatch/dutil.c     20 Crash0 ""  **PREV CRASH**  CopyDirectly:not enough buffers\n
+./libdispatch/dutil.c     21 Crash0 ""  **PREV CRASH**  CopyDirectly:buffers left over\n
+./libdispatch/dutil.c     22 TRAP_FIRE "aaa" Disp: packet too short src %x: dest %x prev hop %x
+./libdispatch/dutil.c     23 TRAP_FIRE "aaa" Disp: packet too short src %x: dest %x prev hop %x
+./libdispatch/fragment.c  24 TRAP_DEBUG "dddd" IP fragmentation: MTU %d - bytes/packet %d - bytes in 1st buffer %d - std bytes %d
+./libdispatch/fragment.c  25 TRAP_DEBUG "xd" IP fragmentation: copy packet (%x) to RAM region (pkt length %d)
+./libdispatch/fragment.c  26 TRAP_DEBUG "dd" Disp frag: data sent %d IP->FO %d
+./libdispatch/fragment.c  27 TRAP_DEBUG "dd" Disp frag: IP->TL %d IP->MF %d
+./libdispatch/fragment.c  28 TRAP_DEBUG "xxddd" Disp: npkt %x: bnxt %x: maxs %d: nbytes %d, o %d
+./libdispatch/fragment.c  29 TRAP_DEBUG "dd" Disp frag: data sent %d IP->FO %d
+./libdispatch/fragment.c  30 TRAP_DEBUG "ddd" Disp frag:IP->TL %d IP->MF %d Pkt.LENGTH %d
+./libdispatch/fragment.c  31 Crash0 ""  **PREV CRASH**  IP Fragment: ran out of buffers free list buffers
+./libdispatch/fragment.c  33  TRAP_DEBUG  "Iddd" IP Fragmentation: Not enough I/O buffers for [%I] (need %d; got %d; available %d)
+./libdispatch/fragment.c  34 TRAP_DEBUG "xxddd" Scrunch: buf %x next %x bytes:old %d room %d next %d
+./libdispatch/ip_frag.c   35  TRAP_FIRE  "Idx" ip_frag: Not enough buffers to fragment [%I]: buf_data_size %d buffer %x
+./libdispatch/ip_frag.c   36  TRAP_FIRE  "xxx" ip_frag: free buffer %xbuf_nxt_pkt %x buf_next_ptr %x
+./libdispatch/ip_frag.c   37  TRAP_DEBUG  "Idddx" ip_frag:[%I]:\r\n\t IP len %d FragOffset %d flags %d packet addr %x
+./libdispatch/options.c   38 TRAP_DEBUG "xxI" Disp: parameter problem byte %x option %x IP packet %I
+./libegp/egp.c            39 Crash1  "u"  **PREV CRASH**  CONFIG: EGP info has only %u numbers needs 8
+./libegp/egp.c            40  TRAP_OPER  "sddddddddd" EGP: core %s, AS %d, nets %d, nbrs %d/%d P=%d,%d,%d,%d,%d
+./libegp/egp.c            41  TRAP_OPER  "aS" EGP: from %a %s
+./libegp/egp.c            42  TRAP_DEBUG  "aSd" EGP from %a %s IP len %d
+./libegp/egp.c            43  TRAP_OPER  "a" EGP: no table space to add neighbor %a
+./libegp/egp.c            44  TRAP_DEBUG  "ad" EGP neighbor %a using my AS# %d
+./libegp/egp.c            45  TRAP_FIRE  "Sxxa" EGP: %s was %x, should be %x, from %a
+./libegp/egp.c            46  TRAP_FIRE  "dda" EGP: length was %d, should be .ge. %d, from %a
+./libegp/egp.c            50  TRAP_OPER  "a" EGP: InitNeighbor: no table space to initiate neighbor %a
+./libegp/egp.c            52  TRAP_OPER  "a" EGP: cannot remove %a because it is not a neighbor
+./libegp/egp.c            53  TRAP_DEBUG  "addsddds" EGP: %a R=%d S=%d %s Ht=%d Pt=%d St=%d%s
+./libegp/egp.c            54  TRAP_DEBUG  "add"    net %a dist %d ttl %d
+./librouting/routingqevent.c 55 TRAP_DEBUG "d" Normal Flood Mode:Flooding to neighbor %d 
+./librouting/routingqevent.c 56 TRAP_DEBUG "aad" SPF:Found neighbor %a on the same incoming IF %a. Not flooding to %d
+./libegp/egp.c            57  TRAP_OPER  "assss" EGP: nbr %a, event %s, state %s->%s, action %s
+./libegp/egp.c            58  TRAP_DEBUG  "assss" EGPEvent: nbr %a, event %s, state %s->%s, action %s
+./libegp/egp.c            59  TRAP_FIRE  "adxxx" EGP: err msg from %a, code %d, hdr %x %x %x
+./libegp/egp.c            60 Crash4  "axdd"  **PREV CRASH**  EGP Event: neighbor %a (blk 0x%x) event %d bad action <<%d>>
+./libegp/egp.c            61 Crash0  ""  **PREV CRASH**  param MyHelloMode is '#define'd wrong
+./libegp/egp.c            62  TRAP_DEBUG  "adsa" EGP new nbr %a, AS# %d, HLO=%s (from %a)
+./libegp/egp.c            63  TRAP_DEBUG  "a" EGP FreeVars: neighbor %a
+./libegp/egp.c            64  TRAP_DEBUG  "axxx" EGP: CntUp %a, bits %x, jk %x, jj %x
+./libegp/egp.c            65  TRAP_DEBUG  "axxx" EGP: CntDn %a, bits %x, jk %x, kk %x
+./libegp/egp.c            67  TRAP_FIRE  "a" EGP can't get buffer to send to %a
+./libegp/egp.c            69  TRAP_OPER  "a" EGP: should not send to indirect neighbor %a
+./libegp/egp.c            70  TRAP_FIRE  "ad" EGP: can't send packet, interface to nbr %a down (%d)
+./libegp/egp.c            71  TRAP_OPER  "aS" EGP: to %a %s
+./libegp/egp.c            72  TRAP_DEBUG  "aSd" EGP -to- %a %s IP len %d
+./libegp/egp.c            73  TRAP_DEBUG  "s" EGP pkt -- %s
+./libegp/gateegp.c        75  TRAP_OPER  "aS" EGP: neighbor %a is %S
+./libegp/getpacket.c      76  TRAP_DEBUG  "d" /*GetPacket called for %d data bytes
+./libegp/getpacket.c      77  TRAP_DEBUG  "d" GetPacket: no buffer for %d bytes
+./libegp/getpacket.c      78  TRAP_DEBUG  "dd" GetPacket only got %d bytes, wants %d
+./libegp/regp.c           82  TRAP_FIRE  "aa" EGP: off-net routing request by nbr %a for net %a
+./libegp/regp.c           83  TRAP_DEBUG  "dadd" EGP: rcvd NR msg %d bytes nbr %a int nbr %d ext nbr %d
+./libhap/hapout.c         84  TRAP_DEBUG  "d" bitspertick == 0
+./libtrunk/trunk_out.c    85  TRAP_DEBUG  "d" bitspertick == 0
+./libether/bi4ether.c     86  TRAP_DEBUG  "d" bitspertick == 0
+./libegp/regp.c           87  TRAP_FIRE  "x" EGP: eof on read of file, FILE* = %x
+./libether/bi4ether.c     88  TRAP_DEBUG  "d" bitspertick == 0
+./libegp/regp.c           89  TRAP_DEBUG  "aa" EGP: no room for indirect nbr %a from %a
+./libegp/regp.c           90  TRAP_DEBUG  "aa" EGP: skip indirect nbr %a learned from %a is in my AutonSys
+./libegp/regp.c           91  TRAP_DEBUG  "aad" egp: IGNORE REPORT from %a about nbr %a in state %d
+./libegp/regp.c           96  TRAP_DEBUG  "aada" EGP from %a: net %a is %d hop(s) via %a
+./libegp/segp.c           98  TRAP_FIRE  "aa" EGP: nbr %a polled us, asking for remote net %a
+./libegp/console_support.c 99  TRAP_DEBUG  "dad" EGP sent NR msg of %d bytes to nbr %a (MTU = %d)
+./libegp/segp.c           100  TRAP_DEBUG  "a" EGP: spf nbr %a all intf up, omit self as path
+./libegp/segp.c           101  TRAP_DEBUG  "ax" EGP: spf nbr %a down on interfaces (bits) 0x%x
+./libegp/segp.c           102  TRAP_DEBUG  "aa"   EGP omit route about self %a on comm net to nbr %a
+./libegp/segp.c           103  TRAP_DEBUG  "ada" EGP omit route(s) via nbr %a on same AS %d as rcvr %a
+./libegp/segp.c           106  TRAP_DEBUG  "da" EGP: >255 nets with same dist %d via %a
+./libegp/segp.c           107  TRAP_DEBUG  "a" EGP omit our common net %a to rcvr
+./libsrc/findhop.c        110  TRAP_OPER  "saadd" route: %s net %a via %a int %d metric %d
+./libegp/spread.c         111 Crash0  ""  **PREV CRASH**  spread: config can't have more than 32 interfaces
+./libegp/spread.c         112  TRAP_DEBUG  "d" spread: wait %d seconds
+./libegp/spread.c         113  TRAP_FIRE  "dxx" EGP: waited %d secs for 0x%x intf bits to clear; only 0x%x active
+./libegp/spread.c         114  TRAP_FIRE  "d" EGP: fail to get token for intf %d
+./libegp/spread.c         115  TRAP_DEBUG  "dd" spread: tokenhdl intf %d, nbr %d got token
+./libegp/spread.c         116  TRAP_DEBUG  "ddad" spread: nbr %a, intf %d, nidx %d, egpst %d
+./libegp/spread.c         117  TRAP_OPER  "a" EGP: no table space to add neighbor %a
+./libegp/spread.c         118  TRAP_DEBUG  "d" spread: tokenhdl intf %d end of loop
+./libegp/spread.c         119  TRAP_DEBUG  "dd" EGP cycle to %d interior nbrs took %d ms
+./libether/bi4ether.c     120  TRAP_FIRE  "dd" Ether#%d: arp table room for %d entries
+./libether/bi4ether.c     121  TRAP_FIRE  "da" Ether#%d: broadcast address is %a
+./libether/bi4ether.c     122  TRAP_DEBUG  "d6X" Ether#%d: IP broadcast from %6X dropped
+./libether/bi4ether.c     123  TRAP_DEBUG  "dx6X" Ether#%d: probe (type 0x%x) from %6X
+./libether/bi4ether.c     124  TRAP_DEBUG  "dx6X" Ether#%d: unknown type 0x%x from %6X
+./libether/bi4ether.c     125  TRAP_FIRE  "d6Xdd" Ether#%d: ARP from %6X only %d long, need %d
+./libether/bi4ether.c     127  TRAP_FIRE  "d6Xdd" Ether#%d: ARP from %6X ar_hlen %d instead of %d
+./libether/bi4ether.c     128  TRAP_DEBUG  "d6X2x" Ether#%d: ARP from %6X, bad protocol 0x%2x
+./libether/bi4ether.c     129  TRAP_DEBUG  "d6X" Ether#%d: ARP from %6X, for CHAOS
+./libether/bi4ether.c     130  TRAP_FIRE  "d6Xdd" Ether#%d: ARP from %6X only %d long. Need %d
+./libether/bi4ether.c     131  TRAP_FIRE  "d6Xdd" Ether#%d: ARP from %6X, ar_plen %d instead of %d
+./libether/bi4ether.c     132  TRAP_FIRE  "d4D6X4D6X" Ether#%d: ARP from %6X, %4D->%6X claims our address (%4D->%6X)
+./libether/bi4ether.c     133  TRAP_FIRE  "d6X4D6X" Ether#%d: ARP from %6X, reply not for me, but %4D->%6X
+./libether/bi4ether.c     134  TRAP_FIRE  "d6Xd" Ether#%d: ARP from %6X operation %d not recognized
+./libether/bi4ether.c     135  TRAP_DEBUG  "d4D6Xx6Xx" Ether#%d: IP %4D new EADDR %6X hardware 0x%x (old %6X hardware 0x%x)
+./libether/bi4ether.c     136  TRAP_DEBUG  "d4D6Xx" Ether#%d: install address map entry %4D->%6X hardware (0x%x)
+./libether/bi4ether.c     137  TRAP_DEBUG  "d4Dx" Ether#%d: send requests for IP address %4D, pktq=%x
+./libether/bi4ether.c     139  TRAP_DEBUG  "d4D" Ether#%d: still waiting for ARP reply from %4D
+./libether/bi4ether.c     140 Crash3  "dax"  **PREV CRASH**  Ether#%d: can't delete old ARP entry %a from table %x
+./libether/bi4ether.c     141  TRAP_DEBUG  "d4D6Xdxd" Ether#%d: drop addr map entry %4D->%6X, age=%d pktq=%x state=%d
+./libether/ether_init.c   164 TRAP_DEBUG "ddd" Ether device number %d, process %d, processor %d
+./libether/ether_init.c   165 TRAP_DEBUG "dd" EtherInit: ProcessNumber %d Monitoree %d\n\r
+./libether/ether_init.c   166  TRAP_OPER  "d" Ether_init: device %d, CONFIG Data not provided
+./libether/ether_init.c   167 TRAP_FIRE "ddaad" Ether proc %d, device %d, address %a, mask %a, input bufs %d
+./libether/etherprocm.c   168 TRAP_DEBUG "d" Ether process number %d starting
+./libether/etherprocm.c   169 TRAP_DEBUG "ddx" Main ether process is %d, config device %d, pmb=%x
+./libether/etherprocm.c   170  TRAP_FIRE  "dxx" Ether#%d: UP going from %x to %x (0 means up)
+./libether/etherprocm.c   171  TRAP_FIRE  "dxx" Ether#%d: DOWN going from %x to %x (not 0 means down)
+./libforus/dll.c          190 Crash3   "xxx"  **PREV CRASH**  DLL insert fail: prev=%x this=%x next=%x
+./libforus/dll.c          191 Crash3   "xxx"  **PREV CRASH**  DLL remove fail: prev=%x this=%x next=%x
+./libforus/finit.c        192 TRAP_DEBUG "x" ForUs device number [%x]
+./libforus/finit.c        193 TRAP_DEBUG "dd" ForusInit: ProcessNumber %d Monitoree %d\n\r
+./libforus/finit.c        194 TRAP_DEBUG "x" address of forus's queue base %x
+./libforus/finit.c        195 Crash0 ""  **PREV CRASH**  something was on the ForUs queue!
+./libforus/finit.c        196  TRAP_OPER  "" Gateway starting; no previous crash
+./libforus/forus.c        197 TRAP_DEBUG "x" Forus: process number %x
+./libforus/forus.c        198 TRAP_DEBUG "Id" ForUs: pkt [%I] IP len %d
+./libforus/forus.c        199 TRAP_FIRE "xxx" FORUS: buf %x bad packet (ip %x)!=(PtrToData %x)
+./libforus/forus.c        200 TRAP_FIRE "I" forus: unrecognized protocol %d [%I]
+./libforus/forus.c        201  TRAP_DEBUG "Id" ForUs: sending pkt: %I, packet length %d
+./libforus/forus.c        202 TRAP_FIRE "Id" FORUS: Received an unexpected UDP [%I] tid %x
+./libforus/hmp_control.c  203  TRAP_DEBUG  "dd" HMP: ProcessNumberedSwitches: Param %d, Value %d
+./libforus/hmp_control.c  204 TRAP_DEBUG  "dd" HMP: Ignoring bad Numbered Switch Parm %d, max. Parm %d
+./libforus/hmp_control.c  206  TRAP_OPER  "d" HMP: Unknown HMP control parameter %d ignored
+./libforus/hmp_control.c  207  TRAP_OPER  "s" HMP: %s gateway restart requested...RESTARTING
+./libforus/hmp_control.c  208 Crash3  "dsa"  **PREV CRASH**  Restart requested; crashing; Test junk: 3 %d, foo %s, 1.1.1.1 %a
+./libforus/hmp_internal.c 209 Crash0  ""  **PREV CRASH**  something was on the Monitoring queue!
+./libforus/hmp_internal.c 210 Crash0 ""  **PREV CRASH**  InitHTMCacheTable: no memory for FillPtr
+./libforus/hmp_internal.c 211 Crash0 ""  **PREV CRASH**  InitHTMCacheTable: no memory for SendPtr
+./libforus/hmp_main.c     212  TRAP_DEBUG  "dI" HMP: illegal part of HMP message, byte # %d, %I
+./libforus/hmp_main.c     213  TRAP_FIRE  "dI" HMP: recv'd message with illegal HMP system type %d, re: %I
+./libforus/hmp_main.c     214  TRAP_FIRE  "xI" HMP: Bad HMP checksum %x, re: %I
+./libforus/hmp_main.c     215 TRAP_DEBUG  "ddI" HMP: Got poll with message type %d and subtype %d from host %I
+./libforus/hmp_main.c     216 TRAP_OPER  "dI" HMP: Illegal or unimplemented HMP R-Subtype %d, pkt %I
+./libforus/hmp_main.c     217 TRAP_FIRE  "dI" HMP: Illegal or unimplemented HMP poll %d, pkt %I
+./libforus/hmp_main.c     218 TRAP_OPER  "" HMP: Can't get buffers for HMP reply
+./libforus/hmp_main.c     219 TRAP_OPER  "d" HMP: IP pkt TotalLen %d too short for HMP header
+./libforus/hmp_main.c     220 TRAP_DEBUG  "" HMP: Packet physically too short for fixed part of HMP header
+./libforus/hmp_main.c     221 TRAP_DEBUG  "d" HMP: IP pkt TotalLen %d too short for end of HMP header
+./libforus/hmp_main.c     222 TRAP_OPER  "" HMP: Packet physically too short for end of HMP header
+./libforus/mgen.c         223 TRAP_OPER  "" Incomplete HMP parameter received
+./libforus/mgen.c         224 TRAP_OPER  "dd" Incomplete HMP parameter value [expect %d, received %d] 
+./libforus/icmp.c         227  TRAP_DEBUG  "I" send ICMP about [%I] but do not forw orig pkt
+./libforus/icmp.c         228  TRAP_FIRE          "Ix" ICMP flag check (no flag):[%I]: pkt %x
+./libforus/icmp.c         229  TRAP_DEBUG  "I" ICMP: Can't get buf re: %I
+./libforus/icmp.c         230  TRAP_DEBUG  "daI" Sending ICMP Unreachable, code %d to %a re: %I
+./libforus/icmp.c         231  TRAP_DEBUG  "daI" Sending ICMP Source Quench, code %d to %a re: %I
+./libforus/icmp.c         232  TRAP_DEBUG  "daI" Sending ICMP Redirect, code %d to %a re: %I
+./libforus/icmp.c         233  TRAP_DEBUG  "daI" Sending ICMP Time Exceeded, code %d to %a re: %I
+./libforus/icmp.c         234  TRAP_DEBUG  "ddaI" Sending ICMP Parameter Problem, code %d at offset %d to %a re: %I
+./libforus/icmp.c         235  TRAP_DEBUG  "ddxaI" Sending ICMP error, type %d, code %d, misc %x to %a re: %I
+./libforus/icmp.c         236  TRAP_DEBUG  "xIx" Bad ICMP checksum %x for pkt %I; packet dropped 0x%x
+./libforus/icmp.c         237  TRAP_DEBUG  "I" ICMP: rcvd ECHO REQUEST %I
+./libforus/icmp.c         238  TRAP_DEBUG  "I" ICMP: rcvd ECHO REPLY %I
+./libforus/icmp.c         239  TRAP_DEBUG  "I" ICMP: rcvd TIMESTAMP REQUEST %I
+./libforus/icmp.c         240  TRAP_DEBUG  "dI" ICMP type %d not impl, pkt %I
+./libforus/ipassemble.c   241  TRAP_FIRE  "I" ForUs: IP non-first fragment ignored: %I
+./libforus/ipassemble.c   242  TRAP_FIRE  "I" ForUs: first fragment ignored: %I
+./libforus/ipassemble.c   243  TRAP_FIRE  "aax" IPAssemble: no table room; drop %x->%x id/pr %x
+./libforus/ipassemble.c   244  TRAP_FIRE  "xdd" IPAssemble: fragment at 0x%x with %d buffs but only room for %d
+./libforus/ipassemble.c   245  TRAP_DEBUG  "xdddd" IPAssemble: frag at 0x%x with %d buffs (%d left), lo %d hi %d
+./libforus/ipassemble.c   246  TRAP_FIRE  "xdddd" IPAssemble: overlap pkt from %x; lo %d hi %d, lo %d hi %d
+./libforus/ipassemble.c   247  TRAP_DEBUG  "xxxdd" IPAssemble: part %x->%x id/pr %x, bytes %d, max %d
+./libforus/ipassemble.c   248  TRAP_FIRE  "xdd" IPAssemble: Crash? pkt %x returning %d buffs > %d counted
+./libforus/ipassemble.c   249  TRAP_DEBUG  "aadxx" IPAssemble: complete pkt %x->%x len %d id/pr %x/%x
+./libforus/ipassemble.c   250  TRAP_DEBUG  "xdd" Merge: pkt1 at 0x%x lo byt %d hi byt %d
+./libforus/ipassemble.c   251  TRAP_DEBUG  "xdd" Merge: pkt2 at 0x%x lo byt %d hi byt %d
+./libforus/ipassemble.c   252  TRAP_FIRE  "aaxdd" IPAssemble: timeout pkt %a->%a id/pr %x buffs %d (in use %d)
+./libgwinit/configrel.c   253 Crash1 "x"  **PREV CRASH**  InitDeviceRout:alloc_seg status = %x
+./libgwinit/configrel.c   254 TRAP_DEBUG "ddx" Input dev %d, Output dev %d, queue %x\n\r
+./libgwinit/configrel.c   255 TRAP_DEBUG "ddx" Input dev %d, Output dev %d, queue %x\n\r
+./libgwinit/configrel.c   256 TRAP_DEBUG "ddx" Input dev %d, Output dev %d, arg %x\n\r
+./libgwinit/configrel.c   257 TRAP_DEBUG "ddx" Input dev %d, Output dev %d, arg %x\n\r
+./libforus/finit.c        258 Crash1 "x"  **PREV CRASH**  forus: alloc of I/O memory failed status [%x]
+./libgwinit/gwinit.c      260 Crash1 "x"  **PREV CRASH**  CommInit: alloc for MonitoreeTable failed status = %x\n\r
+./libgwinit/gwinit.c      261 Crash1 "x"  **PREV CRASH**  C320HaltAndRestartInit: alloc failed, status = %x\n\r
+./libgwinit/gwinit.c      262 TRAP_OPER "a" gwinit: Can't find net for %a in table
+./liblapb/lapb_driver.c   263  TRAP_DEBUG  "xdxxdddd" LAPB #%d: dev %x rm %x tm %x lev %d vec %d nr %d nt %d
+./liblapb/lapb_driver.c   264  TRAP_DEBUG  "ddddxx" LAPB #%d: T1 (1/10ths) %d k_value %d retry_lim %d loc addr %x rem addr %x
+./liblapb/lapb_driver.c   265  TRAP_OPER  "dxxxxx" LAPB #%d (port %x): wrong device type %x not %x or %x or %x
+./liblapb/lapb_driver.c   266  TRAP_DEBUG  "dx" LAPB #%d: LAPBBlock %x
+./liblapb/lapb_driver.c   267  TRAP_OPER  "dx" LAPB #%d: I/O memory allocation failed %x
+./liblapb/lapb_driver.c   268  TRAP_OPER  "ddd" LAPB #%d: not enough rcv buffers - got %d need %d
+./liblapb/lapb_driver.c   269  TRAP_FIRE  "d" LAPB #%d: reset failed - no xmit clock
+./liblapb/lapb_driver.c   270  TRAP_DEBUG  "dxxx" LAPB #%d: rcv tbl %x xmt tbl %x station tbl %x
+./libmb/appropmb.c        271  TRAP_DEBUG  "aa" AppropriateMailbridge:Not in any MB Group! PrevNet: %a, NextNet %a
+./libmb/appropmb.c        272  TRAP_DEBUG  "ddaa" AppropMB: costs: prev %d, next %d; left %a, right %a
+./libmb/appropmb.c        273  TRAP_DEBUG  "daa" AppropMB: prev cost %d; left %a, right %a
+./libmb/appropmb.c        274  TRAP_DEBUG  "d" AppropriateMailbridge: ALL %d Mailbridges are down in this group
+./libmb/appropmb.c        275  TRAP_DEBUG  "da" MBAppropriateMB: Least Cost: %d, RedirectVia: %a
+./libmb/appropmb.c        276  TRAP_DEBUG  "aa" MBAppropriateGroup: Could not find match for PrevNet: %a and NextNet: %a
+./libmb/cost_table.c      277  TRAP_OPER  "da" CostTableGetCost: Invalid RowIndex=%d, MB=%a
+./libmb/cost_table.c      278  TRAP_OPER  "ddaa" CostTableGetCost: Invalid ColumnIndex=%d, NumPrevOrNextHops=%d, MB=%a, PrevOrNextHop=%a
+./libmb/mb.c              279 TRAP_DEBUG "x" MB: process number = %x
+./libmb/mb.c              280 TRAP_DEBUG "ddx" MBInit: ProcessNumber %d Monitoree %d ets %x
+./libmb/mb.c              281 TRAP_DEBUG "Id" Access granted for %I, Output Device %d
+./libmb/mb.c              282  TRAP_DEBUG  "I" Access denied for %I
+./libmb/mb_nbr_table.c    283  TRAP_OPER  "saa" MB nbr table %s nets inconsistent: %a not on net %a, ld sh off
+./libmb/mb_nbr_table.c    284  TRAP_OPER  "saa" MB nbr table %s nets inconsistent: %a not on net %a, ld sh off
+./libmb/mb_nbr_table.c    285 TRAP_DEBUG  "daa" MBNbrTableBringUp: LS Nbr %d addr: %a %a
+./libmb/mb_nbr_table.c    286 TRAP_DEBUG "aaa" MBNbrTableBringUp: my config addr %a ls left addr %a right addr %a
+./libmb/mb_nbr_table.c    287 TRAP_OPER  "" MBNbrTableBringUp: no matching addr in mb_nbr_table, ld sh turned off
+./libmb/mb_segment.c      288 Crash2 "dd"  **PREV CRASH**  mb init: NumGroups value %d (max allowable %d)
+./libmb/mb_segment.c      289 Crash3  "ddd"  **PREV CRASH**  Inconsitency in config! AccessControlOn %d NumDecisionTrees %d ActiveDecisionTree %d
+./libmb/mb_segment.c      290 Crash1 "s"  **PREV CRASH**  MBSegmentInit: Can't find %s for Access Control
+./libmb/mb_segment.c      291  TRAP_OPER  "s" MBSegmentInit: Can't find %s, Load Sharing turned OFF
+./libmb/mb_segment.c      292 Crash0 ""  **PREV CRASH**  MBSegmentInit: failure to allocate memory
+./libmb/mb_segment.c      293 Crash2  "dd"  **PREV CRASH**  MB: initialization values size %d < expected %d
+./libmb/mb_segment.c      294 Crash1 "s"  **PREV CRASH**  MBSegmentInit: Can't find %s for Access Control
+./libmb/mb_segment.c      295 TRAP_DEBUG "sd" LoadSharingTablesInit:Can't find %s%d,Load Sharing turned OFF
+./libmb/procnumswitch.c   296  TRAP_DEBUG  "" Can't modify MB switches because some file not present
+./libmb/procnumswitch.c   297 TRAP_DEBUG "dd" Ignoring Access Control Numbered Switch command - detected bad data value: %d 
+./libmb/procnumswitch.c   298 TRAP_DEBUG "d" Changing Access Control from %d to %d
+./libmb/procnumswitch.c   299 TRAP_DEBUG "" No active decision tree,ignoring AC ON Switch
+./libmb/procnumswitch.c   300 TRAP_DEBUG "dd" Ignoring LoadSharing Numbered Switch command - detected bad data value: %d 
+./libmb/procnumswitch.c   301 TRAP_DEBUG "s" Turning Load Sharing %s
+./libmb/procnumswitch.c   302 TRAP_DEBUG "" No group table,ignoring LS ON Switch
+./libmb/procnumswitch.c   303 TRAP_DEBUG "dd" Ignoring Cache Numbered Switch command - detected bad data value: %d 
+./libmb/procnumswitch.c   304 TRAP_DEBUG "s" Rcv Cache %s Switch
+./libmb/procnumswitch.c   305 TRAP_DEBUG "dd" Ignoring Redirect Host Numbered Switch command - detected bad data value: %d 
+./libmb/procnumswitch.c   306 TRAP_DEBUG "s" Rcv %s Redirect-Host Switch
+./libmb/procnumswitch.c   307 TRAP_DEBUG "d" Ignore Active Decision Tree Numbered Switch command : can't find decision-tree-%d
+./libmb/procnumswitch.c   308 TRAP_DEBUG "dd" Switching Active Decision Tree number from %d to %d
+./libmb/tree.c            309 TRAP_OPER "dddx" Decision Tree info, Ver %d Nodes %d COI size %d, tree %x
+./libmb/tree.c            310  TRAP_DEBUG "dxxx" Quest.=%d Ans.ToMatch=0x%x Ans.=0x%x  Act.=0x%x
+./libmb/tree.c            311  TRAP_FIRE  "saaaasdxs" %s Failed Access Control: s %a d %a p hop %a n hop %a prot %s %d packet_kind 0x%x failed %s question
+./libmb/tree.c            312 Crash0 ""  **PREV CRASH**  Access Control Failure
+./libmb/tree.c            313 TRAP_OPER "ddddxx" Decision Tree: Ver %d Nodes %d COI size %d, tree ptr %x, free ptr %x
+./libmb/tree.c            314  TRAP_DEBUG  "daa" DecisionTreeCOI:CoiListSize:%d, SourceAddr:%a, DestAddr:%a
+./libmb/tree.c            315  TRAP_DEBUG "dax" DecisionTreeCOI:i:%d,p->Address:%a,p->Coi:0x%x
+./libmb/tree.c            316  TRAP_DEBUG  "daa" DecisionTreeCOI:SourceCOI:0x%x, DestCOI:0x%x, Found:%d
+./libhap/hapin.c          330  TRAP_DEBUG  "dx" HAP #%d: rcvd hdwr checksum error pkt %x
+./libhap/hapsyn.c         331  TRAP_FIRE  "dd" HAP #%d: xpc_reinit failed - ret code %d
+./libhap/hapsyn.c         332  TRAP_FIRE  "d" HAP #%d: HAP link going down
+./libhap/hapsyn.c         333  TRAP_FIRE  "dd" Hap #%d: xpc_REinit failed - ret code %d
+./libmsg_gen/ping.c       334 TRAP_DEBUG "x" MsgGen: process number = %x
+./libmsg_gen/ping.c       335 TRAP_OPER "dI" [(send HMP R-Mess Type %d) -> %I]\n\r
+./libmsg_gen/ping.c       336 TRAP_FIRE "d" PING: no buffers available - times in loop %d\n\r
+./libhap/hapout.c         337  TRAP_DEBUG  "xd" /*HAP OUT:  Pkt %x Length %d n_bytes %x offset %x device %x
+./libhap/hapin.c          338  TRAP_DEBUG  "xdxx" /*HAP IN:  Pkt %x Length %d (%x) MCW %x Checksum %x
+./libmsg_gen/ping.c       339  TRAP_DEBUG  "sIddxxx" %s:[%I]: IP len %d ttl %d flags %x ident %x tos %x
+./libhap/hapin.c          340  TRAP_DEBUG  "" Hap STREAM pkt received
+./libhap/hapin.c          341  TRAP_DEBUG  "x" Hap pkt %x without IP header received
+./libhap/hapin.c          342  TRAP_DEBUG  "xx" Bad HAP Checksum: theirs was %x mine was %x
+./libhap/hapin.c          343  TRAP_DEBUG  "" HAP Forwarding received pkt with data error
+./libhap/hapin.c          344  TRAP_DEBUG  "2D" Hap destination %2D is not us(%2D)
+./libhap/hapcontrol.c     345  TRAP_OPER  "" Detected Hap LOOP
+./libhap/hapin.c          346  TRAP_DEBUG  "x" HAP hdwr fmt err: %x
+./libhap/hapin.c          347  TRAP_DEBUG  "x" HAP Pkt %x:  received HARDWARE checksum error
+./libhap/hapcontrol.c     348  TRAP_DEBUG  "" HAP status message while disabled
+./libhap/hapcontrol.c     349  TRAP_DEBUG  "" HAP RR message while disabled
+./libhap/hapcontrol.c     350  TRAP_DEBUG  "" HAP RC message while disabled
+./libhap/hapcontrol.c     351  TRAP_DEBUG  "d" Bogus HAP event %d while disabled
+./libhap/hapcontrol.c     352  TRAP_DEBUG  "a" Hap Link %a down
+./libhap/hapcontrol.c     353  TRAP_DEBUG  "" /*HAP status msg during restart
+./libhap/hapcontrol.c     354  TRAP_DEBUG  "a" HAP %a RR_SNT: Received RR
+./libhap/hapcontrol.c     355  TRAP_DEBUG  "a" HAP RR_SNT: Received RC
+./libhap/hapcontrol.c     356  TRAP_DEBUG  "d" Bogus HAP event %d
+./librouting/configtemp.c 357 Crash1 "d"  **PREV CRASH**  MaxPieces in routing config must be > 0; was %d
+./libhap/hapcontrol.c     358  TRAP_DEBUG  "a" HAP %a RC_SNT: Recieved RR: resetting
+./libhap/hapcontrol.c     359  TRAP_DEBUG  "a" HAP %a RC_SNT: Recieved RC: starting
+./libhap/hapcontrol.c     360  TRAP_DEBUG  "d" Bogus HAP event %d
+./libhap/hapcontrol.c     361  TRAP_OPER  "a" HAP Link %a up
+./libhap/hapcontrol.c     362  TRAP_DEBUG  "" HAP_on:  No event
+./libhap/hapcontrol.c     363  TRAP_OPER  "a" %a HAP status timeout; taking link down; resetting BIO
+./libhap/hapcontrol.c     364  TRAP_FIRE  "a" %a HAP_ON: Received RestartRequest; resetting
+./libhap/hapcontrol.c     365  TRAP_DEBUG  "a" %a HAP_ON: Received RC
+./libhap/hapcontrol.c     366  TRAP_DEBUG  "d" Bogus HAP event %d
+./libhap/hapcontrol.c     367  TRAP_DEBUG  "d" Bogus HAP state %d.
+./libhap/hapcontrol.c     368  TRAP_DEBUG  "s" %s no buffer for SendRR
+./libhap/hapcontrol.c     369  TRAP_DEBUG  "as" HAP %a %s %s message
+./libhap/hapcontrol.c     370  TRAP_DEBUG  "as" HAP %a: can't send %s message
+./libhap/hapcontrol.c     371  TRAP_DEBUG  "xdd" HAP Control Pkt Illegal Len: mcw=%x Length %d but expected %d
+./libhap/hapcontrol.c     372  TRAP_DEBUG  "xx" Bad HAP Checksum: theirs was %x mine was %x
+./libhap/hapcontrol.c     373  TRAP_DEBUG  "a" HAP %a: Received AR message
+./libhap/hapcontrol.c     374  TRAP_DEBUG  "a" HAP %a: Received UR message, %x %x %x
+./libhap/hapcontrol.c     375  TRAP_DEBUG  "ad" HAP %a: Recd NOP msg with bad length, %d
+./libhap/hapcontrol.c     376  TRAP_DEBUG  "a" HAP %a: Received NOP message
+./libhap/hapcontrol.c     377  TRAP_DEBUG  "x" HAP Bogus control message, mcw=%x
+./libhap/hapevents.c      378  TRAP_DEBUG  "adddddddd" HAP at %a sent status msg # %d:  rne %d + rwe %d = %d\r\n          stu %d, sbu %d, bhc %d, hei %d
+./libhap/hapsyn.c         379  TRAP_DEBUG  "XPC"  Xpc Misses: %d  Buffer Too Short: %d  (block %x) bit #3: %d  bit #5: %d
+./libhap/hapsyn.c         380  TRAP_DEBUG  "XPC"  %s %s %s %s %s %s %s %s %s %s %s 
+./libhap/hapout.c         381  TRAP_FIRE  "dx" HAP #%d: xmit failed ;pkt %x
+./librouting/flooding.c   382 TRAP_DEBUG "adddd" SPF: removed %a as component for gwy %d pos %d NumComponents %d NumComponentsUp %d
+./librouting/flooding.c   383 Crash2 "da"  **PREV CRASH**  GetComponentIndex couldn't find component for neighbor %d (%a)
+./librouting/flooding.c   384 Crash2 "dd"  **PREV CRASH**  ChooseUpComponent found NumComponentsUp = %d gwy %d
+./librouting/flooding.c   385 Crash2 "dd"  **PREV CRASH**  ChooseComponent found NumComponents = %d gwy %d
+./librouting/flooding.c   386 Crash1 "d"  **PREV CRASH**  Routing: ChooseComponent found no components for neighbor %d
+./librouting/flooding.c   387 Crash2 "xd"  **PREV CRASH**  RemoveFromList called with empty list : listheader = %x  neighbor = %d
+./libhap/hapinit.c        388  TRAP_DEBUG  "HI" HapInit: %x %x %x %x %x
+./librouting/flooding.c   389 TRAP_DEBUG "d" SPF: ClearAgedRup: removing gwy %d from flooding database
+./librouting/flooding.c   390 Crash3 "ddd"  **PREV CRASH**  found cell %d in flooding column %d in illegal state %d
+./librouting/flooding.c   391 TRAP_DEBUG "" SPF: Printing ResourceList:
+./librouting/flooding.c   392 TRAP_DEBUG "ddd" SPF:  %d: Backward = %d  Forward = %d
+./librouting/init.c       393 TRAP_DEBUG "d" SPF: starting spf sequence number at %d
+./librouting/interfaceevent.c 394 TRAP_FIRE "dx" SPF: interface %d status event, status %x not new information
+./librouting/interfaceevent.c 395 TRAP_FIRE "da" SPF: interface %d came up: IP address is %a
+./librouting/interfaceevent.c 396 TRAP_DEBUG "ad" SPF: omitting neighbor with my own address %a on interface %d
+./librouting/interfaceevent.c 397 TRAP_FIRE "d" SPF: interface %d went down
+./librouting/interfaceevent.c 398 TRAP_DEBUG "" SPF: Printing Interface Table
+./librouting/interfaceevent.c 399 TRAP_DEBUG "dx" SPF: interface %d:  Status = %x
+./librouting/mbupdown.c   400  TRAP_DEBUG  "a" MBUpDownUpdate: Connection %a is DOWN
+./librouting/mbupdown.c   401  TRAP_DEBUG  "a" MBUpDownUpdate: Connection %a is UP
+./librouting/mbupdown.c   402  TRAP_DEBUG  "ad" MBUpDownUpdate: Connection %a is not UP or DOWN it is %d 
+./librouting/mbupdown.c   403  TRAP_DEBUG  "dadadd" MBUpDownTryUpdate: (RT_pmb->Private.NbrTable): %d Left: %a LStatus: %d Right: %a RStatus: %d	 IsUp: %d
+./librouting/mbupdown.c   404  TRAP_DEBUG  "" MBUpDown: SendUpdate found previous update not handled 
+./librouting/mbupdown.c   405  TRAP_DEBUG "" MBUpDown: SendUpdate could not PostEvent
+./librouting/rupgen.c     406 TRAP_FIRE "ddd" SPF: Generating rup failed: %d neighbors %d interfaces %d computed Updatesize
+./librouting/resourcelist.c 407 TRAP_DEBUG "d" SPF: Build Rup, update size = %d
+./librouting/msglibadd.c  408 Crash2 "dd"  **PREV CRASH**  in RtgWrite, numbytes = %d availablebytes = %d
+./librouting/msglibadd.c  409 Crash2 "dd"  **PREV CRASH**  in RtgWrite, MG_Write wrote %d bytes instead of %d
+./librouting/neighborroutines.c 410 TRAP_OPER "dad" SPF: bringing down connection to gwy %d (%a) state = %d
+./librouting/neighborroutines.c 411 TRAP_OPER "da" SPF: bringing up gateway %d (%a)
+./librouting/neighborroutines.c 412 TRAP_DEBUG "dd" SPF: Gathering %d configured neighbors on interface %d
+./librouting/neighborroutines.c 413 TRAP_DEBUG "daddddd" SPF: on interface %d neighbor %a distance %d retr %d k %d n %d rate %d
+./librouting/neighborroutines.c 414 TRAP_DEBUG "" SPF: Printing NeighborTable
+./librouting/neighborroutines.c 415 TRAP_DEBUG "d" SPF:   interface %d
+./librouting/neighborroutines.c 416 TRAP_DEBUG "a" SPF:     %a
+./librouting/resourcelist.c 417 Crash2 "dd"  **PREV CRASH**  update of %d bytes ; %d is max allowed
+./librouting/resourcelist.c 418 TRAP_OPER "dd" SPF: maximum retransmissions of update about %d to %d
+./librouting/resourcelist.c 419 TRAP_DEBUG "dddd" SPF: BuildRup: bad rup about %d to %d, %d nbr entries, spf says %d
+./librouting/resourcelist.c 420 TRAP_FIRE "d" SPF: output queue %d full; dropping routing update
+./librouting/resourcelist.c 421 TRAP_DEBUG "addd" SPF: PrintUpdate:NextHop=%a tok=%d len=%d exitgwy=%d
+./librouting/resourcelist.c 422 TRAP_DEBUG "dd" SPF: Routing: in PrintUpdate,length of message = %d  NumBytes = %d
+./librouting/resourcelist.c 423 TRAP_DEBUG "ddddd" SPF:   about %d: seq=%d ExplicitAck=%d Retransmission=%d Age=%d
+./librouting/resourcelist.c 424 TRAP_DEBUG "a" SPF:     %a
+./librouting/resourcelist.c 425 TRAP_DEBUG "dd" SPF:     %d  (distance %d)
+./librouting/returnqevent.c 426 Crash3 "ddd"  **PREV CRASH**  token from update to %d about %d found cell in state %d
+./librouting/routing.c    427 TRAP_DEBUG "" SPF: Routing initialization completed
+./librouting/routing.c    428 TRAP_DEBUG "" SPF: Routing initialization completed
+./librouting/routinginit.c 429 TRAP_OPER "dd" SPF: Configured MaxNeighbors was too big (%d); reduced to NeighborLimit %d
+./librouting/routinginit.c 430 TRAP_OPER "dd" SPF: CAUTION! MaxNeighbors = %d; should not be bigger than SPFMAXNEIGHBORS(%d)
+./librouting/routinginit.c 431 Crash1 "x"  **PREV CRASH**  newly-created queue %x was not empty
+./librouting/routinginit.c 432 Crash1 "x"  **PREV CRASH**  newly-created queue %x was not empty
+./librouting/routingqevent.c 433 TRAP_DEBUG "d" SPF: flushing routing update sent by down neighbor %d
+./librouting/resourcelist.c 434 TRAP_DEBUG "ddd" SPF: version  %d  (length %d params %d)
+./librouting/routingqevent.c 435 Crash0 ""  **PREV CRASH**  illegal value returned by UpdateStatus
+./librouting/routingqevent.c 436 TRAP_DEBUG "ddddd" SPF: got old update about %d from %d seq %d retr %d eack %d
+./librouting/routingqevent.c 437 TRAP_DEBUG "ddddd" SPF: got current update about %d from %d seq %d retr %d eack %d
+./librouting/routingqevent.c 438 Crash3 "ddd"  **PREV CRASH**  found cell %d in flooding column %d in illegal state %d
+./librouting/routingqevent.c 439 TRAP_DEBUG "ddddd" SPF: got new update about %d from %d seq %d retr %d eack %d
+./librouting/routingqevent.c 440 TRAP_DEBUG "ddd" SPF: Routing: update from %d being preprocessed; %d interfaces %d neighbors
+./librouting/routingqevent.c 441 Crash3 "dd"  **PREV CRASH**  illegal state in SendNewUpdate : cell = %d neighbor = %d state = %d
+./libether/bi4ether.c     442  TRAP_DEBUG  "daa6Xd" Ether#%d: Ignoring ARP request for %a from %a->%6X, MACtype %d
+./librouting/routingqevent.c 443 TRAP_FIRE "ddda" SPF: got malformed rup (too short, %d < %d): input dev %d, prev hop %a
+./librouting/routingqevent.c 444 TRAP_OPER "xda" SPF: bad checksum (%x) on rup : interface %d previous hop %a
+./librouting/routingqevent.c 445 TRAP_OPER "dda" SPF: unknown rupmsgheader ver num (%d) on rup : interface %d previous hop %a
+./librouting/routingqevent.c 446 TRAP_DEBUG "da" SPF: got malformed rup (too short) : interface %d previous hop %a
+./librouting/routingqevent.c 447 TRAP_OPER "ddda" SPF: got new rup expl ack about %d seq no %d : interface %d previous hop %a
+./librouting/routingqevent.c 448 TRAP_OPER "dda" SPF: illegal source gwy number on rup (%d) : interface %d previous hop %a
+./librouting/routingqevent.c 449 TRAP_OPER "ddda" SPF: rcvd rup with age=0 source gw %d seq %d, intf %d prev hop %a
+./librouting/routingqevent.c 450 TRAP_DEBUG "da" SPF: got malformed rup (too short) : interface %d previous hop %a
+./libforus/icmp.c         451  TRAP_DEBUG  "I" ICMP: rcvd TIMESTAMP REPLY %I
+./librouting/routingqevent.c 452 TRAP_OPER "dda" SPF: illegal distance (%d) : interface %d previous hop = %a
+./librouting/routingqevent.c 453 TRAP_OPER "dda" SPF: illegal gwy number (%d): interface %d previous hop = %a
+./librouting/routingqevent.c 454 TRAP_FIRE "dddd" SPF: msglength %d numbytes %d numupdates %d i %d
+./librouting/routingqevent.c 455 TRAP_FIRE "ddddd" SPF: ggheader: Dist %d Ver %d GGType %d Exit %d Entry %d
+./librouting/routingqevent.c 456 TRAP_FIRE "ddd" SPF: rmheader: Checksum %d NumBytes %d Ver %d
+./librouting/routingqevent.c 457 TRAP_FIRE "ddddddd" SPF: rup: Src %d Seq %d Age %d Retr %d Expl %d NumI %d NumN %d
+./librouting/routingqevent.c 458 TRAP_FIRE "d" SPF: rup data: NeighborNumber on erroneous entry was %d
+./librouting/routingqevent.c 459 TRAP_OPER "dda" SPF: unknown gg ver num (%d) on rup : interface %d previous hop %a
+./librouting/routingqevent.c 460 Crash3 "ddx"  **PREV CRASH**  bad pkt on routing q; wrong ggtype (%d): interface %d previous hop %a
+./librouting/routingqevent.c 461 TRAP_OPER "dda" SPF: ExitGwy in ggheader on rup = %d : interface %d previous hop %a
+./librouting/routingqevent.c 462 TRAP_OPER "dda" SPF: illegal EntryGwy in ggheader on rup = %d : interface %d previous hop = %a
+./librouting/routingtable.c 463 TRAP_DEBUG "x" SPF: must wait to get old routing table %x back
+./librouting/routingtable.c 464 Crash3 "dxx"  **PREV CRASH**  timed out waiting to get routing table %d back with ReadPrevent %x and WritePrevent %x
+./librouting/routingtable.c 465 TRAP_DEBUG "dd" SPF: got routing table %d back after %d attempt(s)
+./librouting/routingtable.c 466 TRAP_DEBUG "xa" SPF: New Routing Table:  default next hop=%a default interface=%d
+./librouting/routingtable.c 467 TRAP_DEBUG "d" SPF: %d Reachable Gateways:
+./librouting/routingtable.c 468 TRAP_DEBUG "dad" SPF:    %d : next hop %a interface %d
+./librouting/routingtable.c 469 TRAP_DEBUG "d" SPF: %d Reachable Nets:
+./librouting/routingtable.c 470 TRAP_DEBUG "aad" SPF:   %a mask %a: directly connected on interface %d
+./librouting/routingtimer.c 471 TRAP_DEBUG "dd" SPF: Routing: requesting retransmission of update %d to gwy %d
+./librouting/rupgen.c     472 TRAP_DEBUG "" SPF: TypeOfChange was RUP_RIGHTAWAY
+./librouting/rupgen.c     473 TRAP_DEBUG "" SPF: TypeOfChange was RUP_WAITALITTLE and RupGenWaitFlag was not on
+./librouting/rupgen.c     474 Crash1 "d"  **PREV CRASH**  NumComponents>0  for neigh %d but ChooseUpComponent found none
+./librouting/rupgen.c     475 TRAP_DEBUG "ddd" SPF: Generating rup : %d neighbors %d interfaces %d Updatesize
+./librouting/spf.c        476 Crash1 "d"  **PREV CRASH**  bug in PrepareTree: Dest %d reachable but has no parent
+./librouting/spf.c        477 Crash1 "d"  **PREV CRASH**  bug in SPFSearch: node %d has no backlink
+./librouting/spf.c        478 TRAP_DEBUG "" SPF: Printing SPF tree
+./librouting/spf.c        479 TRAP_DEBUG "ddd" SPF: distance to %d is %d  parent = %d 
+./librouting/spf.c        480 TRAP_DEBUG "dd" SPF: distance to %d is %d
+./librouting/timingsystem.c 481 Crash1 "d"  **PREV CRASH**  routing heap overflow: type %d
+./librouting/timingsystem.c 482 Crash1 "d"  **PREV CRASH**  DeleteTimer called with illegal index %d
+./librouting/timingsystem.c 483 Crash2 "xx"  **PREV CRASH**  bug in timing heap : posted time is %x should be %x
+./librouting/timingsystem.c 484 Crash1 "d"  **PREV CRASH**  RoutingTimerEvent: unknown heap type %d
+./librouting/timingsystem.c 485 TRAP_DEBUG "d" SPF: Printing Timing Heap: HeapEnd = %d
+./librouting/timingsystem.c 486 TRAP_DEBUG "ddx" SPF:    time = %d type = %d pointer = %x
+./librouting/token.c      487 Crash1 "d"  **PREV CRASH**  AddToTokenTable found no room in token table for token %d
+./librouting/updownqevent.c 488 Crash1 "x"  **PREV CRASH**  newly-created queue %x was not empty
+./librouting/updownqevent.c 489 TRAP_DEBUG "x" SPF: received %x on down interface
+./librouting/updownqevent.c 490 Crash1 "x"  **PREV CRASH**  UpDown: return queue %x not empty when created
+./librouting/updownqevent.c 491 Crash1 "d"  **PREV CRASH**  Routing: illegal token %d on UpDownReturnQ
+./librouting/updownqevent.c 492 Crash1 "d"  **PREV CRASH**  Routing: unused token %d on UpDownReturnQ
+./librouting/updownqevent.c 493 Crash4 "ddad"  **PREV CRASH**  UpDown: token %d on UpdnRetQ !=  %d for nbr %a on intf %d
+./librouting/updownqevent.c 494 TRAP_DEBUG "ddddd" SPF: received HELLO from gwy %d interface %d version %d seq number = %d state = %d
+./librouting/updownqevent.c 495 TRAP_DEBUG "ddddd" SPF: received IHY from gwy %d interface %d version %d seq num = %d state = %d
+./librouting/neighborroutines.c 496 TRAP_OPER "ad" SPF: no room in Up/Down for neighbor %a : interface %d 
+./librouting/updownqevent.c 497  TRAP_FIRE  "daddd" SPF: rcv Up/Down from gwy %d (%a) ver %d RtnInfo %d, our ver %d
+./librouting/updownqevent.c 498 TRAP_DEBUG "da" SPF: moving %d (%a) into SYNCHRONIZING state
+./librouting/updownqevent.c 499 TRAP_DEBUG "da" SPF: moving %d (%a) into ESTABLISHING state
+./librouting/updownqevent.c 500 TRAP_DEBUG "da" SPF: moving %d (%a) into ESTABLISHING state
+./librouting/updownqevent.c 501 TRAP_DEBUG "da" SPF: received all routing info from %d (%a)
+./librouting/updownqevent.c 502 TRAP_DEBUG "da" SPF: received all routing info from %d (%a)
+./librouting/updownqevent.c 503 TRAP_FIRE "da" SPF: slave told by %d (%a) without proper exchange of rtg info
+./librouting/updownqevent.c 504 TRAP_DEBUG "da" SPF: received all routing info from %d (%a)
+./librouting/updownqevent.c 505 Crash1 "d"  **PREV CRASH**  UpDown: illegal state %d detected in updownq
+./librouting/updownqevent.c 506 TRAP_DEBUG "daddddddd" SPF: sending ihy to gwy %d (%a) on interface %d version %d seq %d rtginfo %d rate %d K %d N %d
+./librouting/updownqevent.c 508 Crash1 "d"  **PREV CRASH**  UpDown: illegal state %d detected in updownq
+./librouting/updownqevent.c 509 TRAP_OPER "add" SPF: neighbor number of %a changed: was %d now %d
+./librouting/updownqevent.c 510 TRAP_OPER "da" SPF: got malformed updown packet (too short) : interface %d previous hop %a
+./librouting/updownqevent.c 511 TRAP_OPER "xda" SPF: bad checksum (%x) on updown pkt : interface %d previous hop %a
+./librouting/updownqevent.c 512 TRAP_OPER "dda" SPF: received up/down with unknown version %d : interface %d previous hop %a
+./librouting/updownqevent.c 513 TRAP_FIRE "ddda" SPF: received up/down from AS %d (my AS = %d) : interface %d previous hop %a
+./librouting/updownqevent.c 514 TRAP_OPER "dda" SPF: unknown gg ver num (%d) on updown : interface %d previous hop %a
+./librouting/updownqevent.c 515 Crash3 "ddx"  **PREV CRASH**  bad pkt on updown q; wrong ggtype (%d): interface %d previous hop %a
+./librouting/updownqevent.c 516 TRAP_OPER "dda" SPF: illegal EntryGwy in ggheader on updown = %d : interface %d previous hop = %a
+./librouting/updowntimer.c 517 TRAP_DEBUG "da" SPF: moving %d (%a) from RESET to DISESTABLISHED
+./librouting/updowntimer.c 518 TRAP_DEBUG "da" SPF: moving %d (%a) into RTGEXCHANGE state
+./librouting/updowntimer.c 519 TRAP_DEBUG "axddxd" nbr %a Bits x%x NValue %d KValue %d Mask x%x BitCount %d
+./librouting/updowntimer.c 520 TRAP_DEBUG "axddxd" nbr %a Bits x%x NValue %d KValue %d Mask x%x BitCount %d
+./librouting/updowntimer.c 521 Crash1 "d"  **PREV CRASH**  UpDown: illegal state %d detected in updownq
+./librouting/updowntimer.c 522  TRAP_DEBUG  "adddddd" nbr (%a) orig %d state %d rate %d Up %d,LastHeard %d Ping %d
+./librouting/updowntimer.c 523  TRAP_DEBUG  "da" SendHello: gwy %d (%a) already has an outstanding hello pkt
+./librouting/updowntimer.c 524  TRAP_FIRE  "da" SendHello: UpDownTokenTable full, not sending hello to gwy %d (%a)
+./librouting/updowntimer.c 525 TRAP_FIRE "da" SPF: no buffer to send a hello/IHY to %d (%a)
+./librouting/updowntimer.c 526 TRAP_DEBUG "daddddd" SPF: sending hello to gwy %d (%a) on interface %d seq = %d rtginfo = %d V %d Settled %d
+./librouting/updowntimer.c 527 TRAP_FIRE "dad" SPF: can't queue hello/ihy to gwy %d (%a) interface %d
+./librouting/updowntimer.c 528  TRAP_DEBUG  "add" UpdownTimer: nbr %a origin %d LastHeard %d
+./librouting/updowntimer.c 529  TRAP_OPER  "ad" UpdownTimer: neighbor %a with invalid %d origin
+./librouting/updowntimer.c 530 Crash2  "ad"  **PREV CRASH**  UpdownTimer: neighbor %a with invalid %d origin
+./libsrc/bi4events.c      531 Crash2  "xx"  **PREV CRASH**  bad event %x handler %x
+./libsrc/bi4events.c      532  TRAP_DEBUG  "dx" Process %d: EventQueue = %x
+./libsrc/bi4events.c      533 Crash2  "dx"  **PREV CRASH**  too many events(max %d), lose event for routine %x ets
+./libsrc/bi4events.c      534 TRAP_DEBUG "dxx" InitEvent: event #%d, routine %x, ownerdata %x
+./libsrc/bi4events.c      535 Crash2 "xx"  **PREV CRASH**  MapQueueSignalToEvent: too many queue signals needed, ets %x, eh %x
+./libsrc/bi4events.c      536 Crash1 "x"  **PREV CRASH**  Set_Timer: bad eh %x calling argument
+./libsrc/bi4events.c      537 Crash2 "xx"  **PREV CRASH**  Set_Timer: duplicate entry on timer queue for eh %x, handler %x
+./libsrc/bi4events.c      538 Crash2 "x"  **PREV CRASH**  Set_Timer: bad eh %x from timerlist %x
+./libsrc/bi4events.c      539 Crash2 "x"  **PREV CRASH**  Clear_Timer: bad eh %x from timerlist %x
+./libsrc/bi4events.c      540 Crash0 "x"  **PREV CRASH**  ExpireTimers: infinite loop in timer list?
+./libsrc/bi4events.c      541 Crash2 "xx"  **PREV CRASH**  ExpireTimers: bad eh.Next %x in eh %x from timerlist
+./libsrc/bi4events.c      542 Crash1 ""  **PREV CRASH**  Wait: no event for timer, event header %x
+./libsrc/bi4events.c      543 Crash1 "x"  **PREV CRASH**  Wait: bad eh %x from timerlist
+./libsrc/bi4events.c      544 Crash2 "xx"  **PREV CRASH**  Wait: bad eh.Next %x in eh %x from timerlist
+./libsrc/bi4events.c      545 Crash2 "EP"  **PREV CRASH**  SetEventPriority: priority %d too high for EH %x
+./librouting/resourcelist.c 546 TRAP_DEBUG "ddaa" SPF: st option type %d length %d, %a through %a
+./libsrc/bufferlib.c      559  TRAP_DEBUG  "x" FreePacket: return buffer %x
+./libforus/finit.c        560 Crash4 "xxxs"  **PREV CRASH**  FreePacket failed: buffer %x ptid %x pcb 0x%x process %s\n\r
+./libsrc/bufferlib.c      563  TRAP_DEBUG  "dx" GetInputBuffer: req for buf - dev %d buf %x
+./libsrc/bufferlib.c      564  TRAP_DEBUG  "dd" GetInputBuffer: dev %d, get_buf can't get buffer - code %d
+./libsrc/bufferlib.c      565  TRAP_DEBUG  "dx" GetInputPacket: req for buf - dev %d buff %x
+./libsrc/bufferlib.c      566  TRAP_DEBUG  "dddd" GetInputPacket: dev %d, can't get buffers - code %d, requested %d, got %d
+./libsrc/bufferlib.c      567 Crash3 "xxx"  **PREV CRASH**  Copy_Buffer: src =%x dst =%x size = %x
+./libx25/x25.c            568  TRAP_OPER  "d" X25 #%d:  Transmit ADDRESS ERROR - restarting transmitter
+./libsrc/bufferlib.c      569 Crash2 "dd"  **PREV CRASH**  Copy_Buffer:source buffer overflow of %d %d
+./libsrc/bufferlib.c      570 Crash2 "dd"  **PREV CRASH**  Copy_Buffer: destination buffer too small %d %d
+./libsrc/cache.c          579  TRAP_DEBUG  "dd" MB CacheClear: %d Hits %d Misses
+./libsrc/cache.c          580  TRAP_DEBUG  "aaddd" CacheFind: src=%a,dst=%a,Hits:Misses %d:%d Found=%d
+./libsrc/cache.c          581 Crash0  ""  **PREV CRASH**  MB: There's an entry in a just-cleared cache
+./libsrc/cache.c          582  TRAP_DEBUG  "aad" CacheInsert: src=%a,dst=%a,InCache=%d
+./libsrc/cache.c          583 TRAP_DEBUG "d" MB:Waited too long for Cache %d -- Abort Wait
+./libsrc/cache.c          584 TRAP_DEBUG "dd" MB: got cache table %d back after %d attempt(s)
+./libsrc/cache.c          585 TRAP_DEBUG "d" MB: No more room in modify list %d
+./libsrc/cache.c          586 Crash2 "dd"  **PREV CRASH**  CacheModifyEnd:Can't get Table %d after %d attempts for write thru
+./libsrc/cache.c          587  TRAP_DEBUG  "dd" CacheModify: %d entries to write thru to table %d
+./libsrc/cache.c          588 TRAP_DEBUG  "ddd" CacheBT: %d bytes BT from table %d to %d
+./libsrc/checksum.c       589  TRAP_FIRE  "dd" FileChecksum: tried to checksum %d bytes, did %d bytes
+./libstrouting/st_rdbase.c 591 TRAP_DEBUG "d" database_length = %d
+./libsrc/devicedisp.c     592  TRAP_FIRE  "Iuux" IP dispatch: [%I]: IP len %u ttl %u pkt %x
+./libsrc/devicedisp.c     593  TRAP_OPER  "xa" IP dispatch: Bad IP checksum [0x%x], prev hop %a
+./librouting/resourcelist.c 594 Crash2 "dd"  **PREV CRASH**  BuildRup:writeing more than available bytes, numbytes = %d availablebytes = %d
+./librouting/resourcelist.c 595 Crash2 "dd"  **PREV CRASH**  BuildRup:writing more than available bytes numbytes=%d availablebytes=%d
+./librouting/resourcelist.c 596 Crash2 "dd"  **PREV CRASH**  BuildRup:writing more than available bytes, numbytes = %d availablebytes = %d
+./librouting/resourcelist.c 597 Crash2 "dd"  **PREV CRASH**  BuildRup:writing more than available bytes,numbytes=%d availablebytes=%d
+./libsrc/getroute.c       598  TRAP_FIRE  "aa" Disp gateway was invalid exit: source %a - dest %a
+./libsrc/getroute.c       599  TRAP_DEBUG  "aaad" Disp EGP source %a: dest %a: next hop %a: device %d
+./libsrc/getroute.c       600  TRAP_DEBUG  "aa" Disp src %a dest %a, can't find next hop
+./libsrc/enqordrop.c      601  TRAP_FIRE  "xxa" process %x: queue %x full; packet from %a dropped
+./libsrc/enqordrop.c      602  TRAP_FIRE  "a" Trying to enq pkt from %a onto null queue; packet dropped
+./libsrc/enqordrop.c      603  TRAP_FIRE  "xxa" process %x: queue %x full; packet from %a dropped
+./libsrc/enqordrop.c      604  TRAP_FIRE  "a" Trying to enq pkt from %a onto null queue; packet dropped
+./libsrc/getmyprocessarea.c 605 Crash2 "dd"  **PREV CRASH**  GetMyProcessArea proc [%d] dev [%d] - can't get memory
+./libst2/hid_db.c         606 TRAP_DEBUG " " ST2:Could not find Replica Group
+./libst2/hid_db.c         607  TRAP_DEBUG " " ST2: Could not find Replica in Group
+./librouting/database.c   608 TRAP_DEBUG "dd" SPF: DB entries USED %d Max %d
+./librouting/database.c   609 TRAP_DEBUG "dd" SPF: DB entries USED %d Max %d
+./librouting/database.c   610 TRAP_DEBUG "dd" SPF:Current DBInterfaces COUNT %d Max %d
+./librouting/database.c   611 TRAP_DEBUG "dd" SPF:Current DBInterfaces COUNT %d Max %d
+./libstrouting/st_database.c 612 TRAP_DEBUG "dd" STRT: DB entries USED %d MAX %d
+./libstrouting/st_database.c 613 TRAP_DEBUG "dd" STRT: DB entries Count(ret)%d Max %d
+./libsrc/hash1table.c     615 Crash3 "xdx"  **PREV CRASH**  Hash1Remove: entry not found for key %x, hash %d, table %x
+./libsrc/intermodule.c    616 Crash1  "s"  **PREV CRASH**  Hdlc requires module %s and none found in tables!
+./libsrc/intermodule.c    617 Crash1  "s"  **PREV CRASH**  Hdlc requires module %s and none found in tables!
+./libstrouting/st_database.c 618 TRAP_DEBUG "dd" STRT:Current DBInterfaces COUNT %d Max %d
+./libstrouting/st_database.c 619 TRAP_DEBUG "dd" STRT:Current DBInterfaces(RET) COUNT %d Max %d
+./libsrc/mb_globals.c     620  TRAP_OPER  "s" %s not found; ld sh off
+./libsrc/mb_globals.c     621  TRAP_OPER  "s" %s not found; ld sh off
+./libsrc/monitoree.c      622 Crash0 ""  **PREV CRASH**  InitMonitoree -- can't alloc seg memory
+./libsrc/monitoree.c      623 Crash1  "d"  **PREV CRASH**  InitMonitoree: data on new dual queue. MonNum: %d
+./libsrc/monitoree.c      624  TRAP_DEBUG  "" Disp: Monitoring queue full; dropping response
+./libsrc/msglib.c         625  TRAP_FIRE  "x" msglib For_All_Buffers:  count is negative %x
+./libsrc/q_routines.c     626 Crash0 ""  **PREV CRASH**  Make_and_NameMyQueues: failed to allocate queue
+./libsrc/q_routines.c     627 Crash0 ""  **PREV CRASH**  Make_and_NameMyQueues: failed to allocate queue
+./libsrc/q_routines.c     628 Crash0 ""  **PREV CRASH**  Make_and_NameMyQueues: failed to allocate queue
+./libsrc/traps.c          631  TRAP_FIRE  "cxx" Bad Crash Format char %c (0x%x), val %x
+./libsrc/traps.c          632 TRAP_FIRE "d" ShutDown: library shutdown routine, process %d
+./libsrc/util.c           633 Crash2 "dd"  **PREV CRASH**  Allocate failed: %d bytes in mem segment 1, status %d
+./libtrunk/trunk.c        634  TRAP_DEBUG  "d" TRUNK: Initializing process number %d
+./libtrunk/trunk.c        635 TRAP_DEBUG "da" TRUNK #%d: Initializing device (IP %a)
+./libtrunk/trunk.c        636  TRAP_OPER  "dd" TRUNK #%d:  Driver init failed - return code %d
+./libtrunk/trunk.c        637 TRAP_FIRE "d" TRUNK #%d: Trunk link down
+./libtrunk/trunk.c        638  TRAP_DEBUG  "dd" TRUNK #%d:  Driver REinit failed - ret code %d
+./libtrunk/trunk.c        639  TRAP_OPER  "da" TRUNK #%d: Trunk going down - CTS Lost (IP %a)
+./libtrunk/trunk.c        640  TRAP_DEBUG  "dd" TRUNK #%d: Driver REinit failed - ret code %d
+./libtrunk/trunk_events.c 641  TRAP_DEBUG  "d" TRUNK #%d: timer expired - send hello
+./libtrunk/trunk_events.c 642  TRAP_DEBUG  "dddd" TRUNK #%d: last 30 secs. - Packets Tx %d Rx %d TxDropped %d 
+./libtrunk/trunk_events.c 643  TRAP_OPER  "da" TRUNK #%d: Trunk link going down (IP %a)
+./libtrunk/trunk_events.c 644  TRAP_FIRE  "d" TRUNK #%d: Hello pkt refused by driver
+./libtrunk/trunk_events.c 645  TRAP_FIRE  "d" TRUNK #%d: No buffer for hello pkt
+./libtrunk/trunk_in.c     646  TRAP_DEBUG  "dx" TRUNK #%d:  Pkt %x received while link down - free it
+./libtrunk/trunk_in.c     647  TRAP_DEBUG  "dx" TRUNK #%d: Received hardware checksum error pkt %x
+./libtrunk/trunk_in.c     648  TRAP_FIRE  "dxxu" TRUNK #%d: unrecognized hdr type 0x%x version 0x%x nbytes %u
+./libtrunk/trunk_in.c     649  TRAP_OPER  "da" TRUNK #%d: Trunk link up (IP %a)
+./libtrunk/trunk_events.c 650  TRAP_FIRE  "d" TRUNK #%d: Detected loop
+./libtrunk/trunk_in.c     651  TRAP_OPER  "da" TRUNK #%d: Trunk link going down (IP %a)
+./libtrunk/trunk.c        652  TRAP_FIRE  "d" TRUNK #%d: CTS still off
+./libtrunk/trunk.c        653  TRAP_OPER  "da" TRUNK #%d: Restarting transmitter -- address error (IP %a)
+./libtrunk/trunk_in.c     654  TRAP_FIRE  "dx" TRUNK #%d: unknown packet type received 0x%x
+./libtrunk/trunk_out.c    655 TRAP_FIRE "dx" TRUNK #%d: next hop %x - free pkt
+./libtrunk/trunk_out.c    656  TRAP_DEBUG  "dx" TRUNK #%d: dropping pkt %x - refused by driver
+./libtrunk/trunk_out.c    657 		TRAP_DEBUG "dx" TRUNK #%d: interface down, drop packet %x
+./libx25/l3_events.c      658 TRAP_DEBUG "d" X25 #%d: try sending from flow control Q
+./libx25/l3_events.c      659 TRAP_DEBUG "d" X25 #%d: FlowControlQ is Empty now, change state to X25_ON
+./libx25/l3_events.c      661 TRAP_DEBUG "ddx" X25 #%d: TIMER time %d id 0x%x
+./libx25/l3_events.c      662 TRAP_DEBUG "dxdx" X25 #%d: X25TimerEvent: CD 0x%x, event %d EH 0x%x
+./libx25/l3_events.c      663  TRAP_DEBUG "dd" X25 #%d: T2[123] expired lcn %d
+./libx25/l3_events.c      664 TRAP_DEBUG "dddddddd" x25 #%d: lcn %d state %d  sndnxt %d rcvnxt %d tlwe %d rlwe %d na %d
+./libx25/l3_events.c      665  TRAP_OPER "dd" X25 #%d: Unknown EVENT occured: %d
+./libx25/l3_events.c      666  TRAP_OPER  "d" X25 #%d: NULL timer event
+./libx25/l3_events.c      667 TRAP_FIRE "dd" X25 #%d:  VCFSM asserted NULL; lcn %d
+./libx25/l3_facility.c    668  TRAP_DEBUG  "dx" X25 #%d:l3_check_facilities: switch (fac_code = 0x%x ).
+./libx25/l3_facility.c    669  TRAP_DEBUG  "dx" X25 #%d:l3_check_non_x25_facilities: switch (fac_code = 0x%x ).
+./libx25/l3_g_act.c       670 TRAP_DEBUG "d" X25 #%d:x25_g_act: G_trap called, does nothing
+./libx25/l3_g_act.c       671 TRAP_OPER "d" X25 #%d:x25_g_act: G_crash called.
+./libx25/l3_g_act.c       672  TRAP_DEBUG  "dxd" X25 #%d:x25_g_act: NOT sending buf=0x%x out, buf_usecnt=%d.
+./libx25/l3_g_act.c       673 TRAP_DEBUG "dxd" X25 #%d:x25_g_act: sending buf=0x%x out, buf_usecnt=%d.
+./libx25/l3_g_act.c       674  TRAP_DEBUG  "dddd" X25 #%d:x25_g_act: SENDing a RESTART, reason=0x%x (the %d.th) buf_usecnt %d.
+./libx25/l3_g_act.c       675  TRAP_DEBUG  "dd" X25 #%d:x25_g_act: SENDing a RESTART CONF. (the %d.th)
+./libx25/l3_g_act.c       676  TRAP_DEBUG "d" X25 #%d:x25_g_act: Timer t20 --> ON.
+./libx25/l3_g_act.c       677 TRAP_DEBUG "d" X25 #%d:x25_g_act: Timer t20 --> OFF
+./libx25/l3_g_act.c       678 TRAP_DEBUG  "d" X25 #%d:x25_g_act: Clearing all VCs
+./libx25/l3_g_act.c       679 TRAP_OPER "d" X25 #%d:x25_g_act: X25 IS UP
+./libx25/l3_g_act.c       680  TRAP_DEBUG  "d" X25 #%d:x25_g_act: X25 IS DOWN
+./libx25/l3_g_act.c       681  TRAP_FIRE  "d" X25 #%d:x25_g_act: RESET lower
+./libx25/l3_in.c          682 TRAP_DEBUG "ddd" X25 #%d: lcn %d pdp->diag %d
+./libx25/l3_in.c          683 TRAP_FIRE "ddd" X25 #%d: X25InputAcc: non-zero diag %d. from AllocVCResource lcn %d
+./libx25/l3_in.c          684 TRAP_FIRE "dxdda" X25 #%d: Dynamic Address Resolution FAILED - ptid 0x%x cause %d diag %d - using configured address %a
+./libx25/l3_in.c          685 TRAP_FIRE "daa" X25 #%d: Gateway has incorrect configured IP address [%a], new address %a
+./libx25/l3_in.c          686 TRAP_FIRE "da" X25 #%d: Gateway has CORRECT IP address %a
+./libx25/l3_in.c          687 TRAP_DEBUG "dddda" X25 #%d: lcn %d cause %d diag %d remote %a
+./libx25/l3_in.c          688 TRAP_DEBUG "dx" X25InputAccept: unable to get resources lcn %d pti 0x%x
+./libx25/l3_in.c          689 TRAP_DEBUG "ds" X25 #%d: IMB: setting %s
+./libx25/l3_in.c          690 TRAP_DEBUG "ds" X25 #%d: IMB: setting %s
+./libx25/l3_in.c          691 TRAP_DEBUG "ss" X25 - IMB: %s seq break (%s)
+./libx25/l3_in.c          692  TRAP_DEBUG  "dss" X25 #%d: IMB: %s seq break (%s)
+./libx25/l3_in.c          693 TRAP_DEBUG "ds" X25 #%d: IMB: setting %s
+./libx25/l3_in.c          694 TRAP_DEBUG "ds" X25 #%d: IMB: setting %s
+./libx25/l3_in.c          695 TRAP_DEBUG "ds" X25 #%d: IMB: setting %s
+./libx25/l3_in.c          696 TRAP_DEBUG "ds" X25 #%d: IMB: setting %s
+./libx25/l3_in.c          697 TRAP_DEBUG "ds" X25 #%d: IMB: setting %s
+./libx25/l3_in.c          698 TRAP_DEBUG "ds" X25 #%d: IMB: setting %s
+./libx25/l3_in.c          699 TRAP_DEBUG "ds" X25 #%d: IMB: setting %s
+./libx25/l3_in.c          700 TRAP_DEBUG "ds" X25 #%d: IMB: setting %s
+./libx25/l3_in.c          701 TRAP_DEBUG "ds" X25 #%d: IMB: setting %s
+./libx25/l3_in.c          702 TRAP_DEBUG "ds" X25 #%d: IMB: setting %s
+./libx25/l3_in.c          703 TRAP_DEBUG "ds" X25 #%d: IMB: setting %s
+./libx25/l3_out.c         704 TRAP_FIRE "ddx" X25 #%d: Priority (%s) next hop (%I) - free pkt
+./libx25/l3_out.c         705 TRAP_DEBUG "dx" X25 #%d: Resources not available for dest %x
+./libx25/l3_out.c         706 TRAP_DEBUG "d" X25 dev #%d: interface is down, drop pkt
+./libx25/l3_out.c         707 TRAP_DEBUG "d" X25 #%d: interface is flow controlled
+./libx25/l3_out.c         708 TRAP_DEBUG "ddx" X25 #%d: Priority (%s) next hop (%a)
+./libx25/l3_out.c         709 TRAP_FIRE "dd" X25 #%d: X25Send: Unknown EVENT occured: %d
+./libx25/l3_out.c         710 TRAP_DEBUG "dda" X25 #%d: l3_send_data: attempt to send data on lcn %d dest %a
+./libscmp/scmp_stream.c   711 TRAP_FIRE "ad" ST connection refused; next hop %a in and out same intf #%d
+./libx25/l3_out.c         712 TRAP_DEBUG "dx" In LOOP 1: bytes %d pkt %x
+./libx25/l3_out.c         713 TRAP_DEBUG "dx" In LOOP 2: bytes %d pkt %x
+./libx25/l3_out.c         714 TRAP_DEBUG "dx" In LOOP 3: bytes %d pkt %x
+./libx25/l3_out.c         715 TRAP_DEBUG "dx" In LOOP 4: bytes %d pkt %x
+./libx25/l3_out.c         716 TRAP_DEBUG "dddxd" x25 #%d:fsm: GTrace, state %d, input 0x%x, entry %d, newstate %d.
+./libx25/l3_out.c         717 TRAP_FIRE "d" x25 #%d: no LCB supplied to run_vcfsm
+./libx25/l3_out.c         718  TRAP_DEBUG  "ddddd" x25 #%d:window: lcn %d., P(r) %d not in unacked window %d to %d.
+./libx25/l3_out.c         719  TRAP_DEBUG  "dddd" x25 #%d:window: lcn %d., P(s) %d no good, expected %d.
+./libx25/l3_out.c         720  TRAP_DEBUG  "ddddd" x25 #%d:window: lcn %d., P(s) %d not in receive window %d to %d.
+./libx25/l3_out.c         721 TRAP_DEBUG "ddddd" X25 #%d: window full lcn %d sn %d tlwe %d twsz %d
+./libx25/l3_out.c         722 TRAP_DEBUG  "ddxxxdd" X25 #%d: VCTrace, lcn %d, state 0x%x, input 0x%x, cond 0x%x, entry %d, newstate %d
+./libx25/l3_parse.c       723 TRAP_DEBUG "d" X25 #%d: l3_parse_packet: packet too short
+./libx25/l3_parse.c       724 TRAP_DEBUG "d" X25 #%d: parse_pkt: bad gfi %x
+./libx25/l3_parse.c       725  TRAP_DEBUG  "dx" X25 #%d: parse_pkt: PTI = %x
+./libx25/l3_parse.c       726  TRAP_DEBUG  "dx" X25 #%d:parse_packet: switch (PTI_value = 0x%x ).
+./libx25/l3_parse.c       727  TRAP_FIRE  "dx" X25 #%d:parse:unrecognized PTI 0x%02x in l3_parse_packet().
+./libx25/l3_parse.c       728  TRAP_DEBUG  "dd" X25 #%d: parse_pkt: bad callED addr lcn %d
+./libx25/l3_parse.c       729  TRAP_DEBUG  "d" X25 #%d: parse_pkt: bad callING addr lcn %d
+./libx25/l3_parse.c       730  TRAP_FIRE  "dxd" X25 #%d: parse_pkt: bad userdata %x len %d
+./libx25/l3_parse.c       731 TRAP_FIRE "dxxxx" X25 #%d: Rcv'd Diagnostic #0x%x, explanation 0x%x 0x%x 0x%x
+./libx25/l3_rtns.c        732 TRAP_DEBUG "dx" X25 #%d: free_lcb: free packet 0x%x
+./libx25/l3_rtns.c        733  TRAP_FIRE  "d" X25: lcn_to_lcb: LCN %d out of range
+./libx25/l3_rtns.c        734 Crash3 "ddd"  **PREV CRASH**  X25 #%d: LCB->vc_channel %d does not look like LCN %d
+./libx25/l3_rtns.c        735 TRAP_DEBUG "xxx" Start_Timer: call desc %x lcn block %x X25 block %x
+./libx25/l3_rtns.c        736 TRAP_FIRE "d" Start_Timer: not enough timer blocks on device %d
+./libx25/l3_rtns.c        737  TRAP_DEBUG "dxd" X25 #%d: timer id [0x%x] turned ON on lcn [%d]
+./libx25/l3_rtns.c        738  TRAP_DEBUG "dxd" X25 #%d: timer id [0x%x] turned ON on lcn [%d]
+./libx25/l3_rtns.c        739  TRAP_DEBUG "dxd" X25 #%d: timer id [0x%x] turned OFF on lcn [%d]
+./libx25/l3_rtns.c        740 TRAP_DEBUG "dx" X25 #%d: timer is being reset %x
+./libx25/l3_rtns.c        741 TRAP_DEBUG "ddd" X25 #%d: AllocNewVCResource:LCN %d available, # vc's %d
+./libx25/l3_rtns.c        742  TRAP_DEBUG  "d" X25 #%d: AllocNewVCResource: no LCNs available
+./libx25/l3_rtns.c        743 Crash1 "d"  **PREV CRASH**  X25 #%d: AllocNewVCResource: Inconsistent resources, lcb and call desc
+./libx25/l3_rtns.c        744 TRAP_FIRE "ddd" X25 #%d: AllocVCResource: out of range LCN %d supplied, # vc's %d
+./libx25/l3_rtns.c        745 TRAP_OPER "dddd" X25 #%d: AllocVCResource: no. of VC (%d) over limit (%d) -- LCN %d
+./libx25/l3_rtns.c        746 TRAP_DEBUG "ddd" X25 #%d: get_lcb: LCN %d supplied, # vc's %d
+./libx25/l3_rtns.c        747 Crash4  "dddx"  **PREV CRASH**  X25 #%d: get_lcb: BAD in-use LCN %d supplied -used by lcn %d lcbp %x
+./libx25/l3_rtns.c        748 Crash1 "d"  **PREV CRASH**  X25 #%d: AllocVCResource: Inconsistent resources, lcb and call desc
+./libx25/l3_rtns.c        749  TRAP_DEBUG "ddda" X25 #%d: ReleaseVCResource: Clear lcn %d; current vc count %d dest %a
+./libx25/l3_util.c        750 Crash3 "xdd"  **PREV CRASH**  X25:buff_putc: attempt to overflow buffer %x, nbytes %d maxsize %d
+./libx25/l3_util.c        751 Crash3 "xdd"  **PREV CRASH**  X25:buff_putc: attempt to overflow buffer %x, nbytes %d maxsize %d
+./libx25/l3_util.c        752   TRAP_DEBUG  "d" X25 #%d: MbitLink: Null buffer
+./libx25/l3_util.c        753 TRAP_DEBUG "dxxxxxddd" X25 #%d: make_packet(bp=%x, lcbp=%x, ptid=%x, offset=%x,Bbits=%x)lcn=%d. buf_offset=%d. usecnt=%d.
+./libx25/l3_util.c        754  TRAP_DEBUG "dd" X25 #%d: make_packet: offset %d
+./libx25/l3_util.c        755  TRAP_FIRE "d" X25 #%d: make_packet: no buffer available
+./libx25/l3_vc_act.c      756  TRAP_DEBUG  "dda" X25 #%d: SEND CALL REQUEST on lcn %d dest %a
+./libx25/l3_vc_act.c      757  TRAP_DEBUG  "dd" X25 #%d: buffer allocation for CALL_REQUEST fails on lcn %d
+./libx25/l3_vc_act.c      758  TRAP_DEBUG  "dda" X25 #%d: SEND CALL ACCEPT on lcn %d dest %a
+./libx25/l3_vc_act.c      759  TRAP_DEBUG  "dda" X25 #%d: X25_vc_act: V_SEND RR on lcn %d dest %a
+./libx25/l3_vc_act.c      760  TRAP_DEBUG  "dda" X25 #%d: SEND RNR on lcn %d dest %a
+./libx25/l3_vc_act.c      761  TRAP_DEBUG  "dxd" X25 #%d: SEND_PR: pti=0x%x p(r)=%d
+./libx25/l3_vc_act.c      762  TRAP_DEBUG  "ddaddx" X25 #%d: SEND DATA on lcn %d dest %a PktLength %d nbytes %d mbit %x
+./libx25/l3_vc_act.c      763  TRAP_DEBUG  "ddad" X25 #%d: SEND RESET lcn %d dest %a diag %d
+./libx25/l3_vc_act.c      764  TRAP_DEBUG  "ddda" X25 #%d: SEND CLEAR on lcn %d dest %a diag %d
+./libx25/l3_vc_act.c      765  TRAP_DEBUG  "dda" X25 #%d: SEND INTERRUPT on lcn %d dest %a
+./libx25/l3_vc_act.c      766  TRAP_DEBUG  "dda" X25 #%d: SEND RESET CONFIRM on lcn %d dest %a
+./libx25/l3_vc_act.c      767  TRAP_DEBUG  "dda" X25 #%d: SEND CLEAR CONFIRM on lcn %d dest %a
+./libx25/l3_vc_act.c      768  TRAP_DEBUG  "dda" X25 #%d: SEND INTERRUPT CONFIRM on lcn %d dest %a
+./libx25/l3_vc_act.c      769 TRAP_DEBUG "dda" X25 #%d: X25_vc_act: xmit window was full. tell ?? to send data lcn %d dest %a
+./libx25/l3_vc_act.c      770  TRAP_DEBUG  "ddaddd" X25 #%d: lcn %d dest %a, xmit lower window edge is %d, tw size %d sendnext %d
+./libx25/l3_vc_act.c      771  TRAP_DEBUG  "ddad" X25 #%d: RECeive DATA on lcn %d dest %a nbytes %d
+./libx25/l3_vc_act.c      772 TRAP_DEBUG  "ddadd" X25 #%d: accept_data: lcn %d dest %a unacked %d rwsize %d
+./libx25/l3_vc_act.c      773  TRAP_DEBUG  "dxdddd" X25 #%d: X25InputDispose(%x), length %d. offset %d. nbytes %d. max %d.
+./libx25/l3_vc_act.c      774  TRAP_DEBUG  "dda" X25 #%d: RECeive CALL on lcn %d dest %a
+./libx25/l3_vc_act.c      775 TRAP_DEBUG "dda" X25 #%d: RECeive CALL CONNECT on lcn %d dest %a
+./libx25/l3_vc_act.c      776  TRAP_DEBUG  "ddad" X25 #%d: RECeive RESET on lcn %d dest %a diag %d
+./libx25/l3_vc_act.c      777  TRAP_DEBUG  "dda" X25 #%d: RECeive RESET CONFIRM on lcn %d dest %a
+./libx25/l3_vc_act.c      778  TRAP_DEBUG  "dda" X25 #%d: RECeive INTERRUPT on lcn %d dest %a
+./libx25/l3_vc_act.c      779  TRAP_DEBUG  "dda" X25 #%d: RECeive INTERRUPT CONFIRM on lcn %d dest %a
+./libx25/l3_vc_act.c      780  TRAP_DEBUG  "ddadd" X25 #%d: CLEAR level 4 on lcn %d dest %a cause %d diag %d
+./libx25/l3_vc_act.c      781  TRAP_DEBUG "dd" X25 #%d: resetting sequence variables lcn %d
+./libx25/l3_vc_act.c      782  TRAP_DEBUG  "dxd" X25 #%d: V_t21on(): lcbp %x, lcn %d
+./libx25/l3_vc_act.c      783  TRAP_DEBUG  "dxdd" X25 #%d: V_t22on(): lcbp %x, lcn %d retries %d
+./libx25/l3_vc_act.c      784  TRAP_DEBUG  "d" X25: V_reset_both_directions()--DOES NOTHING
+./libx25/l3_vc_act.c      785  TRAP_DEBUG  "d" X25: V_trap()--DOES NOTHING
+./libx25/simple_q.c       786  TRAP_DEBUG  "" QPrint:  queue is empty
+./libx25/simple_q.c       787  TRAP_DEBUG  "x" QPrint:  %x
+./libx25/simple_q.c       788  TRAP_DEBUG  "x" QPrint:  %x
+./libx25/x25.c            789 TRAP_DEBUG "x" X.25: process number %x
+./libx25/x25.c            790 TRAP_FIRE "d" X25 #%d: X25OutputDispose: RESTART packet is flow-controlled
+./libx25/x25.c            791 TRAP_DEBUG "d" X25 #%d: X25OutputDispose: Change STATE to FLOW-CONTROLLED
+./libx25/x25.c            792 TRAP_DEBUG "d" X25 #%d: X25OutputDispose: CONTROL packet is flow-controlled
+./libx25/x25.c            793  TRAP_FIRE  "d" X25 #%d: link going down
+./libx25/x25.c            794  TRAP_DEBUG  "dd" X25 #%d: lapb_REinit failed - ret code %d
+./libx25/x25.c            795  TRAP_FIRE  "dxx" X25 #%d: link was reset - send RESTART (new mode %x, old mode %x)
+./libx25/x25.c            796  TRAP_FIRE  "d" X25 #%d: link coming up
+./libx25/x25.c            797 TRAP_FIRE "dx" X25 #%d:RetryLimit exceeded - reset XPC chip
+./libx25/x25.c            798  TRAP_DEBUG  "dd" X25 #%d: lapb_REinit failed - ret code %d
+./libx25/x25.c            799  TRAP_DEBUG  "dd" X25 #%d: lapb_REinit failed - ret code %d
+./libx25/x25_init.c       800 TRAP_DEBUG "x" X.25 device number [%x]
+./libx25/x25_init.c       801 TRAP_DEBUG "dd" X25Init: ProcessNumber %d Monitoree %d\n\r
+./libhap/hapsyn.c         802  TRAP_FIRE  "dd" Hap #%d: xpc_init failed - return code %d
+./libhap/hapsyn.c         803 TRAP_FIRE "da" Hap #%d: Hap Link down: IP addr %a
+./libx25/x25_init.c       804 TRAP_DEBUG "dd" X.25: low LCN %d, high LCN %d
+./libx25/x25_init.c       805 TRAP_DEBUG "dd" X.25: def window size %d, def packet size %d
+./libx25/x25_init.c       806 Crash3 "dd"  **PREV CRASH**  X25 #%d: gateway buffer (%d) is less than X25 packet size (%d)
+./libx25/x25_init.c       807 Crash1  "d"  **PREV CRASH**  X25 #%d: X25_Init: IMB-- requires no module above and one found in tables!
+./libx25/x25_init.c       808  TRAP_DEBUG  "dsd" X25 #%d: X25_Init: IMB-- IndexAs%s is %d
+./libx25/x25_init.c       809 Crash1  "d"  **PREV CRASH**  X25 #%d: X25_Init: IMB--requires module below and none found in tables!
+./libx25/x25_init.c       810 TRAP_FIRE "ddx" X25 #%d: init - memory size %d, start 0x%x
+./libxpc/xpc_driver.c     811  TRAP_DEBUG  "ddxxdddd" XPC #%d: dev %d rm %x tm %x lev %d vec %d nr %d nt %d
+./libxpc/xpc_driver.c     812  TRAP_FIRE  "dxxxxx" XPC #%d (port %x): wrong device type %x not %x or %x or %x
+./libxpc/xpc_driver.c     813  TRAP_DEBUG  "dx" XPC #%d: XPCBlock %x
+./libxpc/xpc_driver.c     814  TRAP_FIRE  "dx" XPC #%d: I/O memory allocation failed %x
+./libxpc/xpc_driver.c     815  TRAP_FIRE  "ddd" XPC #%d: not enough rcv buffers - got %d need %d
+./libxpc/xpc_driver.c     816  TRAP_FIRE  "d" XPC #%d: reset failed - no xmit clock
+./libxpc/xpc_driver.c     817  TRAP_DEBUG  "dxxx" XPC #%d: rcv tbl %x xmt tbl %x station tbl %x
+./libxpc_common/xpc_util.c 818  TRAP_FIRE  "d" XPC #%d: trouble filling rcv tables
+./libhap/hapinit.c        827 Crash0  ""  **PREV CRASH**  Hap requires no module above and one found in tables!
+./libhap/hapinit.c        829 Crash0  ""  **PREV CRASH**  Hap requires module below and none found in tables!
+./libhap/hap_imc.c        831  TRAP_OPER  "as" HAP at %a %s link as requested
+./libhap/hapsyn.c         840  TRAP_FIRE  "dd" Hap #%d: xpc_REinit failed - ret code %d
+./libhap/hapsyn.c         852  TRAP_FIRE  "d" HAP #%d: CTS still off
+./libhap/hapout.c         853  TRAP_DEBUG  "sxx" %s not IP pkt %x TOS word %x
+./libegp/egp_procnumsw.c  854  TRAP_OPER  "a" EGP: no route to net %a
+./libegp/egp_procnumsw.c  855  TRAP_OPER  "a" EGP: no egp nbr %a in nbrtable
+./libegp/egp_procnumsw.c  856  TRAP_OPER  "adsdddsss" EGP: Nbr %a AS %d %s Ht=%d Pt=%d St=%d %s %s %s
+./libether/driver_config.c 863 TRAP_DEBUG "dddxd" Dev %d: rxring=%d txring=%d mode=%x rxmax=%d
+./libegp/egp.c            865  TRAP_OPER "a" EGP: getlist entry %a not on directly connected net
+./libether/ether_init.c   866 TRAP_OPER "dds" Ether_init: device %d, port %d, driver returned status %s
+./libsrc/ipso.c           867 Crash2 "dd"  **PREV CRASH**  AddIPSO: mtu [%d] less than SPF packet [%d]
+./libbgp/bgp.c            868  TRAP_FIRE  "" bgpInit:  alloc_seg failed for SpfNbrStruct
+./libx25/l3_out.c         872  TRAP_FIRE  "dxdd" X25 #%d: run_vcfsm: lcb %x vc %d state %d
+./libx25/l3_out.c         873 Crash4  "dxdd"  **PREV CRASH**  X25 #%d: run_vcfsm: lcb %x vc %d (state %d invalid)
+./librouting/routingtable.c 874 TRAP_DEBUG "aadd" SPF:   %a next mask %a (Exit %d  Distance = %d)
+./librouting/routingtable.c 875 TRAP_DEBUG "aadd" SPF:   %a mask %a Exit Gateway = %d  Distance = %d
+./libmb/mb_segment.c      877 TRAP_DEBUG "dx" access control: set dec tree #%d as active tree [addr %x]
+./libmb/mb_segment.c      878 TRAP_DEBUG "dx" access control: set dec tree #%d as NOT active tree [addr %x]
+./libmb/mb_segment.c      879 TRAP_DEBUG "x" access control: make cache at addr %x\n\r
+./libmb/mb_segment.c      880 TRAP_DEBUG "xddd" access control config: # dec trees %x, active tree %d, cache num entr %d qsize %d
+./libmb/mb.c              881 TRAP_DEBUG "dx" access control config:  dec tree info: size %d addr %x
+./libdispatch/dinit.c     882 Crash0 ""  **PREV CRASH**  DispatchInit: Devicedisp cache initialization failed
+./libgwinit/gwinit.c      883 TRAP_OPER "aa" gwinit: Using net %a parameters for %a
+./libforus/icmp.c         884 TRAP_FIRE "I" ICMP:  Protocol %d NOT ICMP for pkt [%I]
+./libforus/finit.c        885 TRAP_DEBUG "x" address of icmp queue base %x
+./libforus/finit.c        886 TRAP_FIRE "I" ForUsSwitch: unrecognized protocol %d [%I]
+./libsrc/devicedisp.c     887 TRAP_DEBUG "" Queueing ST encapsulated in IP
+./libtcp/tcpmain.c        888 TRAP_FIRE "xx" tcpmain: event 0x%x data 0x%x
+./libtcp/tcpmain.c        889 TRAP_DEBUG "x" TCP close: close tcb %x
+./libtcp/tcpmain.c        890 TRAP_DEBUG "xdx" tcp: retrans iorb %x nbytes %d xsum %x
+./libtcp/tcpmain.c        891  TRAP_FIRE  "xxxx" TCP: usrtran: problem with cnxn state tcb %x iorbp %x iooper %x state %x
+./libtcp/tcpmain.c        892 TRAP_DEBUG "x" TCP: delcon: rtcb %x
+./libtcp/tcpmain.c        893  TRAP_FIRE  "xx" TCP: sigusr get_iorb failed for tcb %x sig %x
+./libtcp/tcpmain.c        894  TRAP_DEBUG  "xd" TCP: send_probe on tcb %x suna %d
+./libtcp/tcpin.c          895 TRAP_FIRE "xaaaax" TCP: Packet at %x from %a to %a (%a to %a per TCP globals) has bad checksum %x
+./libtcp/tcpin.c          896 TRAP_DEBUG "axx" tcppkt: tcb not found (from %a port 0x%x to 0x%x) - send reset
+./libhap/hapcontrol.c     897  TRAP_FIRE  "axx" Hap %a dropping Pkt %x in order to save RR %x
+./libhap/hapsyn.c         898 TRAP_OPER "hh" HAP_Init: ProcessNumber %d Monitoree %d\n\r
+./libtcp/tcpin.c          899 TRAP_FIRE "s" TCP: Bad %s received in LISTEN
+./libtcp/tcpin.c          900  TRAP_DEBUG  "x" TCP: orig_syn:  rcv'd SYN rtcb %x
+./libtcp/tcpin.c          901 TRAP_DEBUG "axx" TCP: Conn est to host %a, port 0x%x handle %x
+./libtcp/tcpin.c          902 TRAP_FIRE "" TCP: No SYNACK
+./libtcp/tcpin.c          903  TRAP_DEBUG  "xddddx" TCP: outside window ctl %x seq %d rnxt %d len %d rwnd %d handle %x
+./libtcp/tcpin.c          904 TRAP_DEBUG "axx" TCP: Conn est from host %a, port 0x%x handle %x
+./libtcp/tcpin.c          905 TRAP_DEBUG "ddx" TCP: window now 0, suna %d snxt %d handle %x
+./libtcp/tcpin.c          906  TRAP_DEBUG  "x" TCP: rcvrst:  rtcb %x
+./libtcp/tcpin.c          907  TRAP_DEBUG  "x" TCP: rcvrst:  rtcb %x
+./libtcp/tcpin.c          908  TRAP_FIRE  "xx" TCP: rcvsyn:  bad seq num %d rtcb %x
+./libtcp/tcpin.c          909 TRAP_FIRE "x" TCP: Bad SYN rcvd - handle %x
+./libtcp/tcpin.c          910  TRAP_DEBUG  "xxxd" TCP: nowhere to store data: handle %x rpkt %x ctrl %x len %d
+./libtcp/tcpin.c          911 TRAP_DEBUG "xd" TCP: Got a FIN - handle %x seq %d
+./libtcp/tcpout.c         912  TRAP_DEBUG  "x" TCP: sndsynfin: send SYN tcb %x
+./libtcp/tcpout.c         913  TRAP_DEBUG  "x" TCP: sndsynfin: send FIN tcb %x
+./libtcp/tcpout.c         914 TRAP_DEBUG "x" TCP: No SYN or FIN in sndsynfin - tcb %x
+./libtcp/tcpout.c         915 TRAP_DEBUG "I" sndrst: sending tcp reset [%I] 
+./libtcp/tcpout.c         916  TRAP_FIRE  "x" TCPFromUs: no gbuffer available iorb %x
+./libtcp/tcp.c            917  TRAP_DEBUG  "xx" io_complete: iorbp %x rtnQH %x
+./libtcp/tcp.c            918  TRAP_DEBUG  "xxxxdx" get_iorb: iorb %x pid %x ev %x op %x count %d UserMask %x
+./libtcp/tcp_icmp.c       919 TRAP_DEBUG "axax" TCPNotifyUnreachable:for %a(p0x%x) to %a(p0x%x)
+./libtcp/tcp_icmp.c       920 TRAP_FIRE "" TCPNotifyUnreachable:cant find TCB
+./libtcp/tcp_init.c       921 TRAP_FIRE "dd" TCP process number [%d] device number [%d]
+./libtcp/tcp_init.c       922 TRAP_DEBUG "x" address of TCP's (in) queue base %x
+./libtcp/tcp_init.c       923 TRAP_DEBUG "x" address of TCP's (out) queue base %x
+./libtcp/tcp_init.c       924  TRAP_DEBUG  "xdxxd" FreeIORB %x in_use %d UserMask %x tcb %x num_iorbs %d
+./libtcp/tcp.c            925  TRAP_FIRE  "xu" get_iorb: alloc_seg failed %x, count %d
+./libtcp/tcp_init.c       926 Crash0 ""  **PREV CRASH**  TCP: at initialization not enough memory\n\r
+./libtcp/tcp_init.c       927 Crash0 ""  **PREV CRASH**  TCP: at initialization not enough memory\n\r
+./libtcp/tcp_init.c       929 Crash0 ""  **PREV CRASH**  TCP: at initialization not enough memory
+./libtcp/tcp_init.c       930 Crash1 "u"  **PREV CRASH**  tcbinit: can't allocate %u bytes fot TCBs
+./libtcp/tcp_init.c       931 Crash1  "x"  **PREV CRASH**  FreeIORB: iorb %x already freed
+./libtcp/tcp_init.c       932 Crash3 "xdx"  **PREV CRASH**  FreeIORB: free seg on %x failed %d for iorb %x
+./libtcp/tcp_init.c       933 Crash1 "x"  **PREV CRASH**  FreeIORB: free entry table full, or can't find to free %x
+./libtcp/tcpmain.c        934 Crash0 ""  **PREV CRASH**  tcpmain: SG_INP - null packet.
+./libtcp/tcpmain.c        935 Crash0 ""  **PREV CRASH**  tcpmain: SG_IO  - null IORB.
+./libtcp/tcpmain.c        936 Crash0 ""  **PREV CRASH**  clstim: null TCB.
+./libtcp/tcpmain.c        937 Crash1  "x"  **PREV CRASH**  TCP:netousr: MG_read failed on filedesc %x
+./libtcp/tcpmain.c        938 Crash1  "x"  **PREV CRASH**  TCP:netorsm: MG_read failed on filedesc %x
+./libtcp/tcpmain.c        939 Crash1  "x"  **PREV CRASH**  TCP:netorsm: MG_read failed on filedesc %x
+./libtcp/tcpmain.c        940 Crash0 ""  **PREV CRASH**  TCP: delcon: failed.
+./libhap/hap_imc.c        941  TRAP_DEBUG  "ds" #%d: IMB: setting %s
+./libtelnet/telnet.c      942  TRAP_FIRE  "d" Telnet: proc # %d Init failed, exiting
+./libhap/hap_imc.c        943  TRAP_DEBUG  "axx" HapLowerIsUp %a, WaitingForUpEvent %x, SavePkt %x
+./libhap/hapcontrol.c     944  TRAP_DEBUG  "s" %s waiting for lower is up event
+./libtelnet/telnet.c      945 TRAP_OPER "a" Telnet: host_validity_check denies access from %a
+./librouting/routingqevent.c 946 Crash3 "ddd"  **PREV CRASH**  SPF: another gateway has my number %d, update seq %d from %d
+./libhap/hapout.c         947  TRAP_DEBUG  "x" %a HapSend already have SavePkt %x, got %x
+./libtelnet/telnet.c      948 TRAP_OPER "" Telnet: authentication complete
+./libtelnet/telnet.c      949 TRAP_OPER "" Telnet:session terminating
+./libtelnet/telnet.c      950 TRAP_OPER "" Telnet:normal session completion
+./libtelnet/telnet.c      951 TRAP_FIRE "" Telnet:get_char:premature SN_CC
+./libhap/hapevents.c      952  TRAP_DEBUG  "a" HAP %a ProduceEvent couldn't dispose of SavePkt
+./libtelnet/telnet.c      953 TRAP_FIRE "" Telnet:get_char:TCP connection ERROR
+./libtelnet/telnet.c      954 Crash2 "xx"  **PREV CRASH**  Telnet:get_char:unexpected signal (%x),iorbp(%x)
+./libtelnet/security.c    955 TRAP_FIRE "x" telnet_login:problems with getrc_login Abort(%x)
+./libtelnet/security.c    956 TRAP_FIRE "x" telnet_login:problems with getrc_pw Abort(%x)
+./libtelnet/security.c    957  TRAP_OPER  "ds" Telnet: Login(%d) accepted for %s.
+./libtelnet/security.c    958  TRAP_OPER  "ds" Telnet: Login(%d) rejected for %s.
+./libtelnet/security.c    959 TRAP_FIRE "" Telnet: getrc_login:premature SN_CC
+./libtelnet/security.c    960 TRAP_FIRE "" Telnet: getrc_login: SN_RC
+./libtelnet/security.c    961 TRAP_FIRE "" Telnet: getrc_login:TCP connection ERROR
+./libtelnet/security.c    962 TRAP_FIRE "xx" Telnet: getrc_login:unexpected signal (%x),iorbp(%x)
+./libtelnet/security.c    963 TRAP_FIRE "" Telnet: getrc_pw:premature SN_CC
+./libtelnet/security.c    964 TRAP_FIRE "" Telnet: getrc_pw: SN_RC
+./libtelnet/security.c    965 TRAP_FIRE "" Telnet: getrc_pw:TCP connection ERROR
+./libtelnet/security.c    966 TRAP_FIRE "xx" Telnet: getrc_pw:unexpected signal (%x),iorbp(%x)
+./libtelnet/tcp_io.c      967 TRAP_FIRE "" Telnet: mk_tcp_srvr: cannot get an iorb
+./libtelnet/tcp_io.c      968 TRAP_FIRE "" Telnet: mk_tcp_con: cannot get an iorb
+./libtelnet/tcp_io.c      969 TRAP_FIRE "" Telnet:cls_tcp: cannot get an iorb
+./libtelnet/tcp_io.c      970 TRAP_FIRE "" Telnet: tcp_read: cannot get an iorb
+./libtelnet/tcp_io.c      971 TRAP_FIRE "" Telnet: tcp_write: cannot get an iorb
+./libtelnet/tcp_io.c      972 TRAP_DEBUG "xx" Telnet: wait_for_est:impossible event io_event %x evt %x
+./libtelnet/tcp_io.c      973 TRAP_DEBUG "" Telnet: wait_for_est:SN_DD
+./libtelnet/tcp_io.c      974 TRAP_DEBUG "" Telnet: wait_for_est:SN_ERR
+./libtelnet/tcp_io.c      975 TRAP_FIRE "" Telnet: clear_tcp_con: cannot get an iorb
+./libtelnet/tcp_io.c      976 TRAP_FIRE "" Telnet: tcp_read_buf: cannot alloc a buffer
+./libtelnet/tcp_io.c      977 TRAP_DEBUG "" Telnet: tcp_read_buf: cannot get an iorb; pause & try again
+./libtelnet/tcp_io.c      978  TRAP_FIRE  "xx" Telnet:  tcp_eat_iorbs:  iorb %x io_event %x
+./libtelnet/tcp_io.c      979  TRAP_DEBUG  "xxx" Telnet: AddResignal: iorb %x sig %x  q %x
+./libtelnet/tcp_io.c      980 TRAP_DEBUG "xx" Resignal: iorbp(%x), evt(%x)
+./libtelnet/telnet_init.c 981 TRAP_DEBUG "ddd" TelnetInit: ProcessNumber %d Monitoree %d DeviceNumber %d\n\r
+./libtelnet/telnet_util.c 982  TRAP_DEBUG  "x" TELNET: DONT received for option %x. Abort
+./libtelnet/telnet_util.c 983  TRAP_FIRE  "" Telnet: telnet_proc_getchar:bad SN_READ no character
+./libsrc/bi4events.c      984 Crash3 "xxx"  **PREV CRASH**  Clear_Timer: procid %x eh %x routine %x not on timerlist or eventq
+./libforus/icmp.c         985  TRAP_DEBUG  "dII" ICMP: rcvd code %d TTL EXCEEDED from %I about %I
+./libforus/icmp.c         986 TRAP_DEBUG "Idd" ICMP: pkt [%I] IP len %d ttl %d
+./libforus/icmp.c         987 TRAP_FIRE "xxx" ICMP: buf %x bad packet (ip %x)!=(PtrToData %x)\n\r
+./libether/bi4ether.c     988  TRAP_DEBUG  "daa6Xd" Ether#%d: Sending ARP reply about %a to %a->%6X, MACtype %d
+./libsrc/process_exit.c   989  TRAP_FIRE  "ds" Process_Exit: process #%d (%s) exiting
+./librouting/routingtable.c 990 TRAP_DEBUG "x" FOIRE: net %x entry updated
+./librouting/routingtable.c 991 TRAP_DEBUG "xxddd" FOIRE: addr %x, mask %x, old-type %d, old-exit %d, old-dist %d
+./librouting/routingtable.c 992 TRAP_DEBUG "xxddd" FOIRE: addr %x, table %x, type %d, exit %d, dist %d
+./libarp/ARP.c            994  TRAP_OPER  "dx6X" Device#%d: unknown ARP hardware type (0x%x) from %6X
+./librouting/routingtable.c 995 TRAP_DEBUG "xxxx" InsertMask: confignet %x, configmask %x, searchnet %x, searchmask %x
+./librouting/routingtable.c 996 TRAP_DEBUG "xdxxx" NewRE: entry %x, hash %d, entrynet %x, entrymask %x, flag %x
+./librouting/routingtable.c 997 TRAP_DEBUG "xxxx" FOIRE: entry %x, entrynet %x, entrymask %x, flag %x
+./librouting/routingtable.c 998 TRAP_DEBUG "xxx" FOIRE: entry %x, entrynet %x, entrymask %x
+./libieee802dot5/TMS380Snmp.c 999  TRAP_OPER  "d" SNMPInterfaceInitTokenRing: NULL pmbP for Device %d
+./librouting/updowntimer.c 1000 TRAP_DEBUG "daddddd" UpDnTimer: gwy %d %a state %d rate %d lsthrd %d mis/rcv %d/%d
+./libegp/segp.c           1002  TRAP_DEBUG  "adad" EGP: use %a, dist %d to %a, IGP_dist %d
+./libscmp/scmp_stream.c   1003 TRAP_OPER "" No NextHop for acked DISCONNECT
+./libscmp/scmp_stream.c   1004 TRAP_FIRE "" DISCONNECT ACK callback for detached target ignored.
+./libscmp/scmp_stream.c   1005 TRAP_OPER "d" SCMP got an error when deleting its NLS. errcode=%d
+./libdispatch/fragment.c  1007  TRAP_FIRE  "dd" Invalid chain len = %d, IP len = %d
+./libdispatch/fragment.c  1014 TRAP_DEBUG "d" IP Fragmentation: buffers left over %d
+./libconsole/route_actions.c 1020  TRAP_DEBUG  "xxxxs" net_in_range: %x %x %x %s
+./libconsole/route_actions.c 1021  TRAP_DEBUG  "x" SaveEntry(eg, sp): %x
+./libconsole/route_actions.c 1022 TRAP_DEBUG "ss" match_d : %s, stat = %s
+./libconsole/route_actions.c 1023  TRAP_DEBUG  "d" SortNets: NumNets = %d
+./libconsole/route_actions.c 1025 TRAP_DEBUG "ddddxx" default %d egp %d, spf %d, static %d, low_net %x, high_net %x
+./libconsole/route_actions.c 1026  TRAP_DEBUG  "d" num_entries = %d
+./libconsole/route_actions.c 1027  TRAP_DEBUG  "ddx" Size = %d, i = %d, hashptr = %x
+./libconsole/route_actions.c 1028  TRAP_DEBUG  "xxd" SaveEntry(st): %x, Next_Hop %x, IF %d
+./libconsole/route_actions.c 1029 TRAP_DEBUG "xd" SaveEntry(de): %x, IF %d
+./libapi/api.c            1030  TRAP_DEBUG  "d" closing socket %d
+./libapi/api.c            1031  TRAP_DEBUG  "d"  accepted ST connection on socket %d
+./libapi/api.c            1032  TRAP_DEBUG  "dd" attempting to connect on socket %d; domain=%d
+./libapi/api.c            1033  TRAP_DEBUG  "dd" socket() allocated new socket %d; domain= %d; owner = %d
+./libapi/api_util.c       1034  TRAP_DEBUG  "dad" socket %d received ST control message from %a; opcode= %d
+./libapi/api_ext.c        1035 Crash0  ""  **PREV CRASH**  ERROR!!! gbuf_sendit called with unsupported ST control packet
+./libapi/api_util.c       1036  TRAP_DEBUG  "d" goodsocket() failed on socket %d
+./libapi/api_util.c       1037  TRAP_DEBUG  "ad" enqueued ST CONNECT from %a to socket %d
+./libapi/api_ext.c        1038  TRAP_DEBUG  "dxxx" Diverting socket=%d to eh=0x%x, flags=0x%x, pid=0x%x
+./libtftp/rrq.c           1040 TRAP_DEBUG "u" tftp ack: send ack for blk num %u
+./libtftp/gatetftp.c      1041 TRAP_OPER "a" TFTP *** connected to remote host [%a]
+./libtftp/rrq.c           1042 TRAP_FIRE "dx" tftp :ERROR blk number %d packet %x
+./libtftp/rrq.c           1043 TRAP_DEBUG "ss" rrq_connect: fname = %s fmode = %s
+./libtftp/rrq.c           1044 TRAP_FIRE "" tftp (read request): No buffer available
+./libtftp/rrq.c           1045 TRAP_DEBUG "d" rrq_connect:  Can't connect (tried %d times)
+./libtftp/rrq.c           1046 TRAP_DEBUG "x" getfile: tftp buffer pointers = %x, %x
+./libtftp/rrq.c           1047 TRAP_FIRE "dd" tftp: ERROR file too large size [%d], max [%d], changing tftp id\n\rremove a file to make room
+./libtftp/rrq.c           1048 TRAP_DEBUG "x" getfile: tftp file pointer = %x
+./libtftp/rrq.c           1049 TRAP_DEBUG "d" getfile: TFTP_FILE_PTR = %x\n\r
+./libtftp/tftp.c          1050 TRAP_FIRE "dd" ok_tftp: too many bytes %x (max %d)
+./libtftp/tftp.c          1051 TRAP_DEBUG "dd" ok_tftp: rcvd wrong block no. got %d; expected %d
+./libtftp/rrq.c           1052 TRAP_DEBUG "d" getfile: TFTP_FILE_PTRs = %x, %x\n\r
+./libtftp/gatetftp.c      1053 TRAP_DEBUG "d" tftp: up to block number %d
+./libtftp/gatetftp.c      1054 TRAP_DEBUG "dd" tftp: tried to get block %d %d times. Quitting
+./libtftp/rrq.c           1055 TRAP_FIRE "dx" tftp :ERROR transfer aborted: block %d packet %x
+./libtftp/gatetftp.c      1056 TRAP_DEBUG "dd" TFTP_ForUs -- %d RRQ retransmissions %d DATA retransmissions
+./libapi/api_util.c       1058  TRAP_OPER  "dad" couldn't enqueue control msg type %d from %a to socket %d - disconnecting
+./libapi/api_util.c       1059  TRAP_FIRE  "aadxxds" could not find an ST socket for connect %a -> %a, pcol=%d SAP=0x%08x, 0x%08x, SAPBytes=%d, reason=%s
+./libapi/api_util.c       1060  TRAP_DEBUG  "ad" could not find a UDP/IP socket for packet from %a; port= %d
+./libapi/api_util.c       1061  TRAP_DEBUG  "dad" UDP socket= %d full, dropping packet from %a, port= %d
+./libscmp/scmp_timer.c    1066  TRAP_DEBUG  "xxxx" SetNextTimeOut: req: %x  now: %x time: %x  rtc: %x
+./libscmp/scmp_timer.c    1067  TRAP_DEBUG  "xxxx" SetNextTimeOut else:  laissezFaire: %x  req: %x  now: %x  rtc: %x
+./libx25/l3_events.c      1068 TRAP_FIRE "dx" X25 #%d: Probe failed - reset XPC chip
+./libx25/l3_events.c      1069  TRAP_FIRE  "dd" X25 #%d: lapb_REinit failed - ret code %d
+./libconsole/ping_actions.c 1070  TRAP_DEBUG  "d" Traceroute m = %d
+./liblimotrunk/ltrunk_events.c 1071  TRAP_DEBUG  "dddd" LTRUNK #%d: last 30 secs. - Packets Tx %d Rx %d TxDropped %d 
+./liblimotrunk/ltrunk_events.c 1072  TRAP_OPER  "da" LTRUNK #%d: Limotrunk link going down (IP %a)
+./liblimotrunk/ltrunk_events.c 1073  TRAP_FIRE  "dx" LTRUNK #%d: Hello pkt refused by driver, status %x
+./liblimotrunk/ltrunk_events.c 1074 TRAP_DEBUG "d" LTRUNK #%d: Timer expired - send hello
+./liblimotrunk/ltrunk_events.c 1075  TRAP_DEBUG  "dx" LTRUNK #%d: Hello not sent, buffer %x still outstanding
+./liblimotrunk/ltrunk_events.c 1076  TRAP_FIRE  "d" LTRUNK #%d: No buffer for hello pkt
+./liblimotrunk/ltrunk.c   1077  TRAP_DEBUG  "d" LTRUNK: Initializing process number %d
+./liblimotrunk/ltrunk.c   1078 TRAP_DEBUG "da" LTRUNK #%d: Initializing device (IP %a)
+./liblimotrunk/ltrunk.c   1079 TRAP_OPER "dds" LTRUNK #%d: Driver init failed - port %d, status %s
+./libmsg_gen/ping.c       1080  TRAP_DEBUG  "dddI" PING: ICMP type %d code %d seq %d pkt %I
+./libmsg_gen/ping.c       1081  TRAP_DEBUG  "dd" TimerEvent CMD %d STAT %d
+./liblimotrunk/ltrunk_in.c 1082  TRAP_DEBUG  "dx" LTRUNK #%d: Received hardware checksum error pkt %x
+./liblimotrunk/ltrunk_in.c 1083  TRAP_DEBUG  "dx" LTRUNK #%d: Received IP packet %x
+./liblimotrunk/ltrunk_in.c 1084  TRAP_OPER  "da" LTRUNK #%d: Limotrunk link up (IP %a)
+./liblimotrunk/ltrunk_events.c 1085  TRAP_FIRE  "d" LTRUNK #%d: Detected loop
+./liblimotrunk/ltrunk_events.c 1086  TRAP_DEBUG  "dxx" LTRUNK #%d: Freeing hello pkt %x, outstanding %x
+./liblimotrunk/ltrunk_in.c 1087  TRAP_FIRE  "d" LTRUNK #%d: Received hello-not-heard
+./liblimotrunk/ltrunk_in.c 1088  TRAP_FIRE  "dxxu" LTRUNK #%d: unrecognized hdr type 0x%x version 0x%x nbytes %u
+./liblimotrunk/ltrunk_in.c 1089  TRAP_FIRE  "dx" LTRUNK #%d: Received unknown (gg) pkt type 0x%x
+./liblimotrunk/ltrunk_out.c 1090 TRAP_FIRE "dx" LTRUNK #%d: Next hop address is null, freeing pkt %x
+./liblimotrunk/ltrunk_out.c 1091  TRAP_DEBUG  "dx" LTRUNK #%d: Dropping pkt %x - refused by driver
+./liblimotrunk/ltrunk_out.c 1092 TRAP_DEBUG "dx" LTRUNK #%d: Interface down, drop packet %x
+./libsrc/devicedisp.c     1093  TRAP_DEBUG  "Iuux" IP dispatch: IP packet (from us):[%I]: IP len %u ttl %u pkt %x
+./libmb/mb.c              1097 TRAP_OPER "dd" access control: no. of dec. trees inconsistent: config [%d], dec tree[%d]
+./libmb/mb_segment.c      1098 TRAP_OPER "" access control: free existing access control segment
+./libmb/mb_segment.c      1099 TRAP_OPER "dd" access control: found decision tree [%s], size %d
+./liblimo/limo_init.c     1104 TRAP_DEBUG "xxxx" SendLimoCmd: cmd %x, Before: lm_cmd=%x, lm_flags=%x, lm_status=%x
+./liblimo/limo_init.c     1105 TRAP_DEBUG "xxxx" SendLimoCmd: cmd %x, After: lm_cmd=%x, lm_flags=%x, lm_status=%x
+./liblapb/lapb_driver.c   1106  TRAP_OPER  "dxx" LAPB #%d (port %x): illegal port number for card type %x
+./libscmp/scmp_stream.c   1114  TRAP_OPER  "a" unsupported IP encapsulated route to %a
+./libstrouting/st_rtgqevent.c 1115 TRAP_DEBUG "ddddd" ST SPF: got new update about %d from %d seq %d retr %d eack %d
+./libscmp/scmp_message.c  1116 TRAP_OPER "d" Failed to get space for outgoing SCMP message,  opcode=%d, trying again.
+./libgwinit/gwinit.c      1117 Crash0  ""  **PREV CRASH**  watch_dog_process(): fatal buffer leak
+./libegp/spread.c         1118  TRAP_DEBUG  "add" switching AS of Nbr %a from %d to %d
+./libhap/hap_setup.c      1119  TRAP_OPER  "ad" HAP: %a DeleteAllStreams timeout #%d
+./libst2nbrs/st2_helloprocess.c 1122  TRAP_FIRE  "axx" RTT for Hello from %a out of range: %x msec(limit %x) flag: %x
+./libst2nbrs/st2_helloprocess.c 1123  TRAP_FIRE  "ad" Hello from %a late: %d sec since last hello
+./libst2nbrs/st2_helloprocess.c 1124  TRAP_FIRE  "xxxx" %x %x %x %x
+./libppp/lcp.c            1125  TRAP_DEBUG  "dd" PPP #%d: Received MRU %d
+./libxpc/xpc_driver.c     1126  TRAP_FIRE  "dxx" XPC #%d (port %x): illegal port number for card type %x
+./liblimotrunk/ltrunk.c   1130  TRAP_FIRE  "dddd" LIMO #%d [ShutDown failed] device %d, port %d, error %x
+./libx25/x25.c            1157  TRAP_FIRE  "dd" X25 Proc #%d:  ShutDown failed for device %d
+./libppp/fsm.c            1166 TRAP_FIRE "d" PPP #%d: Invalid timeout
+./libforus/icmp.c         1168  TRAP_DEBUG  "d" ICMP: don't send ICMP on pkt from us (dev %d)
+./libsrc/devicedisp.c     1199  TRAP_FIRE  "Ix" IP dispatch: drop pkt ttl is 0:[%I]: IP pkt %x
+./libsrc/devicedisp.c     1200 TRAP_FIRE "x" IP dispatch - SPF packet %x
+./libsrc/devicedisp.c     1201 TRAP_FIRE "x" IP dispatch - SPF up/down packet %x
+./libsrc/devicedisp.c     1203  TRAP_FIRE  "Ix" IP dispatch: fragmentation required:[%I]: IP pkt %x
+./libsrc/devicedisp.c     1204  TRAP_FIRE  "Ix" IP dispatch: drop pkt no route:[%I]: IP pkt %x
+./libsrc/devicedisp.c     1205  TRAP_FIRE  "Ix" IP dispatch: drop pkt ttl is 0:[%I]: IP pkt %x
+./libppp/ppp.c            1213 TRAP_OPER "ddda" PPP #%d: Device has %d PPP params, should have %d (IP %a)
+./libegp/segp.c           1223 Crash2  "ds"  **PREV CRASH**  EGP: can't get %d bytes of memory for %s
+./libegp/free.c           1224  TRAP_OPER  "dd" EGP: count was %d, can't get from FreeLists, free area only has %d
+./libieee802dot5/TMS380Transmit.c  1234  TRAP_DEBUG  "dxx" TR%d:  TXChain.pHeadField 0x%x, TXChain.pTMS380HeadField 0x%x.
+./libieee802dot5/TMS380Transmit.c  1235  TRAP_OPER  "d" TR%d: Transmit:  Command Complete (should never complete).
+./libieee802dot5/TMS380Transmit.c  1236  TRAP_DEBUG  "d" TR%d: Transmit:  Frame Complete.
+./libieee802dot5/TMS380Transmit.c  1237  TRAP_OPER  "d" TR%d: Transmit:  FrameSizeError.
+./libieee802dot5/TMS380Transmit.c  1238  TRAP_OPER  "d" TR%d: Transmit:  TransmitThresholdError.
+./libieee802dot5/TMS380Transmit.c  1239  TRAP_OPER  "d" TR%d: Transmit:  OddAddressError.
+./libieee802dot5/TMS380Transmit.c  1240  TRAP_OPER  "d" TR%d: Transmit:  FrameStartError.
+./libieee802dot5/TMS380Transmit.c  1241  TRAP_OPER  "d" TR%d: Transmit:  AccessPriorityError.
+./libieee802dot5/TMS380Transmit.c  1242  TRAP_OPER  "d" TR%d: Transmit:  UnenabledMACFrameError.
+./libieee802dot5/TMS380Transmit.c  1243  TRAP_OPER  "d" TR%d: Transmit:  IllegalFrameFormatError.
+./libieee802dot5/TMS380Transmit.c  1244  TRAP_OPER  "dx" TR%d: Transmit:  pParameters 0x%x.
+./libieee802dot5/TMS380Transmit.c  1245  TRAP_OPER  "d" TR%d: Transmit:  no recognizable status!.
+./libieee802dot5/TMS380Transmit.c  1246  TRAP_DEBUG  "d" TR%d: Transmit:  warning: IFrameAcknowledged.
+./libieee802dot5/TMS380Transmit.c  1247  TRAP_DEBUG  "d" TR%d: Transmit:  warning: ReadyForIFrames.
+./libieee802dot5/TMS380TXRX.c  1248 Crash1 "d"  **PREV CRASH**  TR%d:  not enough buffers.
+./libieee802dot5/TMS380Receive.c  1249  TRAP_DEBUG  "dx6X" TR%d: unknown type 0x%x from %6X
+./libieee802dot5/TMS380Receive.c  1250  TRAP_DEBUG  "dxx" TR%d:  RXChain.pHeadField 0x%x, RXChain.pTMS380Head 0x%x.
+./libieee802dot5/TMS380Receive.c  1251  TRAP_DEBUG  "d" TR%d:  TokenRing Receive:  Receive suspended.
+./libieee802dot5/TMS380Receive.c  1252  TRAP_OPER  "d" TR%d:  TokenRing Receive:  no recognizable status!.
+./libieee802dot5/TMS380Receive.c  1253  TRAP_OPER  "d6X" TR%d:  UI message received with Poll bit set to Final in message from %6X --- discarding
+./libieee802dot5/TMS380Receive.c  1254  TRAP_OPER  "dx6X" TR%d: received unsolicited 802.2 TEST reply (0x%x) from %6X
+./libieee802dot5/TMS380Receive.c  1255  TRAP_OPER  "d6X" TR%d: received unsolicited 802.2 XID reply from %6X
+./libieee802dot5/TMS380Receive.c  1256  TRAP_FIRE  "dx6X" TR%d: unknown 802.2 Control Type (0x%x) in message from %6X
+./libieee802dot5/TMS380ARPOutput.c  1257  TRAP_DEBUG  "d4Dx" TR%d: send requests for IP address %4D, pktq=0x%x
+./libieee802dot5/TMS380ARPOutput.c  1258  TRAP_DEBUG  "d4D" TR%d: still waiting for ARP reply from %4D
+./libieee802dot5/TMS380.c  1259  TRAP_DEBUG  "dxx" TR%d:  pSCB 0x%x, pSSB 0x%x.
+./libieee802dot5/TMS380.c  1260  TRAP_OPER  "dx" TR%d:  wrong MagicNumber in EPROM = 0x%x
+./libieee802dot5/TMS380.c  1261  TRAP_OPER  "dx" TR%d: EPROM read OVERFLOW (%x)!
+./libieee802dot5/TMS380.c  1262  TRAP_FIRE  "d" TR%d: WARNING: Data Length is NOT EVEN!
+./libieee802dot5/TMS380.c  1263  TRAP_OPER  "d" TR%d: CHECKSUMS DON'T MATCH (check software)...
+./libieee802dot5/TMS380.c  1264  TRAP_OPER  "d" TR%d: BUD:  InitialTestError.
+./libieee802dot5/TMS380.c  1265  TRAP_OPER  "d" TR%d: BUD:  AdapterSoftwareCRCError.
+./libieee802dot5/TMS380.c  1266  TRAP_OPER  "d" TR%d: BUD:  AdapterRAMError.
+./libieee802dot5/TMS380.c  1267  TRAP_OPER  "d" TR%d: BUD:  InstructionTestError.
+./libieee802dot5/TMS380.c  1268  TRAP_OPER  "d" TR%d: BUD:  ContextInterruptTestError.
+./libieee802dot5/TMS380.c  1269  TRAP_OPER  "d" TR%d: BUD:  ProtocolHandlerHardwareError.
+./libieee802dot5/TMS380.c  1270  TRAP_OPER  "d" TR%d: BUD:  SystemInterfaceRegisterError.
+./libieee802dot5/TMS380.c  1271  TRAP_OPER  "d" TR%d: BUD:  Unknown Error.
+./libieee802dot5/TMS380.c  1272  TRAP_OPER  "d" TR%d:  cannot pass Bring-Up-Diagnostics --- halted.
+./libieee802dot5/TMS380.c  1273  TRAP_OPER  "dd" TR%d:  no such port %d.
+./libieee802dot5/TMS380.c  1274  TRAP_OPER  "dxx" TR%d: HandleTMS380Interrupt:  Interrupt dispatch failure (offset 0x%x, index 0x%x)
+./libieee802dot5/TMS380.c  1275  TRAP_OPER  "d" TR%d: Open:  NodeAddressError.
+./libieee802dot5/TMS380.c  1276  TRAP_OPER  "d" TR%d: Open:  ListSizeError.
+./libieee802dot5/TMS380.c  1277  TRAP_OPER  "d" TR%d: Open:  BufferSizeError.
+./libieee802dot5/TMS380.c  1278  TRAP_OPER  "d" TR%d: Open:  ReservedBit4.
+./libieee802dot5/TMS380.c  1279  TRAP_OPER  "d" TR%d: Open:  TransmitBufferCountError.
+./libieee802dot5/TMS380.c  1280  TRAP_OPER  "d" TR%d: Open:  Error:
+./libieee802dot5/TMS380.c  1281  TRAP_OPER  "d" TR%d: Open Phase:  TMS380LobeMediaTestField.
+./libieee802dot5/TMS380.c  1282  TRAP_OPER  "d" TR%d: Open Phase:  TMS380PhysicalInsertion.
+./libieee802dot5/TMS380.c  1283  TRAP_OPER  "d" TR%d: Open Phase:  TMS380AddressVerification.
+./libieee802dot5/TMS380.c  1284  TRAP_OPER  "d" TR%d: Open Phase:  TMS380ParticipationInRingPoll.
+./libieee802dot5/TMS380.c  1285  TRAP_OPER  "d" TR%d: Open Phase:  TMS380RequestInitialization.
+./libieee802dot5/TMS380.c  1286  TRAP_OPER  "d" TR%d: Open Phase:  unrecognized phase.
+./libieee802dot5/TMS380.c  1287  TRAP_OPER  "d" TR%d: Open Phase Error:  TMS380FunctionFailureField.
+./libieee802dot5/TMS380.c  1288  TRAP_OPER  "d" TR%d: Open Phase Error:  TMS380SignalLoss.
+./libieee802dot5/TMS380.c  1289  TRAP_OPER  "d" TR%d: Open Phase Error:  TMS380TimeoutField.
+./libieee802dot5/TMS380.c  1290  TRAP_OPER  "d" TR%d: Open Phase Error:  TMS380RingFailure.
+./libieee802dot5/TMS380.c  1291  TRAP_OPER  "d" TR%d: Open Phase Error:  TMS380RingBeaconing.
+./libieee802dot5/TMS380.c  1292  TRAP_OPER  "d" TR%d: Open Phase Error:  TMS380DuplicateNodeAddress.
+./libieee802dot5/TMS380.c  1293  TRAP_OPER  "d" TR%d: Open Phase Error:  TMS380RequestParameters.
+./libieee802dot5/TMS380.c  1294  TRAP_OPER  "d" TR%d: Open Phase Error:  TMS380RemoveReceived.
+./libieee802dot5/TMS380.c  1295  TRAP_OPER  "d" TR%d: Open Phase:  unrecognized phase error.
+./libieee802dot5/TMS380.c  1296  TRAP_OPER  "d" TR%d: Open:  InvalidOptions.
+./libieee802dot5/TMS380.c  1297  TRAP_OPER  "dx" TR%d: RejectCommand 0x%x:  IllegalCommand.
+./libieee802dot5/TMS380.c  1298  TRAP_OPER  "dx" TR%d: RejectCommand 0x%x:  AddressError.
+./libieee802dot5/TMS380.c  1299  TRAP_OPER  "dx" TR%d: RejectCommand 0x%x:  AdapterOpen.
+./libieee802dot5/TMS380.c  1300  TRAP_OPER  "dx" TR%d: RejectCommand 0x%x:  AdapterClosed.
+./libieee802dot5/TMS380.c  1301  TRAP_OPER  "dx" TR%d: RejectCommand 0x%x:  SameCommand.
+./libieee802dot5/TMS380.c  1302  TRAP_OPER  "dx" TR%d:  unhandled CommandStatus Code is %x.
+./libieee802dot5/TMS380RingStatus.c  1303  TRAP_DEBUG  "d" TR%d:  received RingStatus event.
+./libieee802dot5/TMS380.c  1304  TRAP_OPER  "d" TR%d:  received HandleSCBClear event (should never happen).
+./libieee802dot5/TMS380.c  1305  TRAP_OPER  "d" TR%d:  received AdapterCheck event.  Reset TR!
+./libieee802dot5/TMS380.c  1306  TRAP_OPER  "dxxdddd" TR%d:  PostInitializationInitialization SCB invalid. p 0x%x pSCB 0x%x pShorts[0]= %d, pShorts[1]= %d, pShorts[2]= %d, pShorts[3]= %d
+./libieee802dot5/TMS380.c  1307  TRAP_OPER  "dxxdddd" TR%d:  PostInitializationInitialization SSB invalid. p 0x%x pSSB 0x%x pShorts[0]= %d, pShorts[1]= %d, pShorts[2]= %d, pShorts[3]= %d
+./libieee802dot5/TMS380.c  1308  TRAP_OPER  "d" TR%d: PostInitializationInitialization failed.
+./libieee802dot5/TMS380.c  1309  TRAP_OPER  "d" TR%d:  invalid call sequence.
+./libieee802dot5/TMS380.c  1310  TRAP_OPER  "d" TR%d:  invalid call sequence.
+./libieee802dot5/TMS380.c  1311  TRAP_OPER  "d" TR%d:  invalid PostInitialization call sequence.
+./libieee802dot5/TMS380.c  1312  TRAP_OPER  "d" TR%d:  invalid PostInitialization call sequence.
+./libieee802dot5/TMS380.c  1313  TRAP_OPER  "d" TR%d:  invalid PostInitialization call sequence.
+./libieee802dot5/TMS380.c  1314  TRAP_OPER  "d" TR%d:  invalid PostInitialization call sequence.
+./libieee802dot5/TMS380.c  1315  TRAP_OPER  "dd" TR%d:  error --- no such TokenRing port %d.
+./libieee802dot5/TMS380.c  1316  TRAP_OPER  "dd" TR%d: Initialization Failure on RetriesToGo %d:
+./libieee802dot5/TMS380.c  1317  TRAP_OPER  "d" TR%d:  initialization failure without error!
+./libieee802dot5/TMS380.c  1318  TRAP_OPER  "d" TR%d:  InvalidInitializationBlock
+./libieee802dot5/TMS380.c  1319  TRAP_OPER  "d" TR%d:  InvalidOptions
+./libieee802dot5/TMS380.c  1320  TRAP_OPER  "d" TR%d:  InvalidReceiveBurstSize
+./libieee802dot5/TMS380.c  1321  TRAP_OPER  "d" TR%d:  InvalidTransmitBurstCount
+./libieee802dot5/TMS380.c  1322  TRAP_OPER  "d" TR%d:  InvalidDMAAbortThreshold
+./libieee802dot5/TMS380.c  1323  TRAP_OPER  "d" TR%d:  InvalidSCB
+./libieee802dot5/TMS380.c  1324  TRAP_OPER  "d" TR%d:  InvalidSSB
+./libieee802dot5/TMS380.c  1325  TRAP_OPER  "d" TR%d:  DIOParity
+./libieee802dot5/TMS380.c  1326  TRAP_OPER  "d" TR%d:  DMATimeout
+./libieee802dot5/TMS380.c  1327  TRAP_OPER  "d" TR%d:  DMAParityError
+./libieee802dot5/TMS380.c  1328  TRAP_OPER  "d" TR%d:  DMABusError
+./libieee802dot5/TMS380.c  1329  TRAP_OPER  "d" TR%d:  DMADataError
+./libieee802dot5/TMS380.c  1330  TRAP_OPER  "d" TR%d:  InitializationAdapterCheck
+./libieee802dot5/TMS380.c  1331  TRAP_OPER  "d" TR%d:  unknown initialization error code
+./libieee802dot5/TMS380.c  1332  TRAP_OPER  "d" Tried initialize() %d thrice, check the adapter for errors.
+./libarp/ARP.c             1335  TRAP_FIRE  "d6Xdd" Device#%d: ARP from %6X only %d long. Need %d
+./libarp/ARP.c             1336  TRAP_FIRE  "d6Xdd" Device#%d: ARP from %6X, ar_plen %d instead of %d
+./libarp/ARP.c             1337  TRAP_FIRE  "d6X4D6X4D6X" Device#%d: ARP from %6X, %4D->%6X claims our address (%4D->%6X)
+./libarp/ARP.c             1338  TRAP_DEBUG  "daa6X" Device#%d: Sending ARP reply about %a to %a->%6X
+./libarp/ARP.c             1339  TRAP_DEBUG  "daa6X" Device#%d: Ignoring ARP request for %a from %a->%6X
+./libarp/ARP.c             1340  TRAP_FIRE  "d6X4D6X" Device#%d: ARP from %6X, reply not for me, but %4D->%6X
+./libarp/ARP.c             1341  TRAP_FIRE  "d6Xd" Device#%d: ARP from %6X operation %d not recognized
+./libarp/ARP.c             1342  TRAP_FIRE  "da" ARP#%d: broadcast address is %a
+./libarp/ARP.c             1343  TRAP_DEBUG  "d4D6Xx6Xx" ARP#%d: IP %4D new EADDR %6X hardware 0x%x (old %6X hardware 0x%x)
+./libarp/ARP.c             1344  TRAP_DEBUG  "d4D6Xx" ARP#%d: install address map entry %4D->%6X hardware (0x%x)
+./libarp/ARP.c            1345 Crash3  "dax"  **PREV CRASH**  ARP#%d: can't delete old ARP entry %a from table %x
+./libarp/ARP.c             1346  TRAP_DEBUG  "d4D6Xdxd" ARP#%d: drop addr map entry %4D->%6X, age=%d pktq=%x state=%d
+./libieee802dot5/TMS380RingStatus.c  1347  TRAP_OPER  "d" TR%d:  RingStatus:  SignalLoss.
+./libieee802dot5/TMS380RingStatus.c  1348  TRAP_OPER  "d" TR%d:  RingStatus:  HardError.
+./libieee802dot5/TMS380RingStatus.c  1349  TRAP_OPER  "d" TR%d:  RingStatus:  SoftError.
+./libieee802dot5/TMS380RingStatus.c  1350  TRAP_OPER  "d" TR%d:  RingStatus:  TransmitBeacon.
+./libieee802dot5/TMS380RingStatus.c  1351  TRAP_OPER  "d" TR%d:  RingStatus:  LobeWireFault.
+./libieee802dot5/TMS380RingStatus.c  1352  TRAP_OPER  "d" TR%d:  RingStatus:  AutoRemoveError.
+./libieee802dot5/TMS380RingStatus.c  1353  TRAP_OPER  "d" TR%d:  RingStatus:  RemoveReceived.
+./libieee802dot5/TMS380RingStatus.c  1354  TRAP_OPER  "d" TR%d:  RingStatus:  CounterOverflow.
+./libieee802dot5/TMS380RingStatus.c  1355  TRAP_OPER  "d" TR%d:  RingStatus:  SingleStation.
+./libieee802dot5/TMS380RingStatus.c  1356  TRAP_OPER  "d" TR%d:  RingStatus:  RingRecovery.
+./libieee802dot5/TMS380RingStatus.c  1357  TRAP_OPER  "d" TR%d:  RingStatus:  (unused) ReservedBit6.
+./libppp/fsm.c            1365 TRAP_FIRE "dxddd" PPP #%d: No buffer to send prot %x, code %d, id %d, state %d
+./libppp/fsm.c            1366 TRAP_FIRE "dxddd" PPP #%d: Pkt refused by driver, prot %x, code %d, id %d, state %d
+./libppp/lcp.c            1367  TRAP_FIRE  "d" PPP #%d: Line is looped back
+./libconsole/console.c    1370 Crash2  "dd"  **PREV CRASH**  Incorrect config version %d, not %d
+./liblapb/lapb_driver.c   1371  TRAP_OPER  "dd" LAPB #%d: T1 value %d too large - max value is 5360 tenths of seconds
+./libieee802dot5/TMS380RingStatus.c  1372  TRAP_OPER  "d" TR%d:  RingStatus:  (unused) ReservedBits11Through15.
+./libieee802dot5/TMS380.c  1373  TRAP_OPER  "d" TR%d: Close: Completed.
+./libieee802dot5/TMS380.c  1374  TRAP_OPER  "d" TR%d: Close: Error.
+./libsnmp/snmp_agent.c    1380  TRAP_DEBUG  "Iddd" SNMP pkt %I rcvd, src port %d dst port %d len %d
+./libsnmp/snmp_agent.c    1381  TRAP_OPER  "" SNMP: can't get buffer for SNMP reply
+./libsnmp/snmp_agent.c    1382  TRAP_DEBUG  "" Can't build SNMP trap
+./libsnmp/snmp_agent.c    1383  TRAP_DEBUG  "dd" Sending SNMP pkt, pkt len = %d, udp len = %d
+./libsnmp/snmp_vars.c     1384  TRAP_DEBUG  "xxddxddd" dest %x route_dest %x if %d met %d next %x type %d proto %d ip len %d
+./libforus/ipassemble.c   1389  TRAP_FIRE  "xx" ForUs: bad protocol %x from %x
+./libpassthru/passthru.c  1391  TRAP_DEBUG  "d" Passthru: proc. number %d
+./libpassthru/passthru.c  1392  TRAP_OPER  "d" Passthru #%d:  Transmit ADDRESS ERROR - restarting transmitter
+./libpassthru/passthru.c  1393 TRAP_DEBUG "x" Passthru device number [%x]
+./libpassthru/passthru.c  1394  TRAP_FIRE  "dd" Passthru #%d: xpc_init failed - return code %d
+./libpassthru/passthru.c  1395 TRAP_FIRE "da" Passthru #%d: Passthru Link %a up
+./libpassthru/passthru.c  1396  TRAP_FIRE  "dd" Passthru Proc #%d:  ShutDown failed for device %d
+./libpassthru/passthru.c  1397  TRAP_DEBUG  "dd" Passthru #%d: xpc_REinit failed - ret code %d
+./libpassthru/passthru.c  1398  TRAP_FIRE  "d" Passthru #%d: passthru going down - CTS Lost
+./libpassthru/passthru.c  1399  TRAP_DEBUG  "dd" Passthru #%d: xpc_REinit failed - ret code %d
+./libpassthru/passthru.c  1400  TRAP_FIRE  "d" Passthru #%d: CTS still off
+./libpassthru/passthru_in.c 1401  TRAP_DEBUG  "dx" PASSTHRU #%d: Received hardware checksum error pkt %x
+./libpassthru/passthru_in.c 1402  TRAP_DEBUG  "dx" Passthru #%d:  Pkt %x received while link down - free it
+./libpassthru/passthru_out.c 1403  TRAP_FIRE  "ddd" Passthru #%d: source gw #%d not same as config'd source gw #%d
+./libpassthru/passthru_out.c 1404  TRAP_FIRE  "ddd" Passthru #%d: source dev #%d not same as config'd exit dev #%d
+./libpassthru/passthru_out.c 1405 TRAP_DEBUG "dx" PASSTHRU #%d: driver refused packet %x - drop it
+./libpassthru/passthru_out.c 1406 TRAP_DEBUG "dx" PASSTHRU #%d: interface down, drop packet %x
+./libpassthru/passthru_out.c 1407 TRAP_DEBUG "dxxxu" PASSTHRU #%d: unrecognized pkt %x - dist %x type %x nbytes %u
+./librouting/rupgen.c     1408 TRAP_DEBUG "" SPF: TypeOfChange was RUP_WAITALITTLE and RupGenWaitFlag was on
+./libpassthru/passthru.c  1409  TRAP_FIRE  "d" Passthru #%d:  init failed - exit gateway number is 0
+./libsrc/devicedisp.c     1410  TRAP_DEBUG  "uuuu" IP dispatch: [Passthru] - exit gw %u MTU %u pkt size %u exit dev num %u
+./libsrc/devicedisp.c     1411  TRAP_DEBUG  "uu" PassThru dest. unreachable - exit gw %u exit dev num %u
+./libsrc/devicedisp.c     1412  TRAP_FIRE  "xx" IP dispatch: unrecognized pkt %x - 1st 32 bits %x
+./libsrc/devicedisp.c     1413  TRAP_FIRE  "Iuuxuu" IP dispatch:[%I]: IP len %u ttl %u pkt %x gg:entry %u exit %u
+./libsrc/getroute.c       1414  TRAP_OPER  "I" GetRoute: packet with zero dest [%I]
+./libforus/hmp_main.c     1417 TRAP_DEBUG "I" HMP: [send reply -> %I]\n\r
+./libforus/hmp_control.c  1418 TRAP_OPER "I" HMP: received restart cmd, already restarting [%I]
+./libppp/ppp_snmp.c       1419 TRAP_FIRE "d" PPP #%d: No memory for snmp mib interface entry
+./libsnmp/snmp_vars.c     1425 TRAP_DEBUG "d" SNMP var_ifEntry: No MIB entry yet for interface %d
+./libx25/x25_init.c       1426 TRAP_FIRE "x" Failed to allocate Probe buffer - device number [%x]
+./libx25/l3_events.c      1427 TRAP_FIRE "d" X25 #[%d]: Failed to allocate call descriptor for Probe
+./libx25/l3_events.c      1428 TRAP_FIRE "d" X25 #[%d]: Probe buffer in use
+./libx25/l3_events.c      1429 TRAP_DEBUG "dx" X25 #[%d]: Freeing Probe buffer 0x%x
+./libx25/l3_vc_act.c      1430 TRAP_DEBUG "d" X25 #[%d]: Sending Probe packet
+./libforus/finit.c        1431  TRAP_DEBUG  "dx" %d buffers allocated for IP assembly at 0x%x
+./libegp/egp.c            1432  TRAP_DEBUG  "xxx" intrervals (int): pause 0x%x spread 0x%x table 0x%x
+./libegp/egp.c            1433  TRAP_DEBUG  "ddd" interval values: pause %d spread %d table %d
+./libforus/hmp_control.c  1435 TRAP_FIRE "Id" HMP: throughput control ON: [%I], Interval : %d minutes
+./libforus/hmp_control.c  1437 TRAP_FIRE "" HMP: received HTM control
+./libforus/hmp_control.c  1438 TRAP_FIRE "" HMP: received MC change control
+./libforus/hmp_control.c  1439 TRAP_FIRE "I" HMP: received invalid MC change control-- re: %I
+./libx25/l3_events.c      1440 TRAP_FIRE "dxxd" X25 #[%d]: Probe calld %x in use - LCB %x VC state %d
+./libforus/hmp_control.c  1442 TRAP_FIRE "Id" HMP: throughput control OFF -- re: [%I]
+./libforus/hmp_control.c  1443 TRAP_OPER  "dI" HMP: Illegal HMP throughput parameter value %d about [%I]
+./libether/ether_snmp.c   1444 TRAP_OPER "" SNMPInterfaceInit: Couldn't malloc mib interface entry
+./libegp/segp.c           1462  TRAP_OPER  "a" EGP: can't get memory to add net %a to send nbr list
+./libegp/segp.c           1463  TRAP_OPER  "a" EGP: can't get memory to add net %a to the send distance list
+./libegp/segp.c           1464  TRAP_OPER  "a" EGP: can't get memory to add net %a to the send net list
+./libtftp/rrq.c           1465  TRAP_FIRE  "u" tftp ack: no buffer to send ack for blk num %u
+./libsi/si_bi4.c          1475 Crash3  "ddd"  **PREV CRASH**  Security#%d: Wrong number of config parameters: Got %d, want %d
+./libsi/si_bi4.c           1476  TRAP_DEBUG  "d6X6Xx" Security#%d: SecurityInputAccept() - RX frame. Src:%6X Dst:%6X FrameType: %x
+./libsi/si_bi4.c          1477  TRAP_DEBUG  "d6X" Security#%d: IP broadcast from %6X dropped
+./libsi/si_bi4.c          1478  TRAP_DEBUG  "dx6X" Security#%d: probe (type 0x%x) from %6X
+./libsi/si_bi4.c          1479  TRAP_DEBUG  "dx6X" Security#%d: unknown type 0x%x from %6X
+./libsi/si_bi4.c          1480  TRAP_DEBUG  "d" bitspertick == 0
+./libsi/si_bi4.c          1481 TRAP_FIRE "dx" ST Unbound SI IP site target address. Dropping packet. RID: %d Packet: %x 
+./libsi/si_bi4.c          1482  TRAP_DEBUG  "d" bitspertick == 0
+./libsi/si_driver_config.c 1484 TRAP_DEBUG "dddxd" Dev %d: rxring=%d txring=%d mode=%x rxmax=%d
+./libsi/si_init.c         1490 TRAP_DEBUG "ddd" Security device number %d, process %d, processor %d
+./libsi/si_init.c         1491 Crash0 ""  **PREV CRASH**  SECURITY -- can't alloc seg memory
+./libsi/si_init.c         1492 TRAP_DEBUG "dd" SIInitPhase1: ProcessNumber %d Monitoree %d\n\r
+./libsi/si_init.c         1493  TRAP_OPER  "d" Security_init: device %d, CONFIG Data not provided
+./libsi/si_init.c         1494 TRAP_OPER "dds" Security_init: device %d, port %d, driver returned status %s
+./libsi/si_init.c         1495 TRAP_FIRE "ddaad" Security proc %d, device %d, address %a, mask %a, input bufs %d
+./libsi/si_lnisvc.c       1496  TRAP_DEBUG  "d" Dest added.  Device#%d
+./libsi/si_lnisvc.c       1497  TRAP_DEBUG  "ddx" Add Destination Failed.  Device#%d rid:%d Address:%x
+./libsi/si_lnisvc.c       1498  TRAP_DEBUG  "d" All deleted.  Device#%d
+./libsi/si_lnisvc.c       1499  TRAP_OPER  "" NES RED ETHERNET SUPPORT: Using broadcast multicast.
+./libsi/si_out.c          1500  TRAP_OPER  "d" <<<%d>>>
+./libsi/si_procm.c        1503 TRAP_DEBUG "d" Security process number %d starting
+./libsi/si_procm.c        1504 TRAP_DEBUG "ddx" Main security process is %d, config device %d, pmb=%x
+./libsi/si_procm.c        1505  TRAP_FIRE  "dxx" Security#%d: UP going from %x to %x (0 means up)
+./libsi/si_procm.c        1506  TRAP_FIRE  "dxx" Security#%d: DOWN going from %x to %x (not 0 means down)
+./libsi/si_remotedb.c     1507 Crash1  "d"  **PREV CRASH**  Security cannot create remote site hash database of size %d
+./libsi/si_remotedb.c     1508  TRAP_FIRE  "dx" Security - created remote E3DB with %d entries, base addr %x
+./libsi/si_remotedb.c     1509  TRAP_DEBUG  "ad" Security - touched RDB entry for %a
+./libsi/si_remotedb.c     1510  TRAP_DEBUG "ad" Security - found site %a, ridcount %d in remote DB
+./libsi/si_remotedb.c     1511  TRAP_DEBUG "ad" Security -  created site %a, ridcount %d to remote DB
+./libsi/si_remotedb.c     1512  TRAP_FIRE "a" Security - cant add site %a to remote DB
+./libsi/si_remotedb.c     1513  TRAP_DEBUG  "a" Security - RDBAgeOutSite() just cleaned out site %a
+./libsi/si_remotedb.c     1514  TRAP_DEBUG  "ad" Security - RDBAgeOutSite() site %a, ridcount %d still alive
+./libsi/si_remotedb.c     1515  TRAP_DEBUG  "" Security - RDBAgeOutSite() just swept-up
+./libsi/si_rid.c          1516  TRAP_DEBUG  "da" SIRidGetIPAddr() - rid: %d, target: %a
+./libsi/si_rid.c          1517  TRAP_DEBUG  "da" SIRidGetIPTarget() - rid: %d, target: %a
+./libsi/si_rid.c          1518  TRAP_DEBUG  "dad" Security:%d SIAddRIDSite() - adding site %a to rid %d
+./libsi/si_rid.c          1519  TRAP_DEBUG  "dad" Security:%d SIDeleteRIDSite() - deleting site %a from rid %d
+./libsi/si_smp.c          1520  TRAP_DEBUG  "dd6X" Security:%d SecuritySend1Probe() - probing E3D %d via target %6X
+./libsi/si_smp.c          1521 TRAP_FIRE "d" Security:%d SecuritySend1Probe() - cant get probe output buffer
+./libsi/si_smp.c          1522  TRAP_DEBUG  "d6X6X" Security:%d SMPReplyToProbe() - send probe reply from %6X to %6X
+./libsi/si_smp.c          1523  TRAP_DEBUG  "d6X6X" Security:%d SMPProcessProbeReply() - rcvd probe reply from %6X to %6X
+./libsi/si_smp.c          1524  TRAP_DEBUG  "d6X6X" Security %d sending remote site poll. Src: %6X, Dst: %6X
+./libsi/si_smp.c          1525 TRAP_FIRE "d" Security:%d SecuritySendE3DRemotePoll() - cant get remote site poll buffer
+./libsi/si_smp.c          1526  TRAP_DEBUG  "d6X6Xd" Security:%d SMPReplyToInfoReq() - poll reply to %6X via %6X with %d E3D updates
+./libsi/si_smp.c          1527  TRAP_DEBUG  "d60X" Security:%d Info Reply: %60X
+./libsi/si_smp.c          1528  TRAP_DEBUG  "d6X6Xdd" Security %d - SMPProcessInfoReply() rcvd poll reply. Src %6X, Dst %6X. Applied %d of %d E3 records to RDB 
+./libsi/si_smp.c          1529  TRAP_DEBUG  "d6X6X" Security %d - SMPProcessInfoReply() rcvd poll reply. Src %6X, Dst %6X. NOT applied to RDB
+./libsi/si_smp.c          1530  TRAP_DEBUG  "d6X6X" Security:%d SecuritySendPhantom() -  src: %6X dest: %6X
+./libsi/si_smp.c          1531 TRAP_FIRE "d" Security:%d SecuritySendPhantom() - cant get phantom msg output buffer
+./libsi/si_smp.c          1532  TRAP_FIRE  "dd" Security %d Dropping SMP frame with bad version (%d)
+./libsi/si_smp.c          1533  TRAP_DEBUG  "dd" Security %d - SMPInputAccept() SMP frame with Pkt Type (%d)
+./libsi/si_smp.c          1534  TRAP_FIRE  "dd6X6X" Security %d Dropping SMP frame with bad Pkt Type (%d). Src: %6X Dst: %6X
+./libsi/si_snmp.c         1535 TRAP_OPER "" SNMPInterfaceInit: Couldn't malloc mib interface entry
+./libppp/ppp.c            1580  TRAP_OPER  "da" PPP #%d: Restarting transmitter -- tx addr err (IP %a)
+./libppp/ppp.c            1581 TRAP_DEBUG "da" PPP #%d: Initializing device (IP %a)
+./libppp/ppp.c            1582  TRAP_FIRE  "dd" PPP #%d: Xpc chip init failed - return code %d
+./libppp/ppp.c            1583 TRAP_FIRE "d" PPP #%d: Ppp link down
+./libppp/ppp.c            1584  TRAP_FIRE  "dd" PPP #%d: ShutDown failed (process %d)
+./libppp/ppp.c            1585  TRAP_DEBUG  "dd" PPP #%d: Xpc chip reinit failed - ret code %d
+./libppp/ppp.c            1586  TRAP_OPER  "da" PPP #%d: Ppp link down (IP %a)
+./libppp/ppp.c            1587  TRAP_DEBUG  "dd" PPP #%d: Xpc chip reinit failed - ret code %d
+./libppp/ppp.c            1588 TRAP_FIRE "d" PPP #%d: CTS still off
+./libppp/ppp.c            1589  TRAP_DEBUG  "dx" PPP #%d: Received hardware checksum error pkt %x
+./libppp/ppp.c            1591 TRAP_FIRE "dd" PPP #%d: Received short packet of len %d
+./libppp/ppp.c            1592 TRAP_DEBUG "dxx" PPP #%d: Received pkt %x protocol %x
+./libppp/ppp.c            1593 TRAP_FIRE "dx" PPP #%d: Received unknown protocol %x
+./libppp/ppp.c            1594 TRAP_FIRE "dx" PPP #%d: Next hop address is null, freeing pkt %x
+./libppp/ppp.c            1595 TRAP_DEBUG "dx" PPP #%d: Dropping packet %x because link down
+./libppp/ppp.c            1597 TRAP_DEBUG "dd" PPP #%d: LQM packet number %d delayed
+./libppp/ppp.c            1598  TRAP_DEBUG  "dxs" PPP #%d: Dropping pkt %x from %s - refused by driver
+./libppp/lcp.c            1599  TRAP_DEBUG  "dx" PPP #%d: Received MAGICNUMBER %x
+./libsrc/devicedisp.c     1600  TRAP_FIRE  "xx" IP dispatch: unrecognized pkt %x - 1st 32 bits %x
+./libsrc/devicedisp.c     1601  TRAP_DEBUG  "Ix" IP dispatch: options processing required:[%I]: IP pkt %x
+./libforus/hmp_internal.c 1602 TRAP_OPER "" HMP: install HMP throughput counting
+./libforus/hmp_internal.c 1603 TRAP_OPER "" HMP: remove HMP throughput counting
+./libppp/lcp.c            1604 TRAP_DEBUG "ddd" PPP #%d: Link quality: he sent %d; I lost %d pkts
+./libppp/lcp.c            1605 TRAP_DEBUG "d" PPP #%d: lcp_lqm_timeout: bring down link, no lqm pkts
+./libppp/lcp.c            1606  TRAP_DEBUG  "dx" PPP #%d: Received link quality mon in lcp negot %x
+./libppp/lcp.c            1608  TRAP_OPER  "da" PPP #%d: No memory for lcp fsm table (IP %a)
+./libppp/lcp.c            1610  TRAP_FIRE  "d" PPP #%d: Received protocol-reject for lcp
+./libppp/lcp.c            1611  TRAP_FIRE  "d" PPP #%d: Received bad ack in lcp negotiations
+./libppp/lcp.c            1612  TRAP_FIRE  "d" PPP #%d: Line appears to be looped back
+./libppp/lcp.c            1613  TRAP_FIRE  "d" PPP #%d: Received bad nak in lcp negotiations
+./libppp/lcp.c            1614  TRAP_FIRE  "d" PPP #%d: Received bad reject in lcp negotiations
+./libppp/lcp.c            1615  TRAP_FIRE  "dxdd" PPP #%d: Received lcp CI %x of bad length %d, p[1] %d
+./libppp/lcp.c            1616  TRAP_DEBUG  "d" PPP #%d: Received pcompression in lcp negotiations
+./libppp/lcp.c            1617  TRAP_DEBUG  "d" PPP #%d: Received accompression in lcp negotiations
+./libppp/lcp.c            1618  TRAP_DEBUG  "dd" PPP #%d: Received unknown option %d in lcp negot
+./libppp/fsm.c            1619  TRAP_DEBUG  "dxdd" PPP #%d: fsm_activeopen(%x): level %d, state %d
+./libppp/fsm.c            1620  TRAP_DEBUG  "dxdd" PPP #%d: fsm_passiveopen(%x): level %d, state %d
+./libppp/fsm.c            1621  TRAP_DEBUG  "dxdd" PPP #%d: fsm_close(%x): level %d, state %d
+./libppp/fsm.c            1622  TRAP_DEBUG  "dxdd" PPP #%d: fsm_timeout(%x): level %d, state %d
+./libppp/fsm.c            1623 TRAP_FIRE "ddx" PPP #%d: Received short header of len %d, protocol %x
+./libppp/fsm.c            1624  TRAP_DEBUG  "dxxxdd" PPP #%d: fsm_input: Pkt %x code %x id %x len %d l %d
+./libppp/fsm.c            1625 TRAP_FIRE "ddx" PPP #%d: Received illegal length %d, protocol %x
+./libppp/fsm.c            1626 TRAP_FIRE "dddx" PPP #%d: Received short pkt of len %d, l %d, protocol %x
+./libppp/fsm.c            1627  TRAP_DEBUG  "dxddd" PPP #%d: fsm_input(%x): level %d, state %d, code %d
+./libppp/fsm.c            1628  TRAP_DEBUG  "dxd" PPP #%d: Received configure-ack for prot %x, id %d
+./libppp/fsm.c            1629 TRAP_DEBUG "dxddd" PPP #%d: Sent ppp packet, prot %x, code %d, id %d, state %d
+./libppp/fsm.c            1630 TRAP_FIRE "dxddd" PPP #%d: No buffer to send prot %x, code %d, id %d, state %d
+./libppp/fsm.c            1631 TRAP_FIRE "dx" PPP #%d: Possible configure-nak loop, protocol %x
+./libppp/fsm.c            1632 TRAP_FIRE "ddx" PPP #%d: Received short code-reject of len %d, protocol %x
+./libppp/fsm.c            1633 TRAP_FIRE "ddx" PPP #%d: Received code-reject for code %d, protocol %x
+./libppp/fsm.c            1634 TRAP_FIRE "ddx" PPP #%d: Received short protocol-reject, len %d, protocol %x
+./libppp/fsm.c            1635 TRAP_FIRE "dx" PPP #%d: Received non-lcp protocol-reject, protocol %x
+./libppp/fsm.c            1636 TRAP_FIRE "dx" PPP #%d: Received unknown protocol-reject, protocol %x
+./libppp/ipcp.c           1637  TRAP_DEBUG  "daa" PPP #%d: Received IP addrs [his is %a, he thinks ours is %a]
+./libppp/ipcp.c           1638  TRAP_OPER  "da" PPP #%d: No memory for ipcp fsm table (IP %a)
+./libppp/ipcp.c           1639  TRAP_FIRE  "d" PPP #%d: Received bad ack in ipcp negotiations
+./libppp/ipcp.c           1640  TRAP_FIRE  "ddxx" PPP #%d: Received bad nak in ipcp negot, len %d, p0 %x, p1 %x
+./libppp/ipcp.c           1641  TRAP_FIRE  "d" PPP #%d: Received bad reject in ipcp negotiations
+./libppp/ipcp.c           1642  TRAP_FIRE  "dxdd" PPP #%d: Received ipcp CI %x of bad length %d, p[1] %d
+./libppp/ipcp.c           1643  TRAP_DEBUG  "d" PPP #%d: Received compresstype in ipcp negotiations
+./libppp/ipcp.c           1644  TRAP_OPER  "da" PPP #%d: Ppp link up for IP (IP %a)
+./libppp/ipcp.c           1645  TRAP_OPER  "da" PPP #%d: Ppp link down for IP (IP %a)
+./libppp/ppp_events.c     1646  TRAP_DEBUG  "d" Ppp #%d: timer expired - send hello
+./libppp/ppp_ip.c         1647  TRAP_FIRE  "d" PPP #%d: Received protocol-reject for IP
+./libforus/hmp_main.c     1648 TRAP_FIRE "I" HMP:  received HMP Poll Ack message[%I]\n\r
+./libforus/hmp_main.c     1649 TRAP_FIRE "I" HMP:  received HMP error message[%I]\n\r
+./libegp/console_support.c 1650  TRAP_DEBUG  "d" SortNbrs: NumNbrs = %d
+./libtrunk/trunk_snmp.c   1651 TRAP_FIRE "d" TRUNK #%d: No memory for snmp mib interface entry
+./libx25/x25_snmp.c       1652 TRAP_FIRE "d" X25 #%d: No memory for snmp mib interface entry
+./libsrc/devicedisp.c     1653 TRAP_DEBUG "dda" IP redirect: src device %d, dest device %d, next hop %a
+./libforus/hmp_control.c  1654 TRAP_OPER "Id" HMP: trap count control ON: [%I], Interval : %d minutes
+./libforus/hmp_control.c  1655 TRAP_DEBUG "I" HMP: trap count already running [%I]
+./libforus/hmp_control.c  1656 TRAP_FIRE "Id" HMP: trap count control OFF -- re: [%I]
+./libforus/hmp_control.c  1657 TRAP_OPER  "dI" HMP: Illegal HMP trap count parameter value %d about [%I]
+./libforus/hmp_control.c  1658 TRAP_DEBUG "" HMP: received trap count control
+./libegp/regp.c           1659  TRAP_DEBUG  "da" EGP: received %d nets from %a
+./libegp/segp.c           1660  TRAP_DEBUG  "ddas" EGP: sending %d nets/%d gwys to %a %s 
+./libsrc/devicedisp.c     1661  TRAP_FIRE "ddxd" IP (buffer): nbytes %d, max nbytes %d, next %x, std nbytes %d
+./libforus/hmp_control.c  1662 TRAP_DEBUG "I" HMP: trap count already off [%I]
+./libforus/hmp_monitor.c  1664  TRAP_FIRE "" HMP: can't get buffer to send HMP trap count reply\n\r
+./libsrc/monitoree.c      1665 TRAP_DEBUG "xx" INIT: trap storage FillPtr %x SendPtr %x
+./libsrc/monitoree.c      1666 TRAP_DEBUG "xd" INIT: alloc trap storage for monblock %x, size %d\n\r
+./libforus/hmp_control.c  1667 TRAP_DEBUG "I" HMP: throughput already off [%I]
+./liblimo/limo_init.c     1670 TRAP_DEBUG "x" send_limo_command: csr %x handshake in wrong state
+./liblimo/limo_init.c     1671 TRAP_DEBUG "x" send_limo_command: csr %x command timed out
+./liblimo/limo_init.c     1672 TRAP_DEBUG "x" LIMO: Buffer %x doesn't start on long-word boundary
+./libppp/ipcp.c           1675  TRAP_DEBUG  "daa" PPP #%d: Received IP addrs [his is %a, we think his is %a]
+./libppp/ipcp.c           1676  TRAP_DEBUG  "d" PPP #%d: Rejected IP addr; wrong length or remote may not negotiate
+./libegp/segp.c           1678  TRAP_DEBUG  "uu" EGP: built rev %u of table for send, spent %u millisec.
+./libether/bi4ether.c      1680  TRAP_FIRE  "dx6X" Ether#%d: received 802.2 TEST reply (0x%x) from %6X
+./libether/bi4ether.c      1681  TRAP_FIRE  "dx6X" Ether#%d: received 802.2 XID reply (0x%x) from %6X
+./libether/bi4ether.c      1682  TRAP_FIRE  "dx6X" Ether#%d: unknown 802.2 Control Type (0x%x) in message from %6X
+./libether/bi4ether.c     1683  TRAP_FIRE  "dx6X" Ether#%d: unknown ARP hardware type (0x%x) from %6X
+./libether/bi4ether.c      1684  TRAP_FIRE  "d6Xdd" Ether#%d: ARP from %6X, ar_hlen %d instead of %d
+./libieee802dot5/TMS380.c 1694  TRAP_OPER  "d" initTMS380TokenRing: Can't get %d bytes of memory for TMS380TokenRing
+./libieee802dot5/TMS380.c 1695  TRAP_OPER  "d" initTMS380TokenRing: Can't get %d bytes of memory for TMS380SystemControlBlock
+./libieee802dot5/TMS380.c 1696  TRAP_OPER  "d" initTMS380TokenRing: Can't get %d bytes of memory for TMS380SystemStatusBlock
+./libieee802dot5/TMS380Open.c 1697  TRAP_OPER  "d" initTMS380OpenParameters: Can't get %d bytes of memory for TMS380OpenParameters
+./libieee802dot5/TMS380Open.c 1698  TRAP_OPER  "d" initTMS380OpenParameters: Can't get %d bytes of memory for NodeIdentityString
+./libieee802dot5/TMS380TXRX_h.c 1699 Crash1  "d"  **PREV CRASH**  initTMS380TXRXChain: Temp. Crash For Now!! Can't get %d bytes of memory for TMS380TXRXParametersList
+./libieee802dot5/TMS380TXRX_h.c 1700 Crash1  "d"  **PREV CRASH**  initTMS380TXRXChain: Temp. Crash For Now!! Can't get %d bytes of memory for TMS380TXRXParametersList
+./libx25/l3_in.c          1701 TRAP_FIRE "dxd" X25 #%d:rcv'd pkt (ptid 0x%x) on lcn (%d) while not UP; free it
+./libforus/icmp.c         1703  TRAP_DEBUG  "Iddd" ICMP: rcvd %I Type %d Code %d Seq %d
+./libmsg_gen/ping.c       1704 TRAP_FIRE "" HMP send command: no buffers available
+./librouting/routingqevent.c 1705 TRAP_DEBUG "da" SPF: got malformed rup (too short) : interface %d previous hop %a
+./libforus/hmp_control.c  1706 TRAP_DEBUG "I" HMP: throughput already running [%I]
+./libsnmp/snmp_agent.c    1707  TRAP_FIRE  "d" SNMP: proc # %d Init failed, exiting
+./liblimotrunk/ltrunk_snmp.c 1708 TRAP_FIRE "d" LTRUNK #%d: No memory for snmp mib interface entry
+./liblimotrunk/ltrunk.c   1710 TRAP_FIRE "d" LTRUNK #%d: Limotrunk link down
+./liblimotrunk/ltrunk.c   1711 TRAP_DEBUG "xxx" LimoInputDispose: pkt %x, data %x, trunkblock %x
+./liblimo/limo_config.c   1712 TRAP_DEBUG "ddxddxd" Dev %d: intlev=%d flags=%x rxring=%d txring=%d mode=%x rxmax=%d
+./libxpc/xpc_driver.c     1713  TRAP_FIRE  "dx" XPC #%d: I/O memory allocation failed %x
+./libarp/ARP.c             1714  TRAP_FIRE  "d6Xdd" Device#%d: ARP from %6X only %d long, need %d
+./libarp/ARP.c            1715  TRAP_FIRE  "d6Xdd" Device#%d: ARP from %6X ar_hlen %d instead of %d
+./libarp/ARP.c             1716  TRAP_DEBUG  "d6X2x" Device#%d: ARP from %6X, bad protocol 0x%2x
+./libx25/x25.c            1717  TRAP_FIRE  "d" X25 #%d: CTS still off
+./libpassthru/passthru_snmp.c 1718 TRAP_FIRE "d" PASSTHRU #%d: No memory for snmp mib interface entry
+./libpassthru/passthru_out.c 1719 TRAP_DEBUG "dx" PASSTHRU #%d: do not forward priority pkt %x - drop it
+./libforus/icmp.c         1720 TRAP_DEBUG "Iddd" ICMP:  pkt [%I] IP len %d Prot %d, ICMP error flag %d
+./libforus/icmp.c         1721 TRAP_DEBUG "Iddd" ICMP:  pkt [%I] IP len %d Prot %d, ICMP error flag %d
+./libdispatch/fragment.c  1722  TRAP_DEBUG  "Iddd" IP Fragmentation: Not enough LOCAL buffers for [%I] (need %d; got %d; available %d)
+./libieee802dot5/TMS380.c  1723  TRAP_OPER  "ds" TR%d:  HandleStatus event. %s!
+./libforus/hmp_main.c     1724 TRAP_DEBUG "I" HMP: [no reply sent ->re: %I]\n\r
+./libforus/hmp_main.c     1725 TRAP_DEBUG "I" HMP: [no reply sent ->re: %I]\n\r
+./libieee802dot5/TMS380.c  1726  TRAP_OPER  "ddd" TR%d:  IOID %d does not match that of token ring IOID %d.
+./libsrc/process_exit.c   1727  TRAP_FIRE  "dx" Process_Exit: bad free memory return code %d on memory segment address 0x%x
+./libppp/ppp.c            1728  TRAP_OPER  "dddd" PPP #%d: Changing MTU from %d to %d because buffer size is %d
+./libppp/ppp.c            1729  TRAP_OPER  "dddd" PPP #%d: Changing local MRU from %d to %d because buffer size is %d
+./libppp/ppp.c            1730  TRAP_OPER  "dddd" PPP #%d: Changing remote min mru from %d to %d because buffer size is %d
+./libsrc/devicedisp.c     1731 TRAP_DEBUG "xI" IP dispatch: no output buffers available for %x, re:%I
+./libieee802dot5/TMS380.c 1739  TRAP_OPER  "d" TR%d: Open Failed
+./libsrc/bufferlib.c      1740  TRAP_DEBUG  "dx" GetBuffers: req for buf - dev %d buff %x
+./libsrc/bufferlib.c      1741  TRAP_DEBUG  "dddd" GetBuffers: dev %d, can't get buffers - code %d, requested %d, got %d
+./libforus/finit.c        1755 TRAP_OPER "xd" finit: failed to get buffer pool memory [status = %x], buffers %x
+./libtelnet/telnet_util.c 1768  TRAP_DEBUG  "x" TelnetSendProbeIfNecessary:  can't alloc (%x) memory to send probe
+./libtrunk/trunk.c        1769  TRAP_OPER  "dddd" Trunk #%d: Changing MTU from %d to %d because buffer size is %d
+./libforus/hmp_control.c  1777 TRAP_FIRE "d" HMP: received command for out of range interface (%d)
+./librouting/updownqevent.c 1793 TRAP_FIRE "ada" SPF: received up/down from different net %a : interface %d previous hop %a
+./librouting/updownqevent.c 1796 TRAP_FIRE "dd" SPF: Discard updown packet because Entry Gwy (%d) equals My Gateway (%d)
+./libbgp/bgp.c            1827 Crash2 "xx"  **PREV CRASH**  BGP:tcp:invalid user_ptr (%x) in IORB (%x)
+./libbgp/bgp.c            1828 Crash2 "xx"  **PREV CRASH**  BGP:tcp:unexpected signal (%x),iorb (%x)
+./libbgp/bgp.c            1829  TRAP_FIRE  "xas" BGP:tcp:iorb %x - received data from %a in %s state
+./libbgp/bgp.c            1830  TRAP_FIRE  "Sxxa" BGP:received tcp signal %s for invalid GDU %x: iorb %x (ip=%a)
+./libbgp/bgp.c            1831 Crash3  "xxa"  **PREV CRASH**  BGP:tcp:bad SN_READ - too many bytes: iorb %x GDU %x ip %a
+./libbgp/bgp_tcp.c        1832  TRAP_DEBUG  "d" BGP:tcp:cannot allocate %d bytes for read buffer
+./libbgp/bgp.c            1836 Crash1  "d"  **PREV CRASH**  BGP:bgpProcessInput:invalid return code %d
+./libsrc/gdu_hash.c       1841 Crash2  "ax"  **PREV CRASH**  gduHashRemove: entry not found for key %a, table %x
+./libep/ep.c              1842  TRAP_FIRE  "uu" EP: need %u config params list 0 - only %u
+./libep/ep_routing.c      1843  TRAP_OPER  "xu" EP: alloc failed (%x) for routing table (%u bytes)
+./libep/ep.c              1844  TRAP_OPER  "" EP:  GDU pool allocation failed
+./libep/ep.c              1846  TRAP_OPER  "" EP: allocation failed for BGP GDU Table
+./libep/ep.c              1847  TRAP_OPER  "" EP: allocation failed for EGP GDU Table
+./libep/ep.c              1848  TRAP_OPER  "" EP:  NetReport pool allocation failed
+./libbgp/bgp.c            1853  TRAP_FIRE  "uuu" BGP:bgpGetConfig: need %u config params list %d - only %u
+./libbgp/bgp_fsm.c        1857  TRAP_OPER  "asssxx" BGP FSM: peer %a,event %s,state %s->%s,action addr %x,iorb=%x
+./libbgp/bgp.c            1858 Crash2  "xa"  **PREV CRASH**  BGP:bgpTime: invalid GDU %x (ip=%a)
+./libbgp/bgp_util.c       1859 Crash2 "xd"  **PREV CRASH**  BGP: free seg on %x failed %d
+./libep/ep_routing.c      1862  TRAP_FIRE  "a" EP_BuildTableWork: no more routeexits for net %a
+./libbgp/bgp_tcp.c        1863  TRAP_FIRE  "x" BGP:tcp:Handle %x, no iorb for read
+./libbgp/bgp_util.c       1865  TRAP_FIRE  "u" BGP:Alloc:cannot allocate %u bytes
+./libep/ep_routing.c      1866  TRAP_DEBUG  "u" EP:  time to build EP Route Table: %u millisecs.
+./libep/ep_routing.c      1867  TRAP_OPER  "x" EP: no route exit found for unreachable net report %x
+./libbgp/bgp_fsm.c        1870  TRAP_FIRE  "a" BGP:can't get iorb to send NOTIFICATION to %a
+./libbgp/bgp_util.c       1872  TRAP_FIRE  "auus" BGP:NOTIFICATION to %a, code %u, subcode %u, data %s
+./libbgp/bgp_fsm.c        1873  TRAP_FIRE  "ass" BGP:FSM:Peer %a inconsistent event %s state %s combination
+./libbgp/bgp.c            1874  TRAP_DEBUG  "Sx" BGP:tcp: %s signal (iorb %x) for Listen request
+./libbgp/bgp_tcp.c        1875 Crash1 "x"  **PREV CRASH**  BGP:bgpFreeIORB:iorb %x is already free
+./libbgp/bgp_tcp.c        1877 Crash1 "x"  **PREV CRASH**  BGP:bgpFreeIORB:iorb %x, iorb count is zero
+./libep/ep_util.c         1878  TRAP_FIRE  "x" EP: RemoveRouteExit: routeexit %x not found in hash bucket
+./libsrc/gdu.c            1879 Crash2  "xa"  **PREV CRASH**  gduRemovePeerData: no stream block, gdu %x, ip %a
+./libep/ep_routing.c      1880  TRAP_FIRE  "u" FindRouteHop: no route hops when there should be - num %u
+./libep/ep_routing.c      1881  TRAP_DEBUG  "u" EP Garbage Collection took %u millisecs.
+./libsrc/gdu.c            1882 Crash2  "xa"  **PREV CRASH**  gduRemovePeerData: GDU is not Idle, gdu %x, ip %a
+./libsrc/gdu.c            1883 Crash2  "xa"  **PREV CRASH**  gduRemoveFromTable: GDU is not Idle, gdu %x, ip %a
+./libsrc/gdu.c            1884 Crash2  "xa"  **PREV CRASH**  gduRemoveFromTable: GDU has peer data, gdu %x, ip %a
+./libsrc/free_pool.c      1885  TRAP_DEBUG  "x" GetBlock: no free block in the pool %x
+./libbgp/bgp_tcp.c        1887  TRAP_OPER  "a" BGP:bgpGetIORB: cannot allocate IORB for %a
+./libbgp/bgp_fsm.c        1888  TRAP_OPER  "a" BGP: no free GDU to initiate neighbor %a
+./libbgp/bgp.c            1889  TRAP_OPER "a" BGP: getlist entry %a not on a border net
+./libbgp/bgp.c            1890  TRAP_FIRE  "Sxxa" BGP:no GDU for TCP signal %s: iorb %x, tcb %x, peer %a
+./libsrc/gdu.c            1892 Crash2  "xa"  **PREV CRASH**  gduRemovePeerData: found stream block in non-BGP GDU %x, ip %a
+./libsrc/gdu.c            1893 Crash3  "xxa"  **PREV CRASH**  gduRemovePeerData: stream block points to iorb %x, gdu %x, ip %a
+./libsrc/gdu.c            1894 Crash3  "xxa"  **PREV CRASH**  gduRemovePeerData: stream block points to buffer %x, gdu %x, ip %a
+./libsrc/gdu.c            1895 Crash3  "xxa"  **PREV CRASH**  gduRemovePeerData: unempty Attr. List in peer block %x, gdu %x, ip %a
+./libsrc/gdu.c            1896 Crash2  "xa"  **PREV CRASH**  gduRemovePeerData: unempty Net List in gdu %x, ip %a
+./libep/ep_gbg_coll.c     1897  TRAP_DEBUG  "uuuu" DBG COLL: RevisionCutoff %u, Removed: nets %u, GDUs %u, PABs %u
+./libep/ep.c              1899  TRAP_OPER  "" EP:  PAB pool allocation failed
+./libep/ep.c              1900  TRAP_OPER  "" EP: allocation failed for SPF GDU Table
+./libsrc/gdu.c            1902 Crash3  "xxx"  **PREV CRASH**  gduRemoveNetReport %x: netreport not found in pab %x net list - gdu %x
+./libbgp/bgp_rupdate.c    1903  TRAP_OPER  "auaa" BGP: update from %a (AS %u): net %a unreachable via %a
+./libbgp/bgp_tcp.c        1904  TRAP_FIRE  "ax" BGP:tcpopen to %a failed, iorb %x
+./libbgp/bgp.c            1905  TRAP_FIRE  "" BGP: GDU Free Pool is corrupted
+./libbgp/bgp_fsm.c        1906  TRAP_OPER  "aau" BGP: connection collision of %a with %a (identifier %d)
+./libbgp/bgp_util.c       1907  TRAP_OPER  "auus" BGP:NOTIFICATION from %a, code %u, subcode %u, data %s
+./libbgp/bgp_fsm.c        1908  TRAP_FIRE  "sas" BGP:FSM:Unexpected %s event for peer %a in %s state
+./libep/ep_routing.c      1909  TRAP_DEBUG  "u" EP: took %u millisecs. to check EGP netreports
+./libbgp/bgp.c            1910  TRAP_OPER  "ddddddd" BGP: AS %d, nets %d, nbrs %d, peers %d, update %d version %d hold %d
+./libegp/segp.c           1913  TRAP_FIRE  "a" EGP: can't find neighbor for net %a to remove
+./libegp/segp.c           1914  TRAP_FIRE  "a" EGP: can't find distance for net %a to remove
+./libbgp/bgp_rupdate.c    1917  TRAP_FIRE  "a" BGP: can't get PAB block, update from %a dropped
+./libbgp/bgp_rupdate.c    1918  TRAP_DEBUG  "u" bgpProcessUPDATE: %u msec
+./libep/gdu_spf_update.c  1919  TRAP_FIRE  "a" spfGduUpdate: no table space to add new gdu for %a
+./libep/ep.c              1920  TRAP_OPER  "" EP: allocation failed for Net Hash Table
+./libbgp/bgp_fsm.c        1921  TRAP_OPER  "a" BGP: session with peer %a established
+./libbgp/bgp_rupdate.c    1922  TRAP_DEBUG  "uau" BGP: %u byte (excluding header) update from %a about %u nets
+./libbgp/bgp_rupdate.c    1923  TRAP_DEBUG  "uxa" BGP: unrecognized optional attr %u (flags %x) from %a
+./libbgp/bgp_rupdate.c    1924  TRAP_DEBUG  "uxa" BGP: No room for attr %u (flags %x) from %a, dropped
+./libbgp/bgp_rupdate.c    1925  TRAP_OPER  "auaau" BGP: update from %a (AS %u): net %a via %a, cost %u
+./libegp/egp.c            1926  TRAP_FIRE  "" EGPPeerFindOrInsertAndInit: no table space add EGPeerData
+./libbgp/bgp_rupdate.c    1927  TRAP_DEBUG  "uxa" BGP: opt attr %u (flags %x) from %a befor Path, dropped
+./libbgp/bgp_rupdate.c    1929  TRAP_DEBUG  "au" BGP: Update from %a about %u nets with path via my AS
+./libegp/regp.c           1930  TRAP_FIRE  "a" egpGduUpdate: no table space to add new netreport for %a
+./libbgp/bgp_fsm.c        1931  TRAP_FIRE  "d" BGP: Miscounted bgpIncomingCallCount %d
+./libbgp/bgp_rupdate.c    1932  TRAP_FIRE  "aa" BGP: can't get net block, net %a from %a dropped
+./libbgp/bgp_rupdate.c    1933  TRAP_FIRE  "aau" BGP: Can't get GDU for hop %a; update from %a with %u nets dropped
+./libbgp/bgp.c            1934  TRAP_DEBUG  "uuuu" BGP Msgs: Rx %u (%u bytes) Tx %u (%u bytes)
+./libbgp/bgp.c            1935  TRAP_DEBUG  "uuuu" BGP Updates: Rx %u (%u bytes) Tx %u (%u bytes)
+./libbgp/bgp.c            1936  TRAP_DEBUG  "uuuuuuuu" BGP Events1: Sta=%u Stp=%u Opn=%u RC=%u CC=%u HT=%u KAT=%u OpM=%u
+./libbgp/bgp.c            1937  TRAP_DEBUG  "uuuuuuu" BGP Events2: KAM=%u UpM=%u ST=%u NM=%u WIORB=%u RxT=%u UT=%u
+./libbgp/bgp.c            1938  TRAP_FIRE  "" BGP: PAB Free Pool is corrupted
+./libbgp/bgp.c            1939  TRAP_FIRE  "" BGP: NET Free Pool is corrupted
+./libbgp/bgp.c            1941  TRAP_OPER  "a" BGP: no free GDU to initiate interior neighbor %a
+./libsrc/gdu.c            1942 Crash2  "xa"  **PREV CRASH**  gduRemoveNetReport: Removing netreport %x (%a) with Active flag on
+./libbgp/bgp.c            1943  TRAP_FIRE  "" BGP: IORB Free Pool is corrupted
+./libbgp/bgp_fsm.c        1944  TRAP_OPER  "a" BGP: session with peer %a closed
+./libbgp/bgp_gupdate.c    1946  TRAP_OPER  "sauaa" BGP: %s update to %a (AS %u): net %a via %a
+./libbgp/bgp_gupdate.c    1947  TRAP_DEBUG  "usaua" BGP: %u byte %s update to %a about %u nets via %a
+./libbgp/bgp_gupdate.c    1948  TRAP_DEBUG  "auuu" bgpAllUPDATEs to %a: lr %u, hr %u, %u msec
+./libep/ep_routing.c      1949 Crash1  "a"  **PREV CRASH**  CONFIG: No route distribution policy for interface %a
+./libep/gdu_spf_update.c  1952  TRAP_DEBUG  "u" EP:  took %u millisecs. to update SPF GDU Table
+./libep/ep_routing.c      1955 Crash1  "x"  **PREV CRASH**  EGP:  alloc failed (%x) for NRUpdControl
+./libbgp/bgp.c            1960  TRAP_FIRE  "sauu" BGP: %s GDU %a inconsistancy: GDU Adv. count is %u - actual %u
+./libbgp/bgp.c            1961  TRAP_FIRE  "sau" BGP: %s GDU %a inconsistancy: GDU no change but actually %u net changed
+./libegp/segp.c           1962  TRAP_FIRE  "a" EGP: can't find net %a to remove
+./libbgp/bgp.c            1963  TRAP_FIRE  "saxuu" BGP: %s GDU %a inconsistancy: PAB %x Adv. count is %u - actual %u
+./libbgp/bgp.c            1964  TRAP_FIRE  "sau" BGP: %s GDU %a inconsistancy: GDU no change but actually %u net changed
+./libbgp/bgp.c            1965  TRAP_FIRE  "saxu" BGP: %s GDU %a inconsistancy: PAB %x no change but actually %u net changed
+./libbgp/bgp_gupdate.c    1971 Crash0  ""  **PREV CRASH**  BGP: Internal Inconsistency
+./libegp/egp.c            1972  TRAP_FIRE  "a" EGPPeerFindOrInsertAndInit: Nbr %a not on directly connected net
+./libegp/segp.c           1973  TRAP_DEBUG  "addd" GetUpdateSize: Nbr %a UpdateSize %d, TotNumGateways %d TotNumNets %d
+./libep/ep_routing.c      1974 Crash2  "xa"  **PREV CRASH**  EP: no route exit found for active net report %x (%a)
+./libbgp/bgp_gupdate.c    1975  TRAP_DEBUG  "auuxuu" bgpOneUPDATE to %a: lr %u, hr %u nn %x io %u, %u msec
+./libbgp/bgp.c            1976  TRAP_OPER  "uuuu" BGP CONF: supported BGP Versions are %u and %u - configured %u, assumed %u
+./libep/ep.c              1977  TRAP_OPER  "" EP CONF: GarbageCollectionRate cannot be 0 - using 1
+./libbgp/bgp_tcp.c        1978  TRAP_FIRE  "xd" BGP:tcp:Enqueue_Q failed, QH=%x, error code=%d
+./libbgp/bgp_util.c       1980  TRAP_OPER  "asxx" BGP: Received msg from %a with bad header: %s %x %x
+./libbgp/bgp_tcp.c        1981 Crash1  "u"  **PREV CRASH**  BGP: bad Tx msg size %u
+./libbgp/bgp.c            1983  TRAP_DEBUG  "Sxxauu" BGP:TCP signal %s:iorb %x,tcb=%x,peer=%a,iooper=%u,iostat=%u
+./libbgp/bgp.c            1984  TRAP_FIRE  "Suxxau" BGP:TCP signal %s with iostat %u:iorb %x,tcb=%x,peer=%a,iooper=%u
+./libbgp/bgp_rupdate.c    1985  TRAP_DEBUG  "aaa" BGP: repeated report of net %a via %a from %a
+./libbgp/bgp_rupdate.c    1986  TRAP_OPER  "aa" BGP:from %a (orig=OriginIGP):my AS next hop %a isn't in AS list
+./libep/ep_util.c         1987 Crash1  "a"  **PREV CRASH**  EP: Installing routeexit %a which already installed
+./libbgp/bgp.c            1988  TRAP_FIRE  "Sxaxxa" BGP:tcp signal %s for mismatched GDU %x (ip=%a): iorb %x, tcb %x (ip=%a)
+./libbgp/bgp_rupdate.c    1990  TRAP_DEBUG  "a" EP: cannot find next hop to %a
+./libep/ep_routing.c      1991  TRAP_FIRE  "a" EP: no room in EP Route Table for next hop %a
+./libbgp/bgp_fsm.c        1992  TRAP_FIRE  "a" BGP: cannot find Gwy Number of interior peer %a
+./libegp/segp.c           1994  TRAP_DEBUG  "ad" EGP: Net %a not installed - dist %d too big
+./libep/ep_routing.c      1995  TRAP_DEBUG  "aaddd" EGP: gdu Address %a Net %a OldDist %d NewDist %d/%d
+./libsrc/gdu.c            1996 Crash3  "xxx"  **PREV CRASH**  gduRemoveNetReport %x: pab %x not found in gdu %x pab list
+./libep/ep_routing.c      1997 Crash1  "u"  **PREV CRASH**  EP: waited %u sec. for EGP send table to get updated
+./libether/ether_init.c   2000 Crash0 ""  **PREV CRASH**  ETHER -- can't alloc seg memory
+./librspc/rspc.c          2001 Crash0 ""  **PREV CRASH**  RSPC - can't get SPC Control buffer
+./libbgp/bgp_fsm.c        2002  TRAP_FIRE  "a" BGP: Version discrepancy with %a - closing connection
+./libbgp/bgp_fsm.c        2004  TRAP_OPER  "a" BGP: no room in TCP Table for peer %a
+./libbgp/bgp.c            2005  TRAP_OPER "a" BGP: no route to getlist entry %a
+./libbgp/bgp_fsm.c        2006  TRAP_FIRE  "d" BGP: Miscounted GetListCount %d
+./libxpc_common/kg.c      2007  TRAP_OPER  "d" KG: dev %d resynchronized
+./libxpc_common/kg.c      2008  TRAP_FIRE  "uuu" KG: dev %u rcvd %u CRC err in last %u seconds
+./libsrc/bufferlib.c      2009  TRAP_DEBUG  "x" SmallFreePacket: return buffer %x
+./libsrc/bufferlib.c      2010  TRAP_DEBUG  "dx" GetSmallInputBuffer: req for buf - dev %d buf %x
+./libsrc/bufferlib.c      2011  TRAP_DEBUG  "dd" GetSmallInputBuffer: dev %d, get_buf can't get buffer - code %d
+./libxpc_common/kg.c      2012  TRAP_OPER  "d" KG: dev %d NOT resynchronized
+./libxpc_common/kg.c      2016  TRAP_OPER  "d" KG_Init: dev %d PMB is NULL
+./libegp/list.c           2037 Crash1  "x"  **PREV CRASH**  list appears to be circular starting %x
+./libxpc_common/kg.c      2059  TRAP_OPER  "ddd" KG_Init: dev %d bad KG_LinkSupport (%d) value - changed to default value of %d
+./libxpc_common/kg.c      2060  TRAP_OPER  "ddd" KG_Init: dev %d has bad KG_TimerInterval (%d) value - changed to default value of %d
+./libxpc_common/kg.c      2061  TRAP_OPER  "ddd" KG_Init: dev %d has bad KG_CRCErrThreshold (%d) value - changed to default value of %d
+./libegp/segp.c           2084  TRAP_DEBUG  "aa" EGP omit net %a via %a learned from an interior nbr to spread rcvr
+./librspc/rspc_init.c     2100 Crash2   ""  **PREV CRASH**  RSPC Config has wrong number of entries %d v. %d
+./librouting/spf_bgp.c    2105  TRAP_DEBUG  "ua" bgpMakeSpfNbrList:  IPAddr to use for Gwy #%u is %a\n\r
+./libx25/x25_init.c       2106  TRAP_FIRE  "x" X25: creation of SMALL buffer pool failed -- status [%x]
+./libx25/x25_init.c       2107  TRAP_FIRE  "x" X25: allocation of SMALL BUFFER I/O memory failed -- status [%x]
+./libx25/x25_init.c       2108  TRAP_FIRE  "u" x25:  lcn range exceeds 512 - adjusting high lcn to %u
+./libegp/regp.c           2109  TRAP_FIRE  "aa" EGP: nbr %a advertising bad next hop %a, nets ignored
+./libsthost/sthost.c      2111 Crash1   ""  **PREV CRASH**  STHostInit: failed to allocate IO buffer pool: %x
+./libsthost/sthost.c      2112 Crash1   ""  **PREV CRASH**  STHostInit: failed to allocate IO queue: %x
+./libhap/hap_setup.c      2113  TRAP_DEBUG  "" nbytes %d, data: %x %x %x %x %x %x
+./libhap/hap_setup.c      2114  TRAP_DEBUG  "" sending?: nbytes %d, data: %x %x %x %x %x %x
+./libbgp/bgp_fsm.c        2115  TRAP_DEBUG  "auuxxuu" bgpUPDATE to %a: lr %u, hr %u, nn %x (f=%x r=%u), code %d
+./libbgp/bgp_tcp.c        2116 Crash1  "a"  **PREV CRASH**  BGP:bgpGetIORB: TCP Mux Index is 0 for %a
+./libhap/hap_setup.c      2117  TRAP_DEBUG  "" nbytes %d, data: %x %x %x %x %x %x
+./libhap/hap_setup.c      2118  TRAP_FIRE  "" Spurious STREAM_CHANGED_RPY received on HAP setup request code = %d
+./libhap/hap_setup.c      2119  TRAP_FIRE  "" STREAM_CHANGED_RPY Successful
+./libhap/hapcontrol.c     2120  TRAP_OPER  "a" HAP %a: Received RC w/SL -- Hap streams may be deleted causing ST2 delivery problem
+./libbgp/bgp_fsm.c        2121  TRAP_FIRE  "" BGP: Miscounted bgpUpdateCount
+./libbgp/bgp_fsm.c        2122  TRAP_DEBUG  "ad" bgpUPDATE to %a delayed - outside of update window %d
+./libhap/hap_setup.c      2123  TRAP_FIRE  "" GROUP_CREATED_RPY Successful
+./libhap/hap_setup.c      2124  TRAP_FIRE  "" GROUP_DELETED_RPY Successful
+./libhap/hap_setup.c      2125  TRAP_OPER  "" CreateStream:Insufficient Network Resources.
+./libhap/hap_setup.c      2126  TRAP_OPER  "" CreateStream:Requested bandwidth too large.
+./libhap/hap_setup.c      2127  TRAP_OPER  "" HAPlni: Received NONEXISTENT_STREAM reply for STREAM_DELETE attempt -- assuming stream deleted.
+./libhap/hap_setup.c      2128  TRAP_OPER  "%d%d" Hapresponse: Unknown reply code %d to setup %d
+./libhap/hap_setup.c      2129  TRAP_OPER  "" STREAM_CHANGED_RPY received with no LNI request to match
+./libsthost/sthost.c      2130  TRAP_DEBUG  "dx" HAP #%d: rcvd hdwr checksum error pkt %x
+./libhap/hap_setup.c      2131  TRAP_FIRE  "" Zero bytes in notification
+./libhap/hap_setup.c      2132  TRAP_FIRE  "" Illegal notification header checksum, xsum = %d
+./libhap/hap_setup.c      2133  TRAP_FIRE  "" HapNotification: Can't GetSetupMsg
+./libhap/hap_setup.c      2134  TRAP_FIRE  "axx" HAP %a Sent `keep alive`: stream: 0x%x rid: 0x%x
+./libhap/hap_setup.c      2135  TRAP_OPER  "axxx" HAP %a received notification code 0x%x, ID 0x%x, info 0x%x -- no action taken
+./libhap/hap_setup.c      2136  TRAP_OPER  "dd" HAP request timeout. Rid = %x Type = %x  Code = %d
+./libhap/hap_setup.c      2137  TRAP_FIRE  "d" Hapresponse - Unknown setup timed out code=%d.
+./libhap/hap_setup.c      2138  TRAP_DEBUG  "" HapResponse - Received HAP_INFO_RESP.
+./libhap/hap_setup.c      2139  TRAP_FIRE  "d" Illegal hap info response checksum, xsum = %d
+./libhap/hap_setup.c      2140  TRAP_FIRE  "" Errors in Host Resource Information Request.
+./libhap/hap_setup.c      2141  TRAP_FIRE  "" Network Trouble - Resource Information not available
+./libhap/hap_setup.c      2142  TRAP_FIRE  "" Network Access to this Resource information no allowed.
+./libhap/hap_setup.c      2143  TRAP_FIRE  "" HandleStreamInfo entered
+./libegp/regp.c           2144  TRAP_DEBUG  "aa" EGP: report from %a about net %a ignored
+./libhap/hap_setup.c      2145  TRAP_FIRE  "" HandleGroupInfo entered
+./libhap/hap_setup.c      2146  TRAP_FIRE  "" HandleGroupInfo entered
+./libhap/hap_setup.c      2147  TRAP_FIRE  "d" Deleting %d group entries
+./libhap/hap_setup.c      2148  TRAP_OPER  "xdd" HAP: No delete stream response for hapdest 0x%x, rid %d, stream 0x%x after many tries; giving back bandwidth...
+./libhap/hap_setup.c      2149  TRAP_OPER  "da" HAPNotification: Stream 0x%x obsolete, letting WPS delete it (%a)
+./libhap/hap_setup.c      2150  TRAP_OPER  "" CreateStream: Max. messages per interval too small.
+./libhap/hap_setup.c      2151  TRAP_OPER  "" CreateStream:Reply lost in network.
+./libsthost/sthost.c      2160  TRAP_DEBUG  "dd" Sthost #%d: xpc_REinit failed - ret code %d
+./libsthost/sthost.c      2162  TRAP_FIRE  "d" Sthost #%d: CTS still off
+./libsthost/sthost.c      2168  TRAP_DEBUG  "dd" Sthost #%d: xpc_REinit failed - ret code %d
+./libhap/hap_setup.c      2183  TRAP_FIRE  "" Network Trouble detected; setup code=%d; id=%X
+./libhap/hap_setup.c      2185  TRAP_FIRE  "" SendInfoRequest: Can't GetSetupMsg
+./libhap/hap_setup.c      2186  TRAP_DEBUG  "xxd" xsum = %x,  HapCksum = %x, len = %d
+./libhap/hap_setup.c      2187  TRAP_DEBUG  "as" HAP %a Sent %s message
+./libhap/hap_setup.c      2188  TRAP_FIRE  "" SendCreateStream: Can't GetSetupMsg
+./libhap/hap_setup.c      2189  TRAP_DEBUG  "xxd" Hap_Block %x, rid %x, id %x
+./libhap/hap_setup.c      2190  TRAP_DEBUG  "as" HAP %a Sent %s message
+./libhap/hap_setup.c      2191  TRAP_FIRE  "" SendChangeStream: Can't GetSetupMsg
+./libhap/hap_setup.c      2192  TRAP_DEBUG  "as" HAP %a Sent %s message
+./libhap/hap_setup.c      2193  TRAP_FIRE  "" SendDeleteStream: Can't GetSetupMsg
+./libhap/hap_setup.c      2194  TRAP_DEBUG  "xxx" xsum = %x,  HapCksum = %x, len = %x
+./libhap/hap_setup.c      2195  TRAP_DEBUG  "as" HAP %a Sent %s message
+./libsthost/sthost.c      2196 TRAP_FIRE  "dx" STHost%d: no/illegal hardware sepecified, hw=0x%x
+./libsthost/sthost.c      2197 TRAP_DEBUG "d" STHost: process number %d
+./libsthost/sthost.c      2198  TRAP_OPER  "a" STHostInit: configured with non existent address = %a --> EXITING
+./libhap/hap_setup.c      2199  TRAP_FIRE  "" HapSendDeleteAllStreams: Can't GetSetupMsg
+./libhap/hap_setup.c      2200  TRAP_DEBUG  "xxxx" xsum = %x,  HapCksum = %x, len = %x  reqid=%x
+./libhap/hap_setup.c      2201  TRAP_DEBUG  "ad" HAP %a Sent DeleteAllStreams message #%d
+./libgwinit/gwinit.c      2202  TRAP_OPER  "" Valid crashblock(s) exist.
+./libhap/hap_setup.c      2203  TRAP_FIRE  "" Illegal hap setup header checksum, xsum = %d
+./libhap/hap_setup.c      2204  TRAP_OPER  "ddd" HAP: Received hap reply not for initial delete all streams, type=%d code=%d reqid = %d
+./libhap/hap_setup.c      2205  TRAP_DEBUG  "dxxxxxx" nbytes %d, data: %x %x %x %x %x %x
+./libhap/hap_setup.c      2206  TRAP_FIRE  "" SendSetupAck: Can't GetSetupMsg
+./libhap/hap_setup.c      2207  TRAP_DEBUG  "as" HAP %a Sent %s message
+./libhap/hap_setup.c      2208  TRAP_OPER  "" HAPSendRequest: Dropped packet, old streams not cleared yet.
+./libhap/hap_setup.c      2209  TRAP_OPER  "a" HAP: Any old streams have been cleared for interface %a
+./libhap/hap_setup.c      2210  TRAP_OPER  "a" HAP: DeleteAllStreams failed for interface %a after 30 tries -- allowing new stream setup anyway.
+./libhap/hap_setup.c      2211  TRAP_FIRE  "d" HapDeleteAllStreamsTimeout: timer expired in state %d
+./libhap/hap_setup.c      2212  TRAP_DEBUG  "ddd" LniToStreamAttrs: interval: %d  max_msgs: %d  size: %d
+./libhap/hap_setup.c      2213  TRAP_DEBUG  "ddd" LniToStreamAttrs: interval: %d  max_msgs: %d  size: %d
+./libhap/hap_setup.c      2215  TRAP_FIRE  "d" LniToStreamAttrs: Host asking out-of-range interval -> %d
+./libhap/hap_setup.c      2216  TRAP_FIRE  "ddddx" LniToStreamAttrs: lniRate: %d  lniSize: %d  -> Interval: %d  Words: %d  TOS: 0x%x
+./librspc/rspc.c          2222  TRAP_FIRE  "xx" Error in packet %d at word %d
+./librspc/rspc.c          2223  TRAP_FIRE  "dd" SPC Data Rate Set : %d bps  result(-1 is fail) = %d
+./libether/ether_lnisvc.c 2225  TRAP_OPER  "" NES RED ETHERNET SUPPORT: Using broadcast multicast.
+./libstrouting/st2_getroute.c 2250  TRAP_DEBUG  "aa" STSPF: Disp src %a dest %a, can't find next hop
+./libhap/haprid.c         2251  TRAP_FIRE "sxx" HAP Setting %s destination. from: 0x%x to: 0x%x
+./libstrouting/st_rtgqevent.c 2252 TRAP_DEBUG "ddd" STSPF: Routing: update from %d being preprocessed; %d interfaces %d neighbors
+./libstrouting/st_rtgtable.c 2253 TRAP_DEBUG "xxxx" InsertMask: confignet %x, configmask %x, searchnet %x, searchmask %x
+./libstrouting/st_rtgtable.c 2254 TRAP_DEBUG "xxx" InsertMask: searchnet %x, configmask %x, table %x
+./libstrouting/st_rtgtable.c 2255 TRAP_DEBUG "x" STSPF: must wait to get old routing table %x back
+./libstrouting/st_rtgtable.c 2256 TRAP_DEBUG "dd" STSPF: got routing table %d back after %d attempt(s)
+./libstrouting/strtg_init.c 2257 TRAP_FIRE "da" STSPF: Unable to add %d ST Direct Connections, net %a
+./libstrouting/st_rdbase.c 2258 TRAP_FIRE "aad" STSPF: Entered route %a through %a (gateway %d)
+./libstrouting/st_rdbase.c 2259 TRAP_FIRE "dx" STSPF: # of DB entries = %d, DB ptr = %x
+./libstrouting/strouting.c 2260 TRAP_DEBUG "" STSPF: ST Routing initialization completed
+./librouting/routingqevent.c 2261 TRAP_DEBUG "" SPF: error reading st2 rtg header
+./librouting/routingqevent.c 2262 TRAP_DEBUG "" SPF: error reading st2 data
+./librouting/neighborroutines.c 2263 TRAP_DEBUG "d" SPF: neighbor updown version %d
+./librouting/neighborroutines.c 2264 TRAP_DEBUG "" SPF: no such neighbor!
+./libstrouting/st_spf.c   2265 Crash1 "d"  **PREV CRASH**  STSPF:bug in PrepareTree: Dest %d reachable but has no parent
+./libstrouting/st_spf.c   2266 Crash1 "d"  **PREV CRASH**  STSPF: bug in SPFSearch: node %d has no backlink
+./libstrouting/strtg_init.c 2267 Crash0 ""  **PREV CRASH**  STSPF: alloc_seg failed to allocate queue #3
+./libstrouting/strtg_init.c 2268 Crash0 ""  **PREV CRASH**  STSPF: alloc_seg failed to allocate queue #3
+./libst2nbrs/st2_nbrs.c   2269  TRAP_DEBUG  "" STNBRS: Initialization completed
+./libstrouting/st_rdbase.c 2270 TRAP_OPER "" STSPF: Out of Database Entry Space
+./libstrouting/st_rdbase.c 2271 TRAP_OPER "" STSPF: Out of Static Route Table Space
+./libst2nbrs/st2_ndbase.c 2272  TRAP_DEBUG  "a" sending to %a
+./libst2nbrs/st2_ndbase.c 2273  TRAP_DEBUG  "ad" setting up %a mrto %d
+./libst2/st2_route.c      2274  TRAP_DEBUG  "" Unknown type on ST2 response queue
+./libst2nbrs/st2_ndbase.c 2275  TRAP_DEBUG  "" left neighbor timeout routine
+./libst2nbrs/st2_ndbase.c 2276  TRAP_DEBUG  "ax" Nbr %a failed.  Notify Stream %x
+./libst2nbrs/st2_ndbase.c 2277  TRAP_DEBUG  "a" Enforce On %a
+./libst2nbrs/st2_ndbase.c 2278  TRAP_DEBUG  "a" Enforce Off %a
+./libst2nbrs/st2_ndbase.c 2279  TRAP_DEBUG  "a" Delete nbr %a
+./libgwinit/gwinit.c      2302  TRAP_DEBUG  "d" gwinit awake: rtc = %d
+./libsthost/sthost.c      2330  TRAP_DEBUG  "dd" rcvd pkt size: %d fd:%d
+./libpvp/bbn_unix.c       2332  TRAP_DEBUG  "ddxx" send_to_pvp: fd %d, nbyte %d, buf 0x%x, body[0] 0x%x
+./libhap/hapsvc.c         2333  TRAP_DEBUG  "xx" Hap_Add_many_destinations (pmb %x, ReqID %x, rid %x, num_addrs %x, AddList %x)
+./libhap/haprid.c         2334  TRAP_DEBUG  "" HapTrackRid: rid %d, created %d, num_rids %d
+./libhap/hapin.c          2339  TRAP_DEBUG  "xd" Hap Data Pkt %x Illegal Length: %d
+./libhap/hapin.c          2340  TRAP_DEBUG  "NO" Hapin: odd number of bytes %d
+./libish/vidio.c          2361 TRAP_FIRE "d" VidInput: Input Packet Too Large
+./libish/pktprocr.c       2362 TRAP_FIRE "d" ISHProcSTpkts: no buffers for %d packets
+./libish/stio.c           2364 TRAP_FIRE "x" STOutput: STOUT_ERR: nextbp %x
+./libsthost/sthost.c      2388  TRAP_FIRE  "dd" STHost:  ShutDown failed
+./libfsm/config.c         2400 Crash2 "dd"  **PREV CRASH**  STFSM: size of forwarding config area is %d bytes; expected %d bytes
+./libscmp/scmp_stream.c   2401 TRAP_OPER "" User Param from the last Connect message is yet to be sent out
+./libscmp/scmp_stream.c   2402 TRAP_OPER "" User Param from the last Refuse message is yet to be sent out
+./libscmp/scmp_stream.c   2403 TRAP_OPER "" User Param from the last Accept message is yet to be sent out
+./libscmp/scmp_stream.c   2404 TRAP_OPER "" User Param from the last Disconn message is yet to be sent out
+./libfsm/forwarding.c     2405  TRAP_DEBUG  "xd" STFSM: waiting to open old forwarding table %x, %d time
+./libfsm/forwarding.c     2406 TRAP_DEBUG "x" STFSM: unable to open old forwarding table %x
+./libfsm/forwarding.c     2407  TRAP_DEBUG  "dx" STFSM: Illegal HID %d
+./libfsm/forwarding.c     2408  TRAP_DEBUG  "dx" STFSM: Illegal HID %d (%x) value
+./libfsm/forwarding.c     2409  TRAP_DEBUG "ddxda" STFSM: setup entry: HID=%d, Dev=%d (%x), Count=%d, Dest=%a
+./libfsm/forwarding.c     2410  TRAP_DEBUG  "ddxda" STFSM: RESET entry: HID=%d, Dev=%d (%x), Count=%d, Dest=%a
+./libfsm/forwarding.c     2411 Crash3 "dxx"  **PREV CRASH**  timed out waiting to get forwarding table %d back with ReadPrevent %x and WritePrevent %x
+./libfsm/forwarding.c     2412 TRAP_DEBUG "ddd" STFSM: got forwarding table %d back after %d attempt(s), %d publish attempts
+./libfsm/forwarding.c     2413 TRAP_DEBUG "xd" STFSM: New Forwarding Table %x:  Number of Entries=%d
+./libfsm/forwarding.c     2414  TRAP_DEBUG  "dddxdad" STFSM:\tentry:%d InHID=%d, InDev=%d (%x), HID=%d, Dest=%a, ip=%d
+./libfsm/fsm2waydisconnect.c 2415  TRAP_DEBUG  "d" STFsm: Unknown msg type %d in TWO_WAY_DISCONNECT state
+./libfsm/fsmconnacc.c     2420  TRAP_DEBUG  "d" STFsm: Unknown msg type %d in ST_CONNECTION_ACCEPTED state
+./libst2/st2_scmp.c       2421  TRAP_FIRE  "" No buffer to send SCMP message.
+./libfsm/fsmtoplevel.c    2422 Crash0 ""  **PREV CRASH**  STFSM -- can't alloc seg memory
+./libfsm/fsmdisconnect.c  2425  TRAP_DEBUG  "d" STFsm: Max Timeouts reached in Disconnect state, connection #%d
+./libfsm/fsmdisconnect.c  2426  TRAP_DEBUG  "d" STFsm: Unknown msg type %d in DISCONNECT_IN_PROGRESS state
+./libfsm/fsmevents.c      2430  TRAP_DEBUG  "" FsmPacket: NULL bufid received\n
+./libfsm/fsmevents.c      2431  TRAP_DEBUG  "xd" STFSM: Timeout Conn=%x state=%d
+./libfsm/fsmlni.c         2435  TRAP_DEBUG "dd" STFSM: Stale reply. Request type = %d. Request ID = %d.
+./libfsm/fsmlni.c         2436 TRAP_DEBUG "d" STFSM: Bad request code in reply message. code = %d.
+./libfsm/fsmlni.c         2437  TRAP_DEBUG  "" STFSM: LNI request to non-configured device:%d\n
+./libfsm/fsmnoconn.c      2440  TRAP_DEBUG  "d" STFsm: Unknown msg type %d in NO_ST_CONNECTION state
+./libfsm/fsmnoconn.c      2441 TRAP_DEBUG "addd" STFSM: FsmNoConn() - PrevHop IP %a Device %d HID %d NextHopIP %d
+./libfsm/fsmnoconn.c      2442 TRAP_DEBUG "a" STFSM: FsmNoConn() - Connect->Target.IP_addr : %a
+./libfsm/fsmnoconn.c      2443 TRAP_DEBUG "add" STFSM: FsmNoConn() - PtoP.NextHop: IP %a Device %d NextHopIP %d
+./libfsm/fsmnoconn.c      2444 TRAP_DEBUG "ddd" STFSM: FsmNoConn() - conf %d PrevInHID %d  PrevHop.HID %d
+./libfsm/fsmopen.c        2445  TRAP_DEBUG  "d" STFsm: Unknown msg type %d in OPEN_ST_CONNECTION state
+./libfsm/fsmrefuse.c      2450  TRAP_DEBUG  "d" STFsm: Unknown msg type %d in REFUSE_IN_PROGRESS state
+./libscmp/scmp_message.c  2451 TRAP_OPER "" Could not allocate addtl buffer for PrsSCM
+./libscmp/scmp_message.c  2452 TRAP_OPER "" Allocating extra gbuf for PrsSCM
+./libscmp/scmp_message.c  2453 TRAP_OPER "" Could not get space in PrsSCM for a target param.
+./libstdispatch/stdispatch.c 2454 TRAP_DEBUG "d" Allocating replica to send to device %d
+./libfsm/fsmreqconn.c     2455  TRAP_DEBUG  "d" STFsm: Unknown msg type %d in REQUEST_ST_CONNECTION state
+./libfsm/sendSTcontrol.c  2456  TRAP_DEBUG  "dd" SendACK: Ctl.Type %d Ref %d\n
+./libstdispatch/stdispatch.c 2457 TRAP_DEBUG "ddx" ST2 replica. RID=%d  socket=%d  nextipaddr=%x
+./libstdispatch/stdispatch.c 2458 TRAP_DEBUG "d" Dropping ST2 replica.  Could not get buffer to send to device %d
+./libstdispatch/stdispatch.c 2459  TRAP_DEBUG  "dxxx" ST2DataPkt: Couldn't find entry %d, Dev %d (%x) Dropping Pkt: %x
+./libfsm/fsmstmach.c      2460  TRAP_FIRE  "ddxx" STFSM: Entering FSM State=%d, Type=%d, Conn=%x, pkt=%x
+./libfsm/fsmstmach.c      2461  TRAP_OPER  "d" STFSM: received unknown ST control request message: %d
+./libfsm/fsmtoplevel.c    2465  TRAP_DEBUG "d" STFSM: got unknown event, index %d
+./libfsm/fsmtoplevel.c    2466 Crash0  ""  **PREV CRASH**  STFSM: something was on the FSM ST Control packet queue!
+./libfsm/fsmtoplevel.c    2467 Crash0  ""  **PREV CRASH**  STFSM: someething was on the FSM Net Control packet queue!
+./libfsm/fsmtoplevel.c    2468 Crash0  ""  **PREV CRASH**  STFSM: Failed to get initial packet buffer for ST module
+./libstdispatch/stdispatch.c 2469 TRAP_FIRE "" STDsp: Replica disappeared out from under HID.
+./libfsm/sendSTcontrol.c  2470 TRAP_FIRE "x" STFSM: Unable enqueue packet to ST control queue 0x%x, queue full
+./libfsm/routing.c        2471 TRAP_DEBUG "add"   Net: %a, NexthopIP: %d, Interface: %d
+./libfsm/stutil.c         2475 TRAP_DEBUG "ddxd" STFSM: unable to reset forwarding info HID=%d DEV=%d (%x), reason %d
+./libfsm/stutil.c         2476 TRAP_DEBUG "ad" STFSM: unable to clear bandwith to %a, reason %d
+./libfsm/stutil.c         2477  TRAP_DEBUG  "da" STFSM: InitSTConnection: PrevHop.HID %d  PtoP.Target %a
+./libfsm/stutil.c         2478  TRAP_DEBUG  "d" STFSM: FindSTConnection, don't know about ctl type %d.
+./libfsm/stutil.c         2479  TRAP_DEBUG  "" STFSM: GetSTxmtpkt: could not get any buffers
+./libfsm/stutil.c         2480  TRAP_DEBUG  "da" STFSM: ValidateSTaddr: Pkt of unknown type: %d Rcvd from %a
+./libfsm/stutil.c         2481  TRAP_DEBUG  "das" STFSM: ValidateSTaddr: packet type:%d from %a had error: %s
+./libfsm/stutil.c         2482  TRAP_DEBUG  "" STFSM: ValidateSTCtlPkt: msg longer than 1 buffer
+./libfsm/stutil.c         2483  TRAP_DEBUG  "d" STFSM: ValidateSTCtlPkt: HID not zero =%d
+./libfsm/stutil.c         2484  TRAP_DEBUG  "ddd" STFSM: ValidateSTCtlPkt:Length values inconsistent;Total=%d,Header=%d,Data=%d
+./libfsm/stutil.c         2485  TRAP_DEBUG  "" STFSM: ValidateSTCtlPkt:ST ENV header checksum error (%x)
+./libfsm/stutil.c         2486  TRAP_DEBUG  "" STFSM: ValidateSTCtlPkt:ST CTL header checksum error (%x)
+./libfsm/stutil.c         2487  TRAP_DEBUG  "d" STFSM: ValidateSTCtlPkt. Unknown Ctl pkt type. Type = %d
+./libfsm/stutil.c         2488  TRAP_DEBUG  "add" STFSM: GetSTRoute: direct conn. for Target %a device=%d ip=%d
+./libfsm/stutil.c         2489  TRAP_FIRE  "a" STFSM: GetSTRoute: could not find route to %a
+./libfsm/stutil.c         2490  TRAP_FIRE  "aadd" STFSM: GetSTRoute: Target %a, Next Hop = %a, device=%d, ip=%d
+./libfsm/routing.c        2491 TRAP_DEBUG "dd" size of ST Direct Connect config area: %d, total entries: %d
+./libfsm/routing.c        2492 TRAP_FIRE "" no ST Direct Connect routes configured
+./libfsm/routing.c        2493 TRAP_FIRE "da" Unable to add %d ST Direct Connections, net %a
+./libfsm/routing.c        2494 TRAP_FIRE "da" Unable to add %d DCB nets to  ST Direct Connectn table, net %a
+./libfsm/routing.c        2495 TRAP_DEBUG "dd" size of ST routing config area: %d, total entries: %d
+./libfsm/routing.c        2496 TRAP_FIRE "" no ST routes configured
+./libfsm/routing.c        2497 TRAP_FIRE "da" Unable to add %d ST routes to table, net %a
+./libfsm/routing.c        2498 TRAP_FIRE "d" ST routing table installed, %d route(s)
+./libfsm/routing.c        2499 TRAP_DEBUG "aadd"     %a --> %a, interface: %d, ip: %d
+./libstdispatch/dutil.c   2500  TRAP_FIRE  "xI" Disp: bad IP header cksum 0x%x %I
+./libstdispatch/dutil.c   2501 TRAP_FIRE  "dd" Disp: bad IP version %d ( != %d)
+./libstdispatch/dutil.c   2502 TRAP_FIRE  "dd" Disp: bad IHL %d ( < %d )
+./libstdispatch/dutil.c   2503 TRAP_FIRE  "d" Disp: bad packet length %d
+./libstdispatch/dutil.c   2504 TRAP_DEBUG  "I" Disp: Time To Live expired on %I
+./libst2/st2_other.c      2505  TRAP_DEBUG  "Id" Encapsulate: ip header %I indev %d\n
+./libstdispatch/dutil.c   2506 Crash0 ""  **PREV CRASH**  MarkBuffers - too few buffers\n
+./libstdispatch/dutil.c   2507 Crash0 ""  **PREV CRASH**  CopyDirectly:not enough buffers\n
+./libstdispatch/dutil.c   2508 Crash0 ""  **PREV CRASH**  CopyDirectly:buffers left over\n
+./libstdispatch/dutil.c   2509 TRAP_FIRE "aaa" Disp: packet too short src %a: dest %a prev hop %a
+./libstdispatch/dutil.c   2510 TRAP_FIRE "aaa" Disp: packet too short src %a: dest %a prev hop %a
+./libst2/st2_other.c      2511 TRAP_DEBUG  "" Got ST data message
+./libst2/st2_other.c      2512 TRAP_DEBUG  "" Got ST control message
+./libst2/st2_other.c      2513 TRAP_OPER "d" STDisp: OUTPUT queue full; dropping packet - device %d
+./libst2/st2_other.c      2514 TRAP_DEBUG  "d" sent from ST Dispatch to device %d
+./libstdispatch/forwarding.c 2515  TRAP_DEBUG  "dd" STDFindEntry: Illegal HID %d (%d) value
+./libstdispatch/stdispatch.c 2520 TRAP_DEBUG "" STDsp: STControlPkt passed null buffid
+./libst2/st2_other.c      2521 TRAP_DEBUG "" STDsp: STDataPkt passed null ptr
+./libst2/st2_other.c       2522  TRAP_DEBUG  "dd" STDsp: Checksum error sum = %d length = %d
+./libst2/st2_other.c      2523  TRAP_DEBUG  "dxxx" ST2DataPkt: Couldn't find entry %d, Dev %d (%x) Dropping Pkt: %x
+./libstdispatch/stdispatch.c 2524  TRAP_DEBUG  "dxd" STDsp: Entry %d (%x) DestCount != 1 (= %d), Dropping pkt.
+./libstdispatch/stdispatch.c 2525  TRAP_FIRE  "" STDsp: STPkt->Env.Version != ST_VERSION
+./libstdispatch/stdispatch.c 2526  TRAP_DEBUG "d" Disp: dropping packet; failed to charge to device %d
+./libst2/st2_other.c      2527 TRAP_DEBUG "d" Disp: dropping packet; failed to charge to dest %d
+./libstdispatch/stdispatch.c 2528 TRAP_DEBUG "d" STDisp: OUTPUT queue full; dropping packet - device %d
+./libhap/hapin.c          2529  TRAP_DEBUG  "xxxxxxxxxx" HAP: Incoming packet-1st 10 words 0x%x 0x%x 0x%x 0x%x 0x%x 0x%x 0x%x 0x%x 0x%x 0x%x
+./libstdispatch/stdtoplevel.c 2530 Crash1  ""  **PREV CRASH**  something was on the IP data queue! 0x%x
+./libstdispatch/stdtoplevel.c 2531 Crash1  ""  **PREV CRASH**  something was on the ST data queue! 0x%x
+./libstdispatch/stdtoplevel.c 2532 Crash1  ""  **PREV CRASH**  something was on the ST Control queue! 0x%x
+./libstdispatch/stdtoplevel.c 2533 Crash0  ""  **PREV CRASH**  STDsp: unable to find ST Forwarding Table!
+./libst2/st2_scmp.c       2534  TRAP_DEBUG  "" STDsp: Initialization completed
+./libst2/st2_other.c      2535 TRAP_DEBUG "d" STDsp: unable to charge packet to device %d, dropping packet
+./libst2/st2_other.c      2536 TRAP_DEBUG "d" Disp: dropping packet; failed to charge to dest %d
+./libstdispatch/stdtoplevel.c 2537 Crash0 ""  **PREV CRASH**  alloc_seg failed to allocate queue #1
+./libstdispatch/stdtoplevel.c 2538 Crash0 ""  **PREV CRASH**  alloc_seg failed to allocate queue #2
+./libst2/st2_scmp.c       2539 Crash0 ""  **PREV CRASH**  alloc_seg failed to allocate queue #3
+./libst2/st2_scmp.c       2540  TRAP_OPER  "da" Unable to dispatch SCMP Op=%d message from %a to SCMP stream
+./libscmp/scmp_message.c  2541 TRAP_DEBUG "d" MakeMessage called to build SCMP message.  Opcode=%d
+./libst2/st2_scmp.c       2542 TRAP_OPER "d" SCMPEncode failed.  retcod=%d
+./libst2/st2_scmp.c       2543 TRAP_OPER "xx" Missing mandatory param in scmp: Reqd=%d Actual=%x
+./libscmp/scmp_message.c  2544 TRAP_OPER "" Could not get space in PrsSCM for a user param.
+./libstdispatch/stdispatch.c 2545  TRAP_FIRE  "d" Could not enqueue ST2 data to API socket %d
+./libst2/st2_scmp.c       2546 TRAP_DEBUG "add" Enqueue SCMP packet to %a.  Length=%d  Op=%d
+./libst2/st2_scmp.c       2547 TRAP_FIRE "ad" SCMP packet from %a.  Op=%d
+./libst2/st2_scmp.c       2548 TRAP_FIRE "xd" Parsed SCMP packet from API at %x.  Op=%d
+./libscmp/scmp_message.c  2549 TRAP_OPER  "d" Could not get buffer to build outgoing PrsSCM.  Failure Probable.  Opcode=%d
+./liblni/lniresponse.c     2550  TRAP_DEBUG  "" G_Send_response_to_client: ERROR: buffer is NULL
+./liblni/lniresponse.c     2551  TRAP_DEBUG  "d" RequestID = %d
+./liblni/lniresponse.c     2552  TRAP_DEBUG  "d" Response info: rid = %d
+./liblni/lniresponse.c     2553  TRAP_DEBUG  "d" G_Send_response_to_client: Illegal requestType: %d
+./liblni/lniresponse.c     2554  TRAP_DEBUG  "" G_Send_response_to_client: header->responseQH is NULL. Not sending.
+./liblni/lniresponse.c     2555  TRAP_DEBUG  "xxx" G_Send_response_to_client: Enqueue buffer %x  bufid %x  onto Q %x.
+./liblni/macros.c          2560  TRAP_DEBUG  "" G_What_services called.
+./liblni/macros.c          2561  TRAP_DEBUG  "" G_Allocate_destinations called.
+./liblni/macros.c          2562  TRAP_DEBUG  "" G_Allocate_Destinations: error: num_addr < 1.
+./liblni/macros.c          2563  TRAP_DEBUG  "" G_Allocate_bandwidth_to_destinations called.
+./liblni/macros.c          2564  TRAP_DEBUG  "" G_Allocate_bandwidth_to_dests_cont called.
+./liblni/macros.c          2565  TRAP_DEBUG  "" lni_calls.Loc_Add_destination: no addresses given.
+./liblni/macros.c          2566  TRAP_DEBUG  "" G_Set_bandwidth called.
+./liblni/macros.c          2567  TRAP_DEBUG  "" G_Add_destination called.
+./liblni/macros.c          2568  TRAP_DEBUG  "" G_Delete_destination called.
+./liblni/macros.c          2569  TRAP_DEBUG  "" G_Delete_rid_and_all_attributes called.
+./liblni/macros.c          2570  TRAP_DEBUG  "" G_Delete_rid_and_all_attributes_cont called.
+./libhap/haprid.c          2571  TRAP_DEBUG  "" HapRidHIDSetAddr called.
+./libhap/hapsvc.c         2580  TRAP_DEBUG  "d" LNI services initialized.  Device#%d
+./libhap/hapsvc.c         2581  TRAP_DEBUG  "dd" Rid Created.  Device#%d  Rid:%d
+./libhap/hapsvc.c         2582  TRAP_DEBUG  "d" RID deleted.  Device#%d
+./libhap/hapsvc.c         2583  TRAP_DEBUG  "d" Replies to local services request.  Device#%d
+./libhap/hapsvc.c         2584  TRAP_DEBUG  "ddddd" Set Bandwidth failed.  Device#%d Old bps for rid:%d New bps for rid:%d Rid:%d, old bandwidth allocd %d
+./libhap/hapsvc.c         2585  TRAP_DEBUG  "dddd" Bandwidth initialized(1).  Device#%d.  Rid:%x. Bits Per Sec for rid: %d.  Bits Per Sec Total: %d
+./libhap/hapsvc.c         2586  TRAP_DEBUG  "d" Dest added.  Device#%d
+./libhap/hapsvc.c         2587  TRAP_DEBUG  "ddx" Add Destination Failed.  Device#%d rid:%d Addres:%x
+./liblnisvc/lni_svc.c     2588  TRAP_DEBUG  "d" Multiple Addressing not provided.  Device#%d
+./libhap/hapsvc.c         2589  TRAP_DEBUG  "d" Dest added.  Device#%d
+./libhap/hapsvc.c         2590  TRAP_DEBUG  "ddx" Add Destination Failed.  Device#%d rid:%d Address:%x
+./libhap/hapsvc.c         2591  TRAP_DEBUG  "d" Dest deleted.  Device#%d
+./libhap/hapsvc.c         2592  TRAP_DEBUG  "ddx" Delete Destination Failed.  Device#%d rid:%d Addres:%x
+./libhap/hapsvc.c         2593  TRAP_DEBUG  "d" All deleted.  Device#%d
+./libstep/step_am_proc.c  2600  TRAP_FIRE  "d" STEP application module process number %d starting
+./libstep/step_am_proc.c  2601  TRAP_DEBUG  "dd" STEP AM ProcInit: ProcessNumber %d Monitoree %d\n\r
+./libstep/step_am.c       2605  TRAP_OPER  "" Alloc ApplSocketChangeQ failed!
+./libstep/step_am.c       2606  TRAP_OPER  "d" ATEP-AM Alloc InputEH #%d failed!
+./libstep/step_am.c       2607  TRAP_OPER  "" STEP application proccess running but control process not!!! exiting.
+./libstep/step_am.c       2608  TRAP_OPER  "d" STEP-AM exiting due to CM phase 2 exit!!! CMRunState=%d
+./libstep/step_am.c       2609  TRAP_FIRE  "xxx" STEP-AM starting pmb=0x%x ami=0x%x changeQ=0x%x
+./libstep/step_am.c       2610  TRAP_DEBUG  "x" STEP-AM rx'd socket change msg, Action=%d, Dev=%d, Socket=%d
+./libstep/step_am.c       2611  TRAP_OPER  "dd" STEP-AM can't get STEntry to add socket %d, device %d
+./libstep/step_am.c       2612  TRAP_OPER  "dd" STEP-AM passed bogus device (%d) on add socket (%d) msg
+./libstep/step_am.c       2613  TRAP_FIRE  "ddx" STEP-AM Adding socket %d, device %d, OutputQ=0x%x
+./libstep/step_am.c       2614  TRAP_FIRE  "d" STEP-AM got delete message for socket %d but can't find STEntry
+./libstep/step_am.c       2615  TRAP_FIRE  "dd" STEP-AM deleted socket %d, device %d
+./libstep/step_am.c       2616  TRAP_FIRE  "ddd" STEP-AM received change msg with unknown action=%d, dev=%d, sock=%d
+./libstep/step_am.c       2617  TRAP_FIRE  "d" STEP-AM no STEntry for socket %d - something's broken!
+./libstep/step_am.c       2618  TRAP_DEBUG  "dd" STEP-AM received data msg event on empty/bad socket (%d), avail=%d
+./libstep/step_am.c       2619  TRAP_FIRE  "dd" STEP-AM gbuf_recv on socket %d returned bad value=%d
+./libstep/step_am.c       2620  TRAP_FIRE  "" STEP-AM FindSTEntryBySocket passed bogus socket number!!!
+./libstep/step_am.c       2621  TRAP_OPER  "d" STEP-AM ran out of socket translation entries (coded max = %d)!!!
+./libstep/step_am.c       2622  TRAP_OPER  "" STEP-AM unable to find STE parent - something is very broken!
+./libstep/step_am.c       2623  TRAP_OPER  "d" STEP-AM config has only %d entries, requires 2
+./libstep/step_im_st.c    2626  TRAP_FIRE  "daa" STEPST1_5DataInputAccept: couldn't find HID %d in ACT, src=%a, dst=%a
+./libstep/step_table.c    2630  TRAP_DEBUG  "ddx" STEP emptying unused ACT device=%d, inactive=%d, hash@0x%x
+./libstep/step_table.c    2631  TRAP_DEBUG  "ddx" STEP Swaping ACT device=%d, active=%d, table@0x%x
+./libstep/step_table.c    2632  TRAP_OPER  "d" STEP unable to insert in ACT, device=%d
+./libstep/step_table.c    2633  TRAP_OPER  "d" STEP unable to insert in ACT, device=%d
+./libstep/step_cm_proc.c  2634  TRAP_FIRE  "d" STEP control module process number %d starting
+./libstep/step_cm_proc.c  2635  TRAP_DEBUG  "dd" STEP CM ProcInit: ProcessNumber %d Monitoree %d\n\r
+./libsthost/sthost.c      2636  TRAP_FIRE  "dd" Sthost #%d: xpc_init failed - return code %d
+./libstep/step_cm_st.c    2637  TRAP_FIRE  "" STEP: could not get buffer for ACK packet
+./libstep/step_cm_st.c    2638  TRAP_DEBUG  "dd" ST1_5SendACK: Ctl.Type %d Ref %d\n
+./libstep/step_cm_st.c    2639  TRAP_FIRE  "" STEP: could not get buffer for Refuse packet
+./libstep/step_cm_st.c    2640  TRAP_DEBUG  "aaxd" SendST1_5ControlPkt: Sender: %a NextHop: %a Output=%x Len=%d
+./libstep/step_cm_st.c    2641  TRAP_DEBUG  "Idx" ST1_5Encapsulate: ip header %I len=%d dest=%x\n
+./libstep/step_cm_st.c    2642  TRAP_DEBUG "d" ST1_5 send: OUTPUT queue full; dropping packet - device %d
+./libstep/step_cm_st.c    2643  TRAP_DEBUG  "" STFSM: ValidateST1_5CtlPkt: msg longer than 1 buffer
+./libstep/step_cm_st.c    2644  TRAP_DEBUG  "d" STFSM: ValidateST1_5CtlPkt: HID not zero =%d
+./libstep/step_cm_st.c    2645  TRAP_DEBUG  "ddd" STFSM: ValidateST1_5CtlPkt:Length values inconsistent;Total=%d,Header=%d,Data=%d
+./libstep/step_cm_st.c    2646  TRAP_DEBUG  "" STFSM: ValidateST1_5CtlPkt:ST ENV header checksum error (%x)
+./libstep/step_cm_st.c    2647  TRAP_DEBUG  "" STFSM: ValidateST1_5CtlPkt:ST CTL header checksum error (%x)
+./libstep/step_cm_st.c    2648  TRAP_DEBUG  "d" STFSM: ValidateST1_5CtlPkt. Unknown Ctl pkt type. Type = %d
+./libether/bi4ether.c     2650 TRAP_FIRE "dx" ST Unresolved Ethernet Addr. Dropping packet. RID: %d Packet: %x 
+./libether/timer.c         2651  TRAP_DEBUG  "" EtherTimers Initialized.\n
+./libether/timer.c        2652  TRAP_OPER  "" No more ether timers
+./libsthost/sthost.c      2653  TRAP_OPER  "d" STHOST #%d:  Transmit ADDRESS ERROR - restarting transmitter
+./libstep/step_cm_init.c  2655  TRAP_OPER  "d" STEP-CM common config has only %d entries, requires 8
+./libstep/step_cm_init.c  2656  TRAP_OPER  "dd" STEP-CM port config has only %d entries, expected %d
+./libstep/step_cm_init.c  2657  TRAP_OPER  "d" STEP-CM unable to malloc space for port config, %d entries
+./libstep/step_cm_init.c  2658  TRAP_OPER  "" STEP-CM port config lists no real/valid ports, STEP exiting
+./libstep/step_cm_init.c  2659  TRAP_OPER  "d" STEP-CM E3 config has only %d entries, requires 0
+./libstep/step_cm_init.c  2660  TRAP_OPER  "" Alloc ControlQ failed!
+./libstep/step_cm_init.c  2661  TRAP_OPER  "" Alloc InputEHsQ failed!
+./libstep/step_cm_init.c  2662  TRAP_OPER  "" InitCMStructs failed!
+./libstep/step_cm_init.c  2663  TRAP_OPER  "" InitSTEPTables failed!
+./libstep/step_cm_init.c  2664  TRAP_OPER  "" STEP control proccess running but application process not!!! STEP exiting.
+./libstep/step_cm_init.c  2665  TRAP_FIRE  "xx" STEP-CM starting pmb=0x%x cmi=0x%x
+./libstep/step_cp.c       2670  TRAP_DEBUG  "dx" STEP-CP listening on socket %d with event 0x%x
+./libstep/step_cp.c       2671  TRAP_DEBUG  "ad" FindSTEPTarget resolving %a ref=%d
+./libstep/step_cp.c       2672  TRAP_FIRE  "dd" STEP ProcessCPMessage: Received bad length (%d) or unknown version (%d)
+./libstep/step_cp.c       2673  TRAP_FIRE  "d" STEP ProcessCPMessage: Received unknown CP type (%d)
+./libstep/step_cp.c       2674  TRAP_FIRE  "" STEP ProcessCPMessage: Received event but no packet available???
+./libstep/step_cp.c       2675  TRAP_DEBUG  "d" STEP ProcessCPMessage: Handled %d message(s) in one shot
+./libstep/step_cp.c       2676  TRAP_DEBUG  "x" STEPCPTimeout at 0x%x
+./libstep/step_cp.c       2677  TRAP_FIRE  "a" STEPCPTimeout %a expired, aborting connection
+./libstep/step_cp.c       2678  TRAP_DEBUG  "da" STEPCPTimeout resend #%d to %a
+./libstep/step_cp.c       2679  TRAP_DEBUG  "aad" Got CP request for %a from %a,%d
+./libstep/step_cp.c       2680  TRAP_FIRE  "ad" No return route for CP request from %a,%d
+./libstep/step_cp.c       2681  TRAP_FIRE  "aadd" Send CP response (target=%a) failed to %a,%d errno=%d
+./libstep/step_cp.c       2682  TRAP_DEBUG  "ada" Send CP response to %a,%d target=%a
+./libstep/step_cp.c       2683  TRAP_DEBUG  "aadd" Got STEP-CP response for %a from %a,%d ref #%d
+./libstep/step_cp.c       2684  TRAP_FIRE  "da" Unable to locate ARE ref #%d for STEP-CP response from %a
+./libstep/step_cp.c       2685  TRAP_DEBUG  "aa" Resolved STEP destination=%a to target=%a
+./libstep/step_cp.c       2686  TRAP_DEBUG  "dda" Sending STEP-CP TAR message ref=%d #%d to %a
+./libstep/step_cp.c       2687  TRAP_FIRE  "ad" Send STEP-CP TAR to %a failed, errno=%d
+./libstep/step_cp.c       2688  TRAP_FIRE  "" STEP FindAREntryBySeqNum passed bogus sequence number!!!
+./libstep/step_cp.c       2689  TRAP_FIRE  "" STEP FindAREntryByAddr passed bogus address!!!
+./libstep/step_cp.c       2690  TRAP_OPER  "d" STEP ran out of address resolution entries (configured max = %d)!!!
+./libstep/step_cp.c       2691  TRAP_OPER  "" STEP unable to find ARE parent - something is very broken!
+./libsrc/devicedisp.c     2700  TRAP_OPER  "a" IP dispatch: Bad GGheader/IP checksum, prev hop %a
+./libst2nbrs/st2_ndbase.c 2701  TRAP_FIRE  "a" ST2NBR: Hello failure pending for %a...
+./libst2nbrs/st2_ndbase.c 2702  TRAP_OPER  "sxxdd" ST2NBR: Nbr failure (No %s) rtc: 0x%x last: 0x%x delta(ms): %d mrto(ms): %d
+./libhap/hap_setup.c      2716  TRAP_FIRE  "" HapNotification: Not using stream 0x%x - %a
+./libhap/hap_setup.c      2717  TRAP_FIRE  "" Zero bytes in setup reply
+./libhap/hap_setup.c      2718  TRAP_DEBUG  "" StreamCreateReply: hstream_id %x, adrlistlen %x, adr[0] %x
+./libhap/hap_setup.c      2719  TRAP_FIRE  "ir" got info response packet?? (%x %x %x)
+./libhap/hap_setup.c      2733  TRAP_FIRE  "pt" HapHeader: mcw %x, checksum %x, ar %x, tos %x, dest %x, source %x, hap_protid %x
+./libhap/hap_setup.c      2734  TRAP_FIRE  "pt" Setup: type %x, code %x, chksum %x, reqid %x
+./libhap/hap_setup.c      2735  TRAP_FIRE  "pt" Setup: tos %x, wpi %x, interval %x, unused %x, adrlistlen %x, adr[0] %x
+./libhap/hap_setup.c      2736  TRAP_FIRE  "pt" addrs 1 - 7: %x %x %x %x %x %x %x
+./libhap/haprid.c         2744  TRAP_FIRE  "" req_id %x, coded ridptr %x
+./libhap/haprid.c         2745  TRAP_FIRE  "" Can't find RID timer for req %x on timer list
+./libtrunk/trunk_out.c    2750  TRAP_DEBUG  "dd" pause_p(%d) = %d x 62.5 us
+./libhap/hapout.c         2751  TRAP_DEBUG  "d" HAP %d: Packet refused by driver
+./libtrunk/trunk_out.c    2752 		    TRAP_DEBUG  "d" TRUNK %d: Packet refused by driver
+./libsrc/devicedisp.c     2800  TRAP_DEBUG  "xxd" st2h->IPSTVer wrong (0x%x, not 0x%x), InputDeviceNumber %d
+./libsrc/devicedisp.c     2801  TRAP_FIRE  "x" st2h->IPSTVer is wrong (0x%x instead of 0x%x)
+./libstep/step_cm.c       2810  TRAP_OPER  "dd" STEP CM init - unable to get listen socket for device %d, errno=%d
+./libstep/step_cm.c       2811  TRAP_FIRE  "dd" STEP CM init - bind failed for listen socket device %d, errno=%d
+./libstep/step_cm.c       2812  TRAP_FIRE  "dd" STEP CM init - listen to socket failed device %d, errno=%d
+./libstep/step_cm.c       2813  TRAP_DEBUG  "dxa" STEP-CM setup socket %d, eh 0x%x, for incomming ST to %a
+./libstep/step_cm.c       2814  TRAP_OPER  "d" STEP unable to find device associated with accept, socket=%d
+./libstep/step_cm.c       2815  TRAP_FIRE  "dd" STEP received accept event on empty/bad socket (%d), backlog=%d
+./libstep/step_cm.c       2816  TRAP_DEBUG  "dd" Entering STEP-CM Accept Processing socket=%d, device=%d
+./libstep/step_cm.c       2817  TRAP_FIRE  "dd" STEP accept failed on socket %d, errno=%d
+./libstep/step_cm.c       2818  TRAP_DEBUG  "dd" STEP accept request=%d was not an STReqConnect on socket %d
+./libstep/step_cm.c       2819  TRAP_DEBUG  "d" STEP accept didn't specify caller on socket %d
+./libstep/step_cm.c       2820  TRAP_DEBUG  "dddd" STEP Incoming call using bad protocol(%d!=%d) or bad SAP length(%d!=%d)
+./libstep/step_cm.c       2821  TRAP_OPER  "a" STEP accept - can not get RCE - connection from %a will fail
+./libstep/step_cm.c       2822  TRAP_OPER  "a" STEP accept - can not get input EH - connection from %a will fail
+./libstep/step_cm.c       2823  TRAP_FIRE  "dd" STEP received control msg event on empty/bad socket (%d), errno=%d
+./libstep/step_cm.c       2824  TRAP_FIRE  "dd" STEP recvmsg socket error (socket=%d, errno=%d)
+./libstep/step_cm.c       2825  TRAP_FIRE  "dd" STEP recvmsg wrong ST option level got %d expected %d
+./libstep/step_cm.c       2826  TRAP_DEBUG  "dd" STEP received control msg type %d, on socket %d
+./libstep/step_cm.c       2827  TRAP_FIRE  "d" STEP can not locate RCE for received STReqConnect msg on socket %d
+./libstep/step_cm.c       2828  TRAP_FIRE  "d" STEP can not locate RCE for received STReqDisconnect msg on socket %d
+./libstep/step_cm.c       2829  TRAP_FIRE  "d" STEP can not locate PDE for received STReqAccept msg on socket %d
+./libstep/step_cm.c       2830  TRAP_FIRE  "d" STEP can not locate PDE for received STReqRefuse msg on socket %d
+./libstep/step_cm.c       2831  TRAP_FIRE  "dd" STEP received control msg of unknown type %d, on socket %d
+./libstep/step_cm.c       2832  TRAP_OPER  "" STEP ProcessControlMessage command processing not coded yet!
+./libstep/step_cm.c       2833  TRAP_DEBUG  "aad" STEP received ST control message from %a to %a type %d
+./libstep/step_cm.c       2834  TRAP_DEBUG  "ad" STEP couldn't find forward connection %a,%d in st1.5 refuse processing
+./libstep/step_cm.c       2835  TRAP_DEBUG  "ad" STEP closing forward connection %a,%d in st1.5 refuse processing
+./libstep/step_cm.c       2836  TRAP_FIRE  "ada" STEP couldn't find connection for ST1.5 close request, name=%a,d, dst=%a
+./libstep/step_cm.c       2837  TRAP_DEBUG  "dd" STEP gbuf_send failed, socket=%d, errno=%d
+./libstep/step_cm.c       2838  TRAP_OPER  "ad" STEP confused, couldn't find forward connection %a,%d for st1.5 accept
+./libstep/step_cm.c       2839  TRAP_DEBUG  "sd" STEP rcvd ST1.5 %s request on existing connection, state=%d
+./libstep/step_cm.c       2840  TRAP_DEBUG  "dd" STEP gbuf_send failed, socket=%d, errno=%d
+./libstep/step_cm.c       2841  TRAP_DEBUG  "aa" STEP unable to init connection from %a to %a - no pde
+./libstep/step_cm.c       2842  TRAP_FIRE  "aauu" STEP starting st1.5 init'ed connection from %a to %a, C#=%u, HID=%u
+./libstep/step_cm.c       2843  TRAP_FIRE  "aad" STEP received unknown ST control message from %a to %a type %d
+./libstep/step_cm.c       2844  TRAP_OPER  "d" STEPProcessControlMessage code error! received message of unknown type=%d
+./libstep/step_cm.c       2845  TRAP_DEBUG  "x" STEPST1_5Timeout at 0x%x
+./libstep/step_cm.c       2846  TRAP_FIRE  "ad" STEPST1_5Timeout connect from %a to dev=%d expired, aborting
+./libstep/step_cm.c       2847  TRAP_FIRE  "da" STEP-CM SendSocketChangeMsg failed, closing socket %d, from %a
+./libstep/step_cm.c       2848  TRAP_FIRE  "dd" STEP couldn't send accept to api connect socket=%d, errno=%d
+./libstep/step_cm.c       2849  TRAP_DEBUG  "add" STEP-CM accepted api connect from %a on socket=%d, device=%d
+./libstep/step_cm.c       2850  TRAP_FIRE  "dad" STEP-CM processing disconnect on socket=%d from %a, device=%d
+./libstep/step_cm.c       2851  TRAP_FIRE  "adsdx" STEP-CM got accept for ST1.5 init'd connection %a,%d, s=%d InHID=%d, HeldPkt=0x%x
+./libstep/step_cm.c       2852  TRAP_FIRE  "dd" STEP gbuf_send failed, socket=%d, errno=%d
+./libstep/step_cm.c       2853  TRAP_OPER  "" STEP ApplRefuseResponse E3 mode not coded yet!
+./libstep/step_cm.c       2854  TRAP_FIRE  "aad" STEP closing ST1.5 conn. src=%a, dest=%a, state=%d
+./libstep/step_cm.c       2855  TRAP_DEBUG  "ad" STEP no forward connection %a,%d for st1.5 refuse or API disc
+./libstep/step_cm.c       2856  TRAP_FIRE  "a" STEP unable to resolve target address for %a due to no resources
+./libstep/step_cm.c       2857  TRAP_FIRE  "aa" STEP BUG - address resolution for %a returned wrong destination (%a)
+./libstep/step_cm.c       2858  TRAP_DEBUG  "aad" STEP Init connection to %a, target %a, mode %d
+./libstep/step_cm.c       2859  TRAP_FIRE  "a" STEP init connection to %a due to no (EH) resources
+./libstep/step_cm.c       2860  TRAP_FIRE  "ad" STEP - unable to get socket for new connection to %a, errno=%d
+./libstep/step_cm.c       2861  TRAP_FIRE  "ad" STEP - setsockopt failed for new connection to %a, errno=%d
+./libstep/step_cm.c       2862  TRAP_FIRE  "ad" STEP - bind failed for new connection to %a, errno=%d
+./libstep/step_cm.c       2863  TRAP_FIRE  "ad" STEP - connect failed for new connection to %a, errno=%d
+./libstep/step_cm.c       2864  TRAP_DEBUG  "" STEP Init connection succeeded.
+./libstep/step_cm.c       2865  TRAP_OPER  "ad" STEP confused, couldn't find forward connection %a,%d for st1.5 accept
+./libstep/step_cm.c       2866  TRAP_OPER  "da" STEP-CM unable to find expected entry in ACT, device=%d, Net=%a
+./libstep/step_cm.c       2867  TRAP_FIRE  "dda" STEP AbortConnection mode=%d, state=%d, dest=%a
+./libstep/step_cm.c       2868  TRAP_FIRE  "" STEP FindPFEntryBySocket passed bogus socket number!!!
+./libstep/step_cm.c       2869  TRAP_FIRE  "" STEP FindPFEntryByST1_5Name passed bogus ST name!!!
+./libstep/step_cm.c       2870  TRAP_FIRE  "" STEP FindPFEntryE3UnicastDest passed bogus address!!!
+./libstep/step_cm.c       2871  TRAP_FIRE  "" STEP FindPFEntryByE3McastID passed bogus ID!!!
+./libstep/step_cm.c       2872  TRAP_OPER  "d" STEP ran out of private flow entries (configured max = %d)!!!
+./libstep/step_cm.c       2873  TRAP_OPER  "xx" STEP unable to find PDE's %x parent - something is very broken! cmi=%x
+./libstep/step_cm.c       2874  TRAP_FIRE  "" STEP FindRCEntryBySocket passed bogus socket number!!!
+./libstep/step_cm.c       2875  TRAP_FIRE  "" STEP FindRCEntryByST1_5Name passed bogus ST1.5 name pointer!!!
+./libstep/step_cm.c       2876  TRAP_OPER  "d" STEP ran out of remote connection entries (coded max = %d)!!!
+./libstep/step_cm.c       2877  TRAP_OPER  "" STEP unable to find RCE parent - something is very broken!
+./libstep/step_cm.c       2878  TRAP_OPER  "d" STEP no more input events - reached max ST connections (coded max = %d)!!!
+./libstep/step_cm.c       2879  TRAP_DEBUG  "ddd" STEP-CM sending socket change msg, Action=%d, Dev=%d, Socket=%d
+./libstep/step_cm.c       2880  TRAP_OPER  "ddd" STEP-CM unable to get buffer for change msg, Act=%d, Dev=%d, s=%d
+./libstep/step_cm.c       2881  TRAP_OPER  "ddd" STEP-CM unable to enqueue change msg, Act=%d, Dev=%d, Socket=%d
+./libconsole/console.c    2900 Crash1  		 "d"  **PREV CRASH**  CONFIG: ROOT info has %d values - should have 3
+./libhap/hapout.c         2928  TRAP_DEBUG  "x" %x HAPdest %x ridptr->Hapdest
+./libhap/hapout.c         2929  TRAP_DEBUG  "" HapSend: data: %x %x %x %x %x %x %x %x %x
+./librspc/rspc.c          2942  TRAP_FIRE  "d" SPC Control: proc # %d Init failed, exiting
+./libstdispatch/stdispatch.c 2943 TRAP_DEBUG "" STDsp: STDataPkt passed null ptr
+./libstdispatch/stdispatch.c  2944  TRAP_DEBUG  "dd" STDsp: Checksum error sum = %d length = %d
+./libstdispatch/stdispatch.c 2945  TRAP_DEBUG  "dxxx" ST2DataPkt: Couldn't find entry %d, Dev %d (%x) Dropping Pkt: %x
+./libstdispatch/stdispatch.c 2946 TRAP_DEBUG "" STDsp: STDataPkt passed null ptr
+./libstdispatch/stdispatch.c 2947 TRAP_DEBUG "d" Allocating replica to send to device %d
+./libstdispatch/stdispatch.c 2948 TRAP_DEBUG "d" Dropping ST2 replica.  Could not get buffer to send to device %d
+./libstdispatch/stdispatch.c 2949  TRAP_FIRE  "d" Could not enqueue ST2 data to API socket %d
+./libscmp/scmp_stream.c   2950 TRAP_OPER "dd" SCMP ERROR-IN-REQUEST-MESSAGE Received. ReasonCode=%d Ref=%d
+./libscmp/scmp_stream.c   2951  TRAP_OPER  "dd" Got SCMP ERROR-IN-RESPONSE message.  Reason=%d Ref=%d
+./libscmp/scmp_timer.c    2952  TRAP_FIRE  "" Timer expired for deadStream.
+./libscmp/scmp_utils.c    2954  TRAP_OPER  "" Allocation of st2 control buffer failed.  Trying again.
+./libscmp/scmp_utils.c    2955 TRAP_OPER "" Could not allocate st2 control buffer.  Failure probable.
+./libscmp/scmp_stream.c   2956 TRAP_OPER "a" SCMP neighbor failure notification for hop at %a
+./libscmp/scmp_message.c  2957 TRAP_OPER "" Bad arg to MakeMessage
+./librspc/rspc_init.c     2981 TRAP_DEBUG "ddd" SPCControl: ProcessNumber %d Monitoree %d DeviceNumber %d\n\r

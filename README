@@ -1,0 +1,104 @@
+
+  The files in this directory comprise the 1.2u release of the CMU
+SNMP distribution.  The 'u' stands for 'Unofficial', since CMU has not
+officially gone through the code.  This is mostly a compilation of bug
+fixes made by people across the net.  
+
+This release has been in beta test since early March 1992.
+
+This release includes the SNMP/ASN.1 library, many client
+applications, and supporting documentation.  The snmp agent for the
+Kinetics box is included in this distribution, but the KIP code it
+links against is not.
+
+This code was written with efficiency and portability in mind.  The
+applications compile and run on the following systems: 
+	- Sun3/60 running SUNOS 4.1.1,
+	- Sun SparcStation2 running SUNOS 4.1.1,
+	- Vax running Ultrix 4.1 (snmpd and snmptrapd were not tested),
+	- Decstation running Ultrix 4.2 (snmpd and snmptrapd were not tested),
+
+All applications except for the snmp agent and the snmproute program
+will compile and run on a Sun IPX running SunOS 5.0 beta (but the
+compile will fail trying to do a 'ranlib'-- just type 'make' again to
+continue it).
+
+Most applications are expected to run on any system with a Berkeley
+socket interface.
+
+The agent compiles into about 10 KB of 68000 code.  The machine independent
+portions of this agent also run on CMU's IBM PC/AT based router.
+
+The applications are designed to be useful in the real world.  Snmpnetstat
+is a port of the Berkeley Unix netstat that gathers it's information using
+SNMP.  (Many people will enjoy "snmpnetstat mygateway public -r").  Snmpstatus
+collects several pieces of information and presents them in a useful format
+and is good for everyday status monitoring.  The rest of the tools are simpler,
+but still interpret input and output symbolicly (they can be used without
+referencing the RFC's!).
+
+For instance, 
+snmpnetstat mygateway public -r returns:
+Routing tables
+Destination      Gateway                   Flags   Interface       RouteProto
+default          ENET1-GW.BBN.COM          UG      le0             Local/Static
+8                ENET2-GW.BBN.COM          UGD     le0             Via-ICMP
+LOCALHOST.BBN.CO LOCALHOST.BBN.COM         UH      lo0             Local/Static
+128.89           MEDEA.BBN.COM             U       le0             Local/Static
+192.1.4          T200-BLDG-20.BBN.COM      UGD     le0             Via-ICMP
+192.1.5          T200-BLDG-20.BBN.COM      UGD     le0             Via-ICMP
+192.1.6          T200-BLDG-6.BBN.COM       UGD     le0             Via-ICMP
+192.1.7          T200-BLDG-6.BBN.COM       UGD     le0             Via-ICMP
+192.1.17         T200-BLDG-20.BBN.COM      UGD     le0             Via-ICMP
+192.5.148        ENET2-GW.BBN.COM          UGD     le0             Via-ICMP
+
+snmpstatus returns:
+[128.2.56.220]=>[Kinetics Fastpath2] Up: 1 day, 4:43:31
+Recv/Trans packets - Interface: 262874/39867 | IP 47432/34587
+
+The rest of the applications typically present a variable in a form similar
+to the following:
+Name: interfaces.ifTable.ifEntry.ifType.1 -> INTEGER: ethernet-csmacd(6)
+
+The parsing and printing of symbolic object identifiers and the
+printing of typed variables is driven by a database that describes the
+MIB.  The MIB database is now retrieved from a text file in the ASN.1
+format used in the RFC1213 MIB (concise mib format).  This makes
+adding new (enterprise specific) mibs to the database very simple.
+Initially, the mib.txt file contains a discription of the RFC 1213
+MIB.  Steve Waldbusser had help in optimizing the parser from Phil
+Lapsley of Berkeley (Thanks Phil!).  Partial concise MIB parsing
+support was provided by Shiva Systems.  The concise MIB parsing
+support was finished by David Waitzman at BBN.
+
+For further information, please consult the man pages.  There are man
+pages for each of the applications, as well as for the Application
+Programming Interface (API).
+
+The API has been redesigned to present a very convenient and useful
+asynchronous interface to the SNMP transport.  In addition,
+snmp_client.c contains a toolkit of routines that simplify writing
+client applications.  In particular, there is a synchronous interface
+built on top of the asyncronous interface that makes writing
+applications very easy.
+
+This distribution is coprighted by CMU, but may be used and sold
+without permission.  The snmpnetstat application is derived from the
+Berkeley 4.3 netstat, and is therefore also copyrighted by Berkeley.
+Consult the copyright notices for further information.
+
+This SNMP distribution is available by anonymous FTP from the host
+nic.near.net (192.52.71.4) as the file "pub/cmu-snmp1.2u.tar.Z".
+
+Previous SNMP distributions are available by anonymous FTP from the
+host lancaster.andrew.cmu.edu (128.2.13.21) as the file
+pub/cmu-snmp1.1b.tar.
+
+The original version of this README was written by
+	Steve Waldbusser
+	Network Development
+	Carnegie-Mellon University
+
+This version (1.2u) of this README was updated by 
+	David Waitzman
+	BBN Systems and Technologies

@@ -1,0 +1,99 @@
+.RC $Header: /nfs/medea/u0/rel5/rcs/Tools/cmusnmp/apps/snmpfind.1,v 1.2 1992/07/29 18:16:48 djw Exp $
+.\* /***********************************************************
+.\" 	Copyright 1992 by Carnegie Mellon University
+.\" 
+.\"                       All Rights Reserved
+.\" 
+.\" Permission to use, copy, modify, and distribute this software and its 
+.\" documentation for any purpose and without fee is hereby granted, 
+.\" provided that the above copyright notice appear in all copies and that
+.\" both that copyright notice and this permission notice appear in 
+.\" supporting documentation, and that the name of CMU not be
+.\" used in advertising or publicity pertaining to distribution of the
+.\" software without specific, written prior permission.  
+.\" 
+.\" CMU DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE, INCLUDING
+.\" ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS, IN NO EVENT SHALL
+.\" CMU BE LIABLE FOR ANY SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR
+.\" ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS,
+.\" WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION,
+.\" ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS
+.\" SOFTWARE.
+.\" ******************************************************************/
+.\"
+.\" Man page by David Waitzman.  Program by CMU (Steve Waldbusser:?)
+.\"
+.TH SNMPFIND 1 "20 Feb 1992"
+.UC 4
+.SH NAME
+snmpfind - BROADCASTS to find snmp manageable entities on a network.  DANGEROUS!
+.SH SYNOPSIS
+snmpdelta snmpfind [-d] address community-name object-identifier [object-identifier ...]
+.SH DESCRIPTION
+Snmpfind is an SNMP application that can sends SNMP GET requests
+for some variables, and waits around printing any responses it sees.  If the
+address is a limited broadcast address (like 190.199.255.255), then it
+can identify many snmp manageable entities on the network.
+.B This is a DANGEROUS program!
+.B It can load up your net.
+.PP
+One or more fully qualified object identifiers may be given as
+arguments on the command line.  Each object identifier (variable name)
+is given in the format specified in
+.IR variables (5).
+.PP
+The
+.I community
+specifies the community name for the transactions with the remote systems.
+.PP
+If the network entity has an error processing the request packet, an
+error packet will be returned and a message will be shown, helping to
+pinpoint in what way the request was malformed.  
+.SH FLAGS
+.TP
+.B \-d
+Dump the SNMP packets that are being sent, and that are received in
+hexadecimal.
+.SH Examples:
+.PP
+.ft B
+.nf
+snmpfind 127.0.0.1 public system.sysdescr.0
+.fi
+.ft R
+This is the degenerate case where a broadcast address wasn't used.
+Outputs:
+.RS
+.ft R
+.nf
+127.0.0.1: OCTET STRING- (ascii):    Unix 4.3BSD
+.I a few seconds go by, then
+Timed Out
+.fi
+.ft R
+.RE
+
+.PP
+.ft B
+.nf
+snmpfind 222.222.222.255 public system.sysdescr.0
+.fi
+.ft R
+
+Outputs:
+.RS
+.ft R
+.nf
+222.222.222.4: OCTET STRING- (ascii):     HP UX 8.0
+222.222.222.1: OCTET STRING- (ascii):     Unix 4.3BSD
+222.222.222.41: OCTET STRING- (ascii):    Symbolics 45.4.3
+222.222.222.15: OCTET STRING- (ascii):    PDP-1, Monitor version of 6/12/64
+.I a few seconds go by, then
+Timed Out
+.fi
+.ft R
+.RE
+
+.SH "SEE ALSO"
+variables(5), RFC 1065, RFC 1212, RFC 1213
+

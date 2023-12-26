@@ -1,0 +1,132 @@
+
+
+
+VARIABLES(5)       Headers, Tables, and Macros       VARIABLES(5)
+
+
+
+NNNNAAAAMMMMEEEE
+         variables - Format of specifying variable names to  SNMP
+     tools.
+
+SSSSYYYYNNNNOOOOPPPPSSSSIIIISSSS
+         system.sysdescr.0
+
+DDDDEEEESSSSCCCCRRRRIIIIPPPPTTTTIIIIOOOONNNN
+     Variable names are  in  the  format  of  Object  Identifiers
+     (ASN.1).   There are several methods of representation. Each
+     variable name is given in the format of A.B.C.D..., where A,
+     B,  C, and D are subidentifiers in one of two forms of nota-
+     tion.  Each  subidentifier  may  be  encoded  as  a  decimal
+     integer, or a symbol as found in the RFC 1213 MIB.  The case
+     of the symbols is not significant.
+     If there is no leading "." in the variable  name,  the  name
+     will   be   formed   as   if   having   been  preceded  with
+     "iso.org.dod.internet.mgmt.mib.".   A  "."  must  be  placed
+     before  the  first  variable if the user is to fully specify
+     the name.  For example:
+
+     _1._1._0 _s_y_s_t_e_m._s_y_s_D_e_s_c_r._0 _a_n_d _1._s_y_s_D_e_s_c_r._0
+
+     all refer to the same variable name.  Likewise:
+
+     ._1._3._6._1._2._1._1._1._0
+     ._i_s_o._o_r_g._d_o_d._i_n_t_e_r_n_e_t._m_g_m_t._m_i_b._s_y_s_t_e_m._s_y_s_d_e_s_c_r._0
+     ._1._3._6._1._2._1._1._s_y_s_d_e_s_c_r._0
+
+     All refer to the same variable name.
+
+     The description of the variables in the MIB is  given  in  a
+     file  named  in  the  environment  variable  _M_I_B_F_I_L_E if that
+     environment variable is defined.  If that environment  vari-
+     able  is  defined but the specified file doesn't exist, then
+     it will complain and exit.  Otherwise the description  comes
+     from  a  file  named _c_m_u-_s_n_m_p-_m_i_b._t_x_t directory given in the
+     environment variable _A_N_M_C_O_N_F_D_I_R if that environment variable
+     is defined, in the current directory, or in directory /_e_t_c/.
+     The files are in the ASN.1 notation and use the OBJECT  TYPE
+     macro  defined in RFC 1212.  Most of the file describing the
+     RFC 1213 MIB is pulled out of RFC 1213 without change.
+
+
+SSSSEEEEEEEE AAAALLLLSSSSOOOO
+     RFC 1065, RFC 1066, RFC 1067, RFC 1212,  RFC  1213,  ISO  IS
+     8824(ASN.1)
+
+BBBBUUUUGGGGSSSS
+     The parser of the _m_i_b._t_x_t file is  not  expected  to  handle
+     bizarre  (although  correct)  interpretations  of  the ASN.1
+     notation.
+
+
+
+SunOS 5.5.1        Last change: 6 Febuary 1992                  1
+
+
+
+
+
+
+VARIABLES(5)       Headers, Tables, and Macros       VARIABLES(5)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SunOS 5.5.1        Last change: 6 Febuary 1992                  2
+
+
+
+
+
+
